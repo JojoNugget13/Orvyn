@@ -95,6 +95,43 @@ footer {
     margin: 0;
 }
 
+.social-media-column {
+    /* Ensure social icons are displayed horizontally within their column */
+    align-items: flex-start; /* Align items to the start of the cross axis */
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem; /* Space between icons */
+    /* Removed margin-top as it's now handled by column gap */
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Removed width, height, border-radius, background-color */
+    transition: transform 0.2s ease, opacity 0.2s ease; /* Keep transform for hover, add opacity transition */
+}
+
+.social-icons a:hover {
+    transform: translateY(-2px);
+    opacity: 1; /* Full opacity on hover */
+}
+
+.social-icons img.social-icon {
+    width: 20px; /* Size of the actual icon image */
+    height: 20px;
+    /* Removed filter: invert(1) */
+    opacity: 0.8; /* Slightly dim by default */
+    transition: opacity 0.2s ease;
+}
+
+.social-icons a:hover img.social-icon {
+    /* Removed filter: invert(0) */
+    opacity: 1; /* Full opacity on hover */
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .footer-main {
@@ -110,6 +147,9 @@ footer {
 
     .footer-column {
         align-items: center;
+    }
+    .social-icons {
+        gap: 0.75rem;
     }
 }
 
