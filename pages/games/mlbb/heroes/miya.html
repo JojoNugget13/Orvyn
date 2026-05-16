@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <title>Miya - Mobile Legends: Bang Bang</title>
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <link rel="stylesheet" href="../../../../css/pages/games/mlbb/hero-detail.css">
+    <link rel="stylesheet" href="../../../../css/components/tabs.css">
+    <style>
+        /* Mastery Code Styling */
+        .mastery-chapters-wrapper { display: flex; flex-direction: column; gap: 24px; padding: 10px 0; }
+        .mastery-chapter-card { 
+            background: rgba(255, 255, 255, 0.03); 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+            border-radius: 12px; 
+            overflow: hidden; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .mastery-chapter-header { 
+            background: rgba(255, 255, 255, 0.05); 
+            padding: 15px 20px; 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex; align-items: center; gap: 15px;
+        }
+        .chapter-label { font-family: 'Unbounded', sans-serif; font-size: 0.7rem; color: #f59e0b; text-transform: uppercase; letter-spacing: 1px; }
+        .chapter-title { margin: 0; font-size: 1.1rem; color: #fff; }
+        .mastery-chapter-body { padding: 20px; }
+        .mastery-story-container p { margin: 0; line-height: 1.7; color: #cbd5e1; font-size: 0.95rem; }
+        
+        /* Fused Task Container */
+        .mastery-task-container { 
+            background: rgba(0, 0, 0, 0.3); 
+            padding: 15px 20px; 
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex; flex-direction: column; gap: 8px;
+        }
+        .task-badge { 
+            font-size: 0.65rem; font-weight: 800; color: #10b981; 
+            background: rgba(16, 185, 129, 0.1); padding: 2px 8px; 
+            border-radius: 4px; align-self: flex-start; text-transform: uppercase;
+        }
+        .task-description { margin: 0; font-size: 0.85rem; color: #94a3b8; font-style: italic; }
+
+        /* Patch History Modern Design */
+        .patch-timeline { display: flex; flex-direction: column; gap: 20px; padding: 10px 0; }
+        .patch-card { 
+            background: rgba(255, 255, 255, 0.03); 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+            border-radius: 12px; border-left: 5px solid #94a3b8; 
+            transition: transform 0.2s;
+        }
+        .patch-card.buff { border-left-color: #10b981; }
+        .patch-card.nerf { border-left-color: #ef4444; }
+        .patch-card.adjustment { border-left-color: #f59e0b; }
+        
+        .patch-card-header { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 12px 20px; background: rgba(255, 255, 255, 0.05);
+        }
+        .patch-version { font-family: 'Unbounded', sans-serif; font-weight: 700; color: #fff; margin-right: 10px; }
+        .patch-date { font-size: 0.8rem; color: #94a3b8; }
+        
+        .patch-tag { 
+            font-size: 0.65rem; font-weight: 800; padding: 2px 10px; border-radius: 4px; text-transform: uppercase; 
+        }
+        .patch-tag.buff { background: rgba(16, 185, 129, 0.2); color: #10b981; }
+        .patch-tag.nerf { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+        .patch-tag.adjustment { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
+
+        .patch-card-content { padding: 20px; }
+        .patch-card-content h4 { margin: 0 0 10px 0; color: #fff; font-size: 1.1rem; }
+        .patch-summary { font-size: 0.9rem; color: #cbd5e1; margin-bottom: 15px; line-height: 1.5; }
+        
+        .patch-change-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+        .change-item { 
+            display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; color: #94a3b8;
+            background: rgba(0,0,0,0.2); padding: 8px 12px; border-radius: 6px;
+        }
+        .change-type-indicator { 
+            width: 8px; height: 8px; border-radius: 50%; margin-top: 5px; flex-shrink: 0;
+        }
+        .change-type-indicator.buff { background: #10b981; box-shadow: 0 0 5px #10b981; }
+        .change-type-indicator.nerf { background: #ef4444; box-shadow: 0 0 5px #ef4444; }
+        .change-type-indicator.adjustment { background: #f59e0b; box-shadow: 0 0 5px #f59e0b; }
+
+        .strategy-content { display: none; }
+        .strategy-content.active { display: block; }
+
+        /* Strategy Layout Improvements */
+        .strategy-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 1rem; }
+        .recommendation-card { 
+            background: var(--surface-light); 
+            border: 1px solid var(--border); 
+            border-radius: 12px; 
+            padding: 1.5rem; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .recommendation-card h4 { margin-top: 0; color: var(--primary-color); font-family: 'Unbounded', sans-serif; font-size: 1rem; }
+        .build-path { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: 0.75rem; }
+        .build-item { 
+            background: var(--surface); 
+            border: 1px solid var(--border); 
+            padding: 0.4rem 0.8rem; 
+            border-radius: 8px; 
+            font-size: 0.85rem; 
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        .build-arrow { color: var(--secondary-color); font-weight: bold; opacity: 0.6; }
+        .emblem-spell-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 1.5rem; 
+        }
+
+        /* Fix for infobox text overflow in relationships and other long fields */
+        .infobox-list div {
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            gap: 10px;
+            align-items: start;
+        }
+        .infobox-list strong {
+            text-align: right;
+            word-break: break-word;
+            overflow-wrap: break-word;
+        }
+
+        /* Price Item Optimization */
+        .currency-icon {
+            width: 20px !important;
+            height: 20px !important;
+            flex-shrink: 0;
+            object-fit: contain;
+        }
+
+        /* Styling for the Notes section within ability cards */
+        .ability-notes {
+            background: rgba(255, 255, 255, 0.05); /* Slightly lighter background */
+            border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+            border-left: 4px solid var(--primary-color); /* Accent border on the left */
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-top: 15px; /* Space from the description */
+        }
+
+        .ability-notes h5 {
+            color: var(--primary-color); /* Use primary color for the heading */
+            font-size: 1rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-family: 'Unbounded', sans-serif; /* Consistent font */
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .ability-notes ul {
+            list-style: none; /* Remove default bullets */
+            padding: 0;
+            margin: 0;
+        }
+
+        .ability-notes li {
+            position: relative;
+            padding-left: 20px; /* Space for custom bullet */
+            margin-bottom: 8px;
+            color: var(--text-secondary); /* Lighter text color */
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .ability-notes li:last-child {
+            margin-bottom: 0; /* No margin for the last item */
+        }
+
+        .ability-notes li::before {
+            content: '•'; /* Custom bullet point */
+            color: var(--secondary-color); /* Accent color for bullet */
+            position: absolute;
+            left: 0;
+            font-size: 1.2em; /* Slightly larger bullet */
+            line-height: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <main class="container">
+        <div class="page-header hero-header">
+            <button class="back-btn" onclick="navigateTo('../list-of-heroes.html')">← Back to List</button>
+            <div class="hero-header-content">
+                <img class="hero-header-icon" src="../../../../images/games/mlbb/heroes/icons/miya-moonlight-archer-icon.webp" alt="Miya">
+                <div>
+                    <h2>Miya</h2>
+                    <p class="subtitle">The Moonlight Archer</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-tabs">
+            <button class="hero-tab-btn active" data-tab="main">Main</button>
+            <button class="hero-tab-btn" data-tab="cosmetics">Cosmetics</button>
+            <button class="hero-tab-btn" data-tab="audio">Audio</button>
+            <button class="hero-tab-btn" data-tab="mastery">Mastery Code</button>
+            <button class="hero-tab-btn" data-tab="patch">Patch History</button>
+            <button class="hero-tab-btn" data-tab="archives">Archives</button>
+            <button class="hero-tab-btn" data-tab="strategy">Strategy</button>
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- TAB: MAIN                                                        -->
+        <!-- ============================================================== -->
+        <section class="hero-tab-content active" id="tab-main">
+            <div class="hero-main-grid">
+                <div class="hero-main-content">
+                    <section class="wiki-section">
+                        <div class="section-header">
+                            <h3>"An archer blessed by the Moon God."</h3>
+                        </div>
+                    </section>
+
+                    <section class="wiki-section">
+                        <div class="section-header">
+                            <h3>Ratings (1-10)</h3>
+                        </div>
+                        <div class="section-content" id="ratings-container"></div>
+                    </section>
+
+                    <section class="wiki-section">
+                        <div class="section-header">
+                            <h3>Abilities</h3>
+                        </div>
+                        <div class="section-content" id="abilities-container"></div>
+                    </section>
+
+                    <section class="wiki-section">
+                        <div class="section-header">
+                            <h3>Hero Stats</h3>
+                        </div>
+                        <div class="section-content" id="stats-container"></div>
+                    </section>
+
+                    <section class="wiki-section">
+                        <div class="section-header">
+                            <h3>Trivia</h3>
+                        </div>
+                        <div class="section-content" id="trivia-container"></div>
+                    </section>
+
+                    <section class="wiki-section">
+                        <div class="section-header">
+                            <h3>Story</h3>
+                        </div>
+                        <div class="section-content">
+                            <div class="story-card">
+                                <p>Born at the end of the Era of Strife, Miya bore witness to the unspeakable tragedies that befell the elves during the Endless War. She saw how the Abyss defiled the Shadow Swamp and corrupted many of her people into Dark Elves. It was not until the Moon Goddess created the Lunar Aegis over Azrya that the Moon Elves were able to thrive again under its protection. Miya became the Priestess of the Moon, and for thousands of years she served faithfully in the Lunar Temple, diligently watching over her people. However, with the continued expansion of the Abyss and its dark legions, the Land of Dawn is once again shrouded by the fog of war. From the Moonlit Forest, a call to war that has not been heard in thousands of years sounded again. Miya took up her silver bow and swore by the light of the moon to fight for her people.</p>
+                            </div>
+                            <div class="story-block">
+                                <h4>Bio</h4>
+                                <div class="story-quote">"What is war, brother?"</div>
+                                <p>"When the races of the Land of Dawn turned on one another instead of embracing unity and mutual prosperity, that is war. When they invaded their neighbors and razed cities to the ground, that is a war. When they choose destruction over peace, cruelty over benevolence, and corruption over purity... that is war."</p>
+                                <div class="story-quote">"Peace, benevolence, and purity... is that your wish for the world?"</div>
+                                <p>Estes did not reply. The outstretched branches of the Tree of Life wrapped around him, and he fell back into deep slumber. This time he would not awaken again for many years. Long enough for Miya to grow from a little girl, who couldn't even reach the branches of the Tree of Life, into a fearless warrior and protector of the Moonlit Forest.</p>
+                            </div>
+                            <div class="story-block">
+                                <p>Miya stood atop the trees and scouted the enemy incursion. A warband of orcs and demons had just broken through the border, inflicting a wound on the Lunar Aegis that caused the Tree of Life to shake. With a draw of her bow, three silvery beams of moonlight gracefully danced through the branches before swiftly slaying the leader and sending the rest fleeing in disarray. With the threat gone, the elves channeled the energy from the Tree of Life to repair the breach and restore the Aegis. Peace returned to the forest and all was well.</p>
+                                <p>Miya, nestled wearily in the trees, had assumed the responsibility of protecting the Moonlit Forest after her brother Estes went into slumber to preserve the energy of the Lunar Aegis. In the beginning, Estes would speak to Miya through the Tree of Life, and it was through these conversations that she learned of the peace, benevolence, and purity that her brother longed for. And in Estes's absence, Miya watched over the forest according to the last words he spoke.</p>
+                            </div>
+                            <div class="story-block">
+                                <p>As she relaxed and put down her bow, Miya noticed that she had bruised her hand while dealing with the intruders. She began to recall the times when she practised archery while her brother studied nearby. As a somewhat stubborn child, Miya would often shoot her bow incessantly trying to hit a leaf or branch, until her fingers bled. Her brother would look up from his scroll and, with a wave of his hand, heal her wounds with the forest' magic.</p>
+                                <p>Perhaps Miya was too attached to the past. She often found herself longing for a time when she could still hide under her brother's protection. Miya snapped back to attention and clenched her fist. This was no time to dwell on the past. She knew the only direction for her was forward, for she had become the hope that her people looked to in these dire times.</p>
+                            </div>
+                            <div class="story-block">
+                                <p>But Miya knew deep down she was only lying to herself. She turned a blind eye to the outside world as evil gained strength, and only acted when the enemy encroached on her lands. While this has kept the elves from war, how long would it last? Even a fool could see she was delaying the inevitable. A war that's never fought can never be won.</p>
+                                <p>But peace, benevolence, and purity were her brother's wishes. How could she willingly plunge her people into the horrors of war? She could not; she would not.</p>
+                            </div>
+                            <div class="story-block">
+                                <p>But war comes and goes as it wishes, and it would come suddenly for the Moon Elves one bloodstained dawn. The orc shock troops tore through the Aegis. But unlike previous attacks, the orcs seemed far more savage this time, as if they've been sent into a mindless bloodlust by dark magic. Black smoke permeated through the forest as the elves awoke to screams and the crackling of burning trees. Great pillars of smoke could be seen from the direction of the Tree of Life.</p>
+                                <p>War was here.</p>
+                                <div class="story-quote">"Run! Get out of the forest! Our home is lost, save yourselves!"</div>
+                                <p>Miya heard the desperate cries, and before she could act, most of her people were already fleeing in panic.</p>
+                                <div class="story-quote">"Brother... give me an answer!"</div>
+                                <p>Miya made one last plea to the Tree of Life as smoke enveloped her, hoping for salvation, but the tree remained silent amidst the scorched Earth.</p>
+                            </div>
+                            <div class="story-block">
+                                <p>Miya looked around at her home, the place where the first oracle emerged from the Tree of Life; the place where the elves first took root; the place where their branches grew into a great empire; the place where the last pure Moon Elves stood firm against the Abyss's corruption. This was their most sacred ground, blessed by the Moon Goddess herself, and Estes's hope for their future.</p>
+                                <div class="story-quote">"What is war..."</div>
+                                <p>She finally found her answer.</p>
+                                <div class="story-quote">"When we have been pushed to the brink of destruction and finally take up arms for our very survival, that is war. When we must defend our last home, the Moonlit Forest, at any cost, that is war."</div>
+                            </div>
+                            <div class="story-block">
+                                <p>The Moon Elves heard Miya's words and looked back to their home.</p>
+                                <div class="story-quote">"My people! We have suffered for too long... lived in a fear for too long. There is nowhere left for us to run. If the Moonlit Forest falls, then we will truly have lost everything. Who will stand with me one last time?"</div>
+                                <p>At first, a few dozen elven warriors stepped out from the trees. Then hundreds more followed, holding swords, spears, and bows. As they rushed to Miya's side, their silver hair shimmered like cascading moonlight upon the battlefield.</p>
+                                <p>The Tree of Life, too, answered Miya's call. Using its precious energy, the tree spread its roots in all directions to smother the raging fires, and reinvigorated the Moon Elves for a final counter attack.</p>
+                                <p>The Moon Elves rushed out from the trees and caught the Abyss legion completely off guard. They quickly gained the upper hand and pressed their attack until every invader was driven out of the Moonlit Forest. The surviving orcs came to their senses as their bloodlust subsided, and gained a newfound respect for the elves.</p>
+                                <div class="story-quote">"Peace, benevolence, and purity are what you wished for, but if we lose our home, our way of life, then all our efforts will be for naught. If war is already upon our doorstep, then we will meet it head on. We are prepared to sacrifice everything for our home. Give me the strength, courage and faith to protect our people, and our homeland!"</div>
+                            </div>
+                            <div class="story-block story-footer">
+                                <h4>Side Story</h4>
+                                <p>Check the article: <a href="../stories/time-of-lunar-eclipse.html">Time of Lunar Eclipse</a></p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <aside class="hero-infobox">
+                    <h4>Miya</h4>
+                    <p class="hero-infobox-subtitle">Moonlight Archer</p>
+                    <img src="../../../../images/games/mlbb/heroes/skins/miya-moonlight-archer.webp" alt="Miya portrait">
+                    <div class="infobox-list">
+                        <div>
+                            <span>Role</span>
+                            <strong><a href="../roles/marksman.html">Marksman</a></strong>
+                        </div>
+                        <div>
+                            <span>Specialities</span>
+                            <strong><a href="../specialities/finisher.html">Finisher</a><br><a href="../specialities/damage.html">Damage</a></strong>
+                        </div>
+                        <div>
+                            <span>Best Lane</span>
+                            <strong><a href="../lanes/gold-lane.html">Gold Lane</a></strong>
+                        </div>
+                        <div>
+                            <span>Price</span>
+                            <div class="price-column">
+                                <div class="price-item">
+                                    <img class="currency-icon" src="../../../../images/games/mlbb/currencies/bp.webp" alt="BP" width="20" height="20">
+                                    <strong>10800</strong>
+                                </div>
+                                <div class="price-item">
+                                    <img class="currency-icon" src="../../../../images/games/mlbb/currencies/ticket.webp" alt="Ticket" width="20" height="20">
+                                    <strong>399</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span>Skill Resource</span>
+                            <strong><a href="../resource.html">Mana</a></strong>
+                        </div>
+                        <div>
+                            <span>Damage Type</span>
+                            <strong><a href="../damage/physical.html">Physical</a></strong>
+                        </div>
+                        <div>
+                            <span>Basic Attack</span>
+                            <strong><a href="../range.html">Ranged</a></strong>
+                        </div>
+                        <div>
+                            <span>Alias</span>
+                            <strong>Moonlight Archer<br>Priestess of the Moon</strong>
+                        </div>
+                        <div>
+                            <span>Chinese Name</span>
+                            <strong>米娅 (mǐyà)</strong>
+                        </div>
+                        <div>
+                            <span>Internal Name</span>
+                            <strong>弓箭手 (gongjianshou, “archer”)</strong>
+                        </div>
+                        <div>
+                            <span>Birthday</span>
+                            <strong>September 6 (Virgo)</strong>
+                        </div>
+                        <div>
+                            <span>Birthplace</span>
+                            <strong>Moonlit Forest, <a href="../locations/azrya-woodlands.html">Azrya Woodlands</a></strong>
+                        </div>
+                        <div>
+                            <span>Age</span>
+                            <strong>Immortal</strong>
+                        </div>
+                        <div>
+                            <span>Gender</span>
+                            <strong>Female</strong>
+                        </div>
+                        <div>
+                            <span>Species</span>
+                            <strong>Moon elf</strong>
+                        </div>
+                        <div>
+                            <span>Occupation</span>
+                            <strong>Priestess</strong>
+                        </div>
+                        <div>
+                            <span>Weapons</span>
+                            <strong>Silver bow and arrows</strong>
+                        </div>
+                        <div>
+                            <span>Relationships</span>
+                            <strong><a href="estes.html">Estes</a> (brother)<br><a href="alucard.html">Alucard</a> (love interest)<br><a href="alice.html">Alice</a>, <a href="balmond.html">Balmond</a> (enemies)</strong>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- ============================================================== -->
+        <!-- TAB: COSMETICS                                                   -->
+        <!-- ============================================================== -->
+        <section class="hero-tab-content" id="tab-cosmetics">
+            <div class="cosmetics-grid">
+                <div class="wiki-section">
+                    <div class="section-header"><h3>Skins</h3></div>
+                    <div class="section-content">
+                        <div id="skins-container" class="cosmetics-gallery"></div>
+                    </div>
+                </div>
+                <div class="wiki-section">
+                    <div class="section-header"><h3>Painted Skins</h3></div>
+                    <div class="section-content">
+                        <div id="painted-skins-container" class="cosmetics-gallery"></div>
+                    </div>
+                </div>
+                <div class="wiki-section">
+                    <div class="section-header"><h3>Sacred Statues</h3></div>
+                    <div class="section-content">
+                        <div id="statues-container" class="cosmetics-gallery"></div>
+                    </div>
+                </div>
+                <div class="wiki-section">
+                    <div class="section-header"><h3>Icons</h3></div>
+                    <div class="section-content">
+                        <div id="icons-container" class="cosmetics-gallery"></div>
+                    </div>
+                </div>
+                <div class="wiki-section">
+                    <div class="section-header"><h3>Splash Art</h3></div>
+                    <div class="section-content">
+                        <div id="splash-art-container" class="cosmetics-gallery"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================== -->
+        <!-- TAB: AUDIO                                                       -->
+        <!-- ============================================================== -->
+        <section class="hero-tab-content" id="tab-audio">
+            <div class="wiki-section">
+                <div class="section-content">
+                    <!-- Language tabs -->
+                    <div class="sub-tabs" id="audio-lang-tabs">
+                        <button class="sub-tab-btn active" data-lang="en">English</button>
+                        <button class="sub-tab-btn" data-lang="id">Indonesian</button>
+                        <button class="sub-tab-btn" data-lang="jp">Japanese</button>
+                        <button class="sub-tab-btn" data-lang="es">Spanish</button>
+                        <button class="sub-tab-btn" data-lang="cn">Chinese</button>
+                    </div>
+
+                    <!-- English voice lines -->
+                    <div id="audio-lang-en" class="lang-content active">
+                        <!-- Skin voice tabs -->
+                        <div class="voice-tabs" id="audio-skin-tabs-en">
+                            <button class="voice-tab-btn active" data-skin="default">Default</button>
+                            <button class="voice-tab-btn" data-skin="christmas">Christmas Carnival</button>
+                            <button class="voice-tab-btn" data-skin="modena">Modena Butterfly</button>
+                            <button class="voice-tab-btn" data-skin="doom">Doom Catalyst</button>
+                            <button class="voice-tab-btn" data-skin="atomic">Atomic Pop Miya</button>
+                        </div>
+
+                        <!-- Default skin categories -->
+                        <div id="audio-skin-en-default" class="voice-content active">
+                            <div class="audio-category-tabs" id="audio-cat-tabs-en-default">
+                                <button class="audio-cat-btn active" data-cat="selection">Selection</button>
+                                <button class="audio-cat-btn" data-cat="movement">Movement</button>
+                                <button class="audio-cat-btn" data-cat="interaction">Interaction</button>
+                                <button class="audio-cat-btn" data-cat="skill">Skill</button>
+                                <button class="audio-cat-btn" data-cat="recall">Recall</button>
+                                <button class="audio-cat-btn" data-cat="death">Death</button>
+                            </div>
+                            <div id="audio-en-default-selection"    class="audio-cat-content active"></div>
+                            <div id="audio-en-default-movement"     class="audio-cat-content"></div>
+                            <div id="audio-en-default-interaction"  class="audio-cat-content"></div>
+                            <div id="audio-en-default-skill"        class="audio-cat-content"></div>
+                            <div id="audio-en-default-recall"       class="audio-cat-content"></div>
+                            <div id="audio-en-default-death"        class="audio-cat-content"></div>
+                        </div>
+
+                        <!-- Christmas skin categories -->
+                        <div id="audio-skin-en-christmas" class="voice-content">
+                            <div class="audio-category-tabs" id="audio-cat-tabs-en-christmas">
+                                <button class="audio-cat-btn active" data-cat="selection">Selection</button>
+                            </div>
+                            <div id="audio-en-christmas-selection" class="audio-cat-content active"></div>
+                        </div>
+
+                        <!-- Other skins (no data yet — show empty state) -->
+                        <div id="audio-skin-en-modena" class="voice-content">
+                            <p class="empty-state">No voice lines available for this skin yet.</p>
+                        </div>
+                        <div id="audio-skin-en-doom" class="voice-content">
+                            <p class="empty-state">No voice lines available for this skin yet.</p>
+                        </div>
+                        <div id="audio-skin-en-atomic" class="voice-content">
+                            <p class="empty-state">No voice lines available for this skin yet.</p>
+                        </div>
+                    </div>
+
+                    <!-- Other languages (no data yet) -->
+                    <div id="audio-lang-id" class="lang-content">
+                        <p class="empty-state">No voice lines available for this language yet.</p>
+                    </div>
+                    <div id="audio-lang-jp" class="lang-content">
+                        <p class="empty-state">No voice lines available for this language yet.</p>
+                    </div>
+                    <div id="audio-lang-es" class="lang-content">
+                        <p class="empty-state">No voice lines available for this language yet.</p>
+                    </div>
+                    <div id="audio-lang-cn" class="lang-content">
+                        <p class="empty-state">No voice lines available for this language yet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================== -->
+        <!-- TAB: MASTERY CODE                                               -->
+        <!-- ============================================================== -->
+        <section class="hero-tab-content" id="tab-mastery">
+            <div class="wiki-section">
+                <div class="section-header"><h3>Mastery Code</h3></div>
+                <div class="section-content">
+                    <div id="mastery-container"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================== -->
+        <!-- TAB: PATCH HISTORY                                              -->
+        <!-- ============================================================== -->
+        <section class="hero-tab-content" id="tab-patch">
+            <div class="wiki-section">
+                <div class="section-header"><h3>Patch History</h3></div>
+                <div class="section-content">
+                    <div id="patch-history-container"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================== -->
+        <!-- TAB: ARCHIVES                                                    -->
+        <!-- ============================================================== -->
+        <section class="hero-tab-content" id="tab-archives">
+            <div class="wiki-section">
+                <div class="section-content">
+                    <!-- Archive section tabs -->
+                    <div class="sub-tabs" id="archive-section-tabs">
+                        <button class="sub-tab-btn active" data-archive="abilities">Previous Abilities</button>
+                        <button class="sub-tab-btn" data-archive="skins">Previous Skins</button>
+                        <button class="sub-tab-btn" data-archive="lore">Previous Lore</button>
+                    </div>
+
+                    <!-- -------------------------------------------------- -->
+                    <!-- ARCHIVE: PREVIOUS ABILITIES                          -->
+                    <!-- Same card design as heroAbilities.                   -->
+                    <!-- -------------------------------------------------- -->
+                    <div id="archive-abilities" class="archive-content active">
+                        <div id="archive-abilities-container"></div>
+                    </div>
+
+                    <!-- -------------------------------------------------- -->
+                    <!-- ARCHIVE: PREVIOUS SKINS                              -->
+                    <!-- Simple gallery: image + name only.                   -->
+                    <!-- -------------------------------------------------- -->
+                    <div id="archive-skins" class="archive-content">
+                        <div id="archive-skins-container" class="cosmetics-gallery"></div>
+                    </div>
+
+                    <!-- -------------------------------------------------- -->
+                    <!-- ARCHIVE: PREVIOUS LORE                               -->
+                    <!-- Same card design as mastery code, without task.      -->
+                    <!-- -------------------------------------------------- -->
+                    <div id="archive-lore" class="archive-content">
+                        <div id="archive-lore-container"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================== -->
+        <!-- TAB: STRATEGY                                                    -->
+        <!-- ============================================================== -->
+        <section class="hero-tab-content" id="tab-strategy">
+            <div class="wiki-section">
+                <div class="section-content">
+                    <!-- Strategy sub-tabs -->
+                    <div class="sub-tabs" id="strategy-tabs">
+                        <button class="sub-tab-btn active" data-strategy="recommendations">Recommendations</button>
+                        <button class="sub-tab-btn" data-strategy="pros-cons">Pros & Cons</button>
+                        <button class="sub-tab-btn" data-strategy="tactics">Tactics</button>
+                        <button class="sub-tab-btn" data-strategy="counters">Counters</button>
+                    </div>
+
+                    <div id="strategy-recommendations" class="strategy-content active"></div>
+                    <div id="strategy-pros-cons" class="strategy-content"></div>
+                    <div id="strategy-tactics" class="strategy-content"></div>
+                    <div id="strategy-counters" class="strategy-content"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../../../../js/script.js"></script>
+    <script src="../../../../js/components.js"></script>
+    <script src="../../../../js/games/mlbb/heroes/miya.js"></script>
+    <script>
+    // ======================================================================
+    // UTILITY: generic tab switcher
+    // Activates one button (by matching data-attribute) and its paired panel.
+    // ======================================================================
+    function switchTabs(buttons, panels, activeValue, attrName) {
+        buttons.forEach(btn => {
+            btn.classList.toggle('active', btn.dataset[attrName] === activeValue);
+        });
+        panels.forEach(panel => {
+            panel.classList.toggle('active', panel.id.endsWith('-' + activeValue) ||
+                panel.id === activeValue);
+        });
+    }
+
+    // ======================================================================
+    // MAIN HERO TABS
+    // ======================================================================
+    const heroTabBtns     = document.querySelectorAll('.hero-tab-btn');
+    const heroTabContents = document.querySelectorAll('.hero-tab-content');
+
+    function activateHeroTab(tabName) {
+        heroTabBtns.forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.tab === tabName);
+        });
+        heroTabContents.forEach(content => {
+            content.classList.toggle('active', content.id === 'tab-' + tabName);
+        });
+    }
+
+    heroTabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const tab = btn.dataset.tab;
+            activateHeroTab(tab);
+            localStorage.setItem('activeHeroTab', tab);
+        });
+    });
+
+    // ======================================================================
+    // MAIN AUDIO TABS
+    // ======================================================================
+
+    // Language switch
+    document.querySelectorAll('#audio-lang-tabs .sub-tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.dataset.lang;
+            document.querySelectorAll('#audio-lang-tabs .sub-tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.querySelectorAll('#tab-audio .lang-content').forEach(c => c.classList.remove('active'));
+            const langEl = document.getElementById('audio-lang-' + lang);
+            if (langEl) langEl.classList.add('active');
+        });
+    });
+
+    // Skin switch (per language — delegate within each voice-tabs group)
+    document.querySelectorAll('#tab-audio .voice-tabs').forEach(tabGroup => {
+        tabGroup.querySelectorAll('.voice-tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const skin = btn.dataset.skin;
+                // Deactivate siblings in this group only
+                tabGroup.querySelectorAll('.voice-tab-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                // Find the parent lang-content and toggle its voice-content children
+                const langContent = tabGroup.closest('.lang-content');
+                if (langContent) {
+                    langContent.querySelectorAll('.voice-content').forEach(c => c.classList.remove('active'));
+                    const skinEl = langContent.querySelector('#audio-skin-' + langContent.id.replace('audio-lang-', '') + '-' + skin);
+                    if (skinEl) skinEl.classList.add('active');
+                }
+            });
+        });
+    });
+
+    // Category switch (per skin — delegate within each audio-category-tabs group)
+    document.querySelectorAll('#tab-audio .audio-category-tabs').forEach(tabGroup => {
+        tabGroup.querySelectorAll('.audio-cat-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const cat = btn.dataset.cat;
+                tabGroup.querySelectorAll('.audio-cat-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                // Find the parent voice-content and toggle its audio-cat-content children
+                const voiceContent = tabGroup.closest('.voice-content');
+                if (voiceContent) {
+                    voiceContent.querySelectorAll('.audio-cat-content').forEach(c => c.classList.remove('active'));
+                    // The container ID follows the pattern audio-{lang}-{skin}-{cat}
+                    // Derive lang and skin from the voice-content's ID: audio-skin-{lang}-{skin}
+                    const match = voiceContent.id.match(/^audio-skin-(\w+)-(\w+)$/);
+                    if (match) {
+                        const catEl = document.getElementById('audio-' + match[1] + '-' + match[2] + '-' + cat);
+                        if (catEl) catEl.classList.add('active');
+                        renderAudioList(match[1], match[2], cat);
+                    }
+                }
+            });
+        });
+    });
+
+    // ======================================================================
+    // ARCHIVE TABS
+    // ======================================================================
+
+    // Section tabs (lines / abilities / skins / lore)
+    document.querySelectorAll('#archive-section-tabs .sub-tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('#archive-section-tabs .sub-tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.querySelectorAll('#tab-archives .archive-content').forEach(c => c.classList.remove('active'));
+            const panel = document.getElementById('archive-' + btn.dataset.archive);
+            if (panel) panel.classList.add('active');
+        });
+    });
+
+    // ======================================================================
+    // STRATEGY TABS
+    // ======================================================================
+    document.querySelectorAll('#strategy-tabs .sub-tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const target = btn.dataset.strategy;
+            document.querySelectorAll('#strategy-tabs .sub-tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.querySelectorAll('#tab-strategy .strategy-content').forEach(c => c.classList.remove('active'));
+            const content = document.getElementById('strategy-' + target);
+            if (content) content.classList.add('active');
+        });
+    });
+
+    // ======================================================================
+    // INIT: restore saved tab on load
+    // ======================================================================
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedTab = localStorage.getItem('activeHeroTab');
+        activateHeroTab(savedTab || 'main');
+    });
+    </script>
+</body>
+</html>

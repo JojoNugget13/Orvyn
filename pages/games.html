@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games - Project Ello</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <main class="container">
+        <div class="page-header">
+            <button class="back-btn" onclick="navigateTo('../index.html')">← Back to Home</button>
+            <h2>Games</h2>
+            <p class="subtitle">Explore video games & their details</p>
+        </div>
+
+        <div class="filter-section">
+            <div class="filter-controls">
+                <input type="text" id="gameSearch" placeholder="Search games..." class="filter-input">
+                <select id="sortBy" class="filter-select">
+                    <option value="name">Sort by Name</option>
+                    <option value="recent">Recently Added</option>
+                    <option value="genre">Sort by Genre</option>
+                </select>
+            </div>
+        </div>
+
+        <section class="games-section">
+            <div class="category-grid">
+                
+                <!-- Mobile Legends: Bang Bang -->
+                <div class="game-card" data-game="mlbb" onclick="navigateTo('games/mobile-legends.html')">
+                    <div class="game-image">
+                        <img src="../images/games/mlbb-logo.webp" alt="Mobile Legends: Bang Bang" class="game-logo">
+                    </div>
+                    <div class="game-content">
+                        <h3>Mobile Legends: Bang Bang</h3>
+                        <p class="game-description">5v5 MOBA battle arena game</p>
+                        <div class="game-meta">
+                            <span class="meta-tag">MOBA</span>
+                            <span class="meta-tag">Mobile</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <div class="feedback-link">
+            <p>Found a bug or want to suggest something? <a href="feedback.html">Submit feedback here</a></p>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/games.js"></script>
+    <script src="../js/components.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

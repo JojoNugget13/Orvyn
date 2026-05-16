@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup Profile - Project Ello</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo" onclick="navigateTo('../index.html')" style="cursor: pointer;">Project Ello</h1>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="setup-container">
+            <div class="setup-box">
+                <h2>Complete Your Profile</h2>
+                <p class="setup-subtitle">Let's personalize your account</p>
+
+                <form id="setupProfileForm" onsubmit="handleProfileSetup(event)">
+                    
+                    <!-- Username -->
+                    <div class="form-group">
+                        <label for="username">Username *</label>
+                        <input type="text" id="username" name="username" placeholder="Choose a username" required>
+                        <small id="usernameError" class="error-message"></small>
+                        <small>This will be your unique identifier</small>
+                    </div>
+
+                    <!-- Profile Picture -->
+                    <div class="form-group">
+                        <label>Profile Picture</label>
+                        <div class="upload-section">
+                            <input type="file" id="profilePic" name="profilePic" accept="image/*" onchange="previewProfilePic(event)">
+                            <div class="preview-container">
+                                <div id="pfpPreview" class="pfp-preview">
+                                    <span id="pfpLetter"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="color-picker">
+                            <label>Or choose a color:</label>
+                            <div class="color-options">
+                                <button type="button" class="color-btn" data-color="#ef4444" style="background: #ef4444;" onclick="selectPfpColor('#ef4444')"></button>
+                                <button type="button" class="color-btn" data-color="#f97316" style="background: #f97316;" onclick="selectPfpColor('#f97316')"></button>
+                                <button type="button" class="color-btn" data-color="#eab308" style="background: #eab308;" onclick="selectPfpColor('#eab308')"></button>
+                                <button type="button" class="color-btn" data-color="#22c55e" style="background: #22c55e;" onclick="selectPfpColor('#22c55e')"></button>
+                                <button type="button" class="color-btn" data-color="#3b82f6" style="background: #3b82f6;" onclick="selectPfpColor('#3b82f6')"></button>
+                                <button type="button" class="color-btn" data-color="#a855f7" style="background: #a855f7;" onclick="selectPfpColor('#a855f7')"></button>
+                                <button type="button" class="color-btn" data-color="#000000" style="background: #000000;" onclick="selectPfpColor('#000000')"></button>
+                                <button type="button" class="color-btn" data-color="#ffffff" style="background: #ffffff; border: 2px solid #475569;" onclick="selectPfpColor('#ffffff')"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Banner -->
+                    <div class="form-group">
+                        <label>Profile Banner</label>
+                        <div class="upload-section">
+                            <input type="file" id="bannerPic" name="bannerPic" accept="image/*" onchange="previewBanner(event)">
+                            <div class="banner-preview-container">
+                                <div id="bannerPreview" class="banner-preview"></div>
+                            </div>
+                        </div>
+                        <div class="color-picker">
+                            <label>Or choose a color:</label>
+                            <div class="color-options">
+                                <button type="button" class="color-btn" data-color="#ef4444" style="background: #ef4444;" onclick="selectBannerColor('#ef4444')"></button>
+                                <button type="button" class="color-btn" data-color="#f97316" style="background: #f97316;" onclick="selectBannerColor('#f97316')"></button>
+                                <button type="button" class="color-btn" data-color="#eab308" style="background: #eab308;" onclick="selectBannerColor('#eab308')"></button>
+                                <button type="button" class="color-btn" data-color="#22c55e" style="background: #22c55e;" onclick="selectBannerColor('#22c55e')"></button>
+                                <button type="button" class="color-btn" data-color="#3b82f6" style="background: #3b82f6;" onclick="selectBannerColor('#3b82f6')"></button>
+                                <button type="button" class="color-btn" data-color="#a855f7" style="background: #a855f7;" onclick="selectBannerColor('#a855f7')"></button>
+                                <button type="button" class="color-btn" data-color="#000000" style="background: #000000;" onclick="selectBannerColor('#000000')"></button>
+                                <button type="button" class="color-btn" data-color="#ffffff" style="background: #ffffff; border: 2px solid #475569;" onclick="selectBannerColor('#ffffff')"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Complete Setup</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Project Ello - The source for everything</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/profile-setup.js"></script>
+</body>
+</html>

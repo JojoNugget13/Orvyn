@@ -1,0 +1,299 @@
+.navbar {
+    background: var(--surface);
+    border-bottom: 2px solid var(--primary-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.search-bar {
+    display: flex;
+    gap: 0;
+    flex: 1;
+    max-width: 500px;
+    position: relative;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 0.875rem 1.25rem;
+    padding-right: 3.5rem;
+    background: var(--surface-light);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-family: 'Unbounded', sans-serif;
+    transition: all 0.3s;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: var(--surface);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.search-bar input::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.7;
+}
+
+.search-bar button {
+    position: absolute;
+    right: 0.375rem;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.625rem 1.25rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-family: 'Unbounded', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.search-bar button:hover {
+    background: var(--primary-dark);
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.4);
+}
+
+.search-bar button:active {
+    transform: translateY(-50%) scale(0.98);
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.nav-btn {
+    padding: 0.75rem 1.25rem;
+    background: transparent;
+    color: var(--text-primary);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    font-weight: 600;
+    font-family: 'Unbounded', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+.nav-btn:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .search-bar {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .search-bar input {
+        font-size: 0.95rem;
+    }
+    
+    .search-bar button {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .nav-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .nav-btn {
+        flex: 1;
+    }
+}
+
+/* User Dropdown */
+.nav-profile-dropdown {
+    position: relative;
+}
+
+.nav-profile-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 1rem;
+    background: var(--surface-light);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Unbounded', sans-serif;
+}
+
+.nav-profile-btn:hover {
+    border-color: var(--primary-color);
+    background: var(--surface);
+}
+
+.nav-profile-btn.active .nav-profile-arrow {
+    transform: rotate(180deg);
+    color: var(--primary-color);
+}
+
+.nav-profile-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: white;
+    overflow: hidden;
+}
+
+.nav-profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nav-profile-name {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.nav-profile-arrow {
+    color: var(--text-secondary);
+    font-size: 0.7rem;
+    transition: transform 0.3s;
+}
+
+.nav-profile-btn:hover .nav-profile-arrow {
+    transform: translateY(2px);
+}
+
+.nav-profile-menu {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    background: rgba(15, 23, 42, 0.96);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 16px;
+    min-width: 220px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 15px rgba(99, 102, 241, 0.05);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px) scale(0.95);
+    transform-origin: top right;
+    transition: all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 1000;
+    overflow-y: auto !important;
+    max-height: 280px !important; /* Forces scrollbar strictly after 7 items */
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    padding: 10px;
+    overscroll-behavior: contain;
+    box-sizing: border-box;
+}
+
+/* Custom scrollbar for the dropdown list */
+.nav-profile-menu::-webkit-scrollbar {
+    width: 6px;
+}
+
+.nav-profile-menu::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-profile-menu::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+.nav-profile-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.nav-profile-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 12px 18px;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 500;
+    border-radius: 12px;
+    border: none;
+    outline: none !important;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+.nav-profile-item:hover {
+    background: rgba(99, 102, 241, 0.18);
+    color: var(--primary-color);
+    padding-left: 24px;
+    box-shadow: -4px 0 0 var(--primary-color);
+}
+
+.nav-profile-item span {
+    font-size: 1.2rem;
+}
+
+@keyframes dropdownFade {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .nav-profile-name {
+        display: none;
+    }
+
+    .nav-profile-arrow {
+        display: none;
+    }
+
+    .nav-profile-btn {
+        padding: 0.5rem;
+    }
+}

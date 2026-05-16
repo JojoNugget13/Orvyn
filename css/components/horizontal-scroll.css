@@ -1,0 +1,50 @@
+/* Horizontal Scrolling Component - Project Ello */
+
+/* Standard container for horizontal scrolling */
+.horizontal-scroll-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) var(--surface);
+    padding-bottom: 8px;
+}
+
+/* Content wrapper that prevents wrapping and allows expansion */
+.horizontal-scroll-content {
+    display: flex;
+    min-width: max-content;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+/* Custom Scrollbar Styles for Webkit (Chrome, Safari, Edge) */
+.horizontal-scroll-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar-track {
+    background: var(--surface);
+    border-radius: 10px;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 10px;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+    box-shadow: 0 0 8px rgba(99, 102, 241, 0.4);
+}
+
+/* Optional utility to hide scrollbar but keep functionality */
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}

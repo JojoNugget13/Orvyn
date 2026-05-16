@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Project Ello</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <main class="container profile-page">
+        <div class="page-header">
+            <button class="back-btn" onclick="navigateTo(getHomePath())">← Back to Home</button>
+            <h2>Your Profile</h2>
+            <p class="subtitle">Everything about your Project Ello identity</p>
+        </div>
+
+        <section class="profile-shell hidden" id="profileShell">
+            <div class="profile-banner" id="profileBanner">
+                <div class="profile-banner-shade"></div>
+            </div>
+
+            <div class="profile-card">
+                <div class="profile-avatar" id="profileAvatar">
+                    <span id="profileAvatarLetter">?</span>
+                </div>
+
+                <div class="profile-main">
+                    <div class="profile-title">
+                        <h3 id="profileName">Unknown User</h3>
+                        <span class="role-badge" id="profileRole">User</span>
+                    </div>
+                    <p class="profile-handle" id="profileHandle">@username</p>
+                </div>
+            </div>
+
+            <div class="profile-details">
+                <div class="detail-grid">
+                    <div class="detail-card">
+                        <h4>Account</h4>
+                        <ul class="detail-list">
+                            <li><span>Email</span><span id="profileEmail">-</span></li>
+                            <li><span>Provider</span><span id="profileProvider">-</span></li>
+                            <li><span>Member Since</span><span id="profileJoined">-</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-card">
+                        <h4>Status</h4>
+                        <p class="detail-note" id="profileStatus">Ready to explore Project Ello.</p>
+                        <div class="detail-chip" id="profileRoleChip">Standard Member</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-empty hidden" id="profileEmpty">
+            <h3>You’re not signed in</h3>
+            <p>Log in to see your profile, banner, and account details.</p>
+            <button class="nav-btn" id="profileLoginBtn">Log In / Sign Up</button>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/components.js"></script>
+    <script src="../js/profile.js"></script>
+</body>
+</html>

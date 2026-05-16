@@ -1,0 +1,209 @@
+.profile-page {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.profile-shell {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.profile-banner {
+    height: 230px;
+    background: linear-gradient(135deg, #1e293b, var(--primary-color));
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.profile-banner-shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.1), rgba(15, 23, 42, 0.75));
+}
+
+.profile-card {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.5rem;
+    padding: 0 2rem 2rem;
+    margin-top: -70px;
+    position: relative;
+}
+
+.profile-avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 5px solid var(--background);
+    background: var(--surface-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+.profile-avatar span {
+    text-transform: uppercase;
+}
+
+.profile-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.profile-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.profile-title h3 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.profile-handle {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.role-badge {
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    background: rgba(99, 102, 241, 0.2);
+    color: var(--primary-color);
+    border: 1px solid rgba(99, 102, 241, 0.35);
+}
+
+.role-badge.owner {
+    background: rgba(245, 158, 11, 0.2);
+    color: #f59e0b;
+    border-color: rgba(245, 158, 11, 0.4);
+}
+
+.role-badge.moderator {
+    background: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+    border-color: rgba(16, 185, 129, 0.4);
+}
+
+.profile-details {
+    padding: 0 2rem 2.5rem;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.detail-card {
+    background: var(--surface-light);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.detail-card h4 {
+    font-size: 1.1rem;
+}
+
+.detail-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.detail-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.detail-list li span:last-child {
+    color: var(--text-primary);
+    font-weight: 600;
+    text-align: right;
+}
+
+.detail-note {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.detail-chip {
+    align-self: flex-start;
+    padding: 0.4rem 0.9rem;
+    border-radius: 8px;
+    background: rgba(99, 102, 241, 0.15);
+    color: var(--text-primary);
+    border: 1px solid rgba(99, 102, 241, 0.4);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.profile-empty {
+    text-align: center;
+    padding: 3rem 2rem;
+    border: 1px dashed var(--border);
+    border-radius: 16px;
+    background: rgba(30, 41, 59, 0.4);
+}
+
+.profile-empty h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+}
+
+.profile-empty p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .profile-card {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: -90px;
+    }
+
+    .profile-avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-title h3 {
+        font-size: 1.6rem;
+    }
+
+    .detail-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

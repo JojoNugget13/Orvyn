@@ -1,0 +1,134 @@
+[
+  {
+    "url": "/pages/cards.html",
+    "title": "TCG Cards",
+    "desc": "",
+    "category": "Pages"
+  },
+  {
+    "url": "/pages/changelog.html",
+    "title": "Changelog",
+    "desc": "",
+    "category": "Pages"
+  },
+  {
+    "url": "/pages/feedback.html",
+    "title": "Feedback",
+    "desc": "",
+    "category": "Pages"
+  },
+  {
+    "url": "/pages/games/mlbb/heroes/balmond.html",
+    "title": "Balmond",
+    "desc": "",
+    "category": "Heroes"
+  },
+  {
+    "url": "/pages/games/mlbb/heroes/miya.html",
+    "title": "Miya",
+    "desc": "",
+    "category": "Heroes"
+  },
+  {
+    "url": "/pages/games/mlbb/heroes.html",
+    "title": "Heroes",
+    "desc": "",
+    "category": "MLBB"
+  },
+  {
+    "url": "/pages/games/mlbb/list-of-heroes.html",
+    "title": "List of Heroes",
+    "desc": "",
+    "category": "MLBB"
+  },
+  {
+    "url": "/pages/games/mobile-legends.html",
+    "title": "Mobile Legends: Bang Bang",
+    "desc": "",
+    "category": "Games"
+  },
+  {
+    "url": "/pages/games.html",
+    "title": "Games",
+    "desc": "",
+    "category": "Pages"
+  },
+  {
+    "url": "/pages/login.html",
+    "title": "Login",
+    "desc": "",
+    "category": "Pages"
+  },
+  {
+    "url": "/pages/profile.html",
+    "title": "Profile",
+    "desc": "",
+    "category": "Pages"
+  },
+  {
+    "url": "/pages/search.html",
+    "title": "Search Results",
+    "desc": "",
+    "category": "Pages"
+  },
+  {
+    "url": "/pages/setup-profile.html",
+    "title": "Setup Profile",
+    "desc": "",
+    "category": "Pages"
+  },
+  {
+    "url": "/pages/signup.html",
+    "title": "Sign Up",
+    "desc": "",
+    "category": "Pages"
+  },
+  {
+    "url": "/pages/sports/football/europe/continental/ucl/ucl20242025.html",
+    "title": "UCL 24/25 Season",
+    "desc": "",
+    "category": "Pages"
+  },
+  {
+    "url": "/pages/sports/football/europe/continental/ucl.html",
+    "title": "Champions League",
+    "desc": "",
+    "category": "Pages"
+  },
+  {
+    "url": "/pages/sports/football/europe/continental.html",
+    "title": "Continental",
+    "desc": "",
+    "category": "Pages"
+  },
+  {
+    "url": "/pages/sports/football/europe.html",
+    "title": "Europe",
+    "desc": "",
+    "category": "Pages"
+  },
+  {
+    "url": "/pages/sports/football.html",
+    "title": "Football",
+    "desc": "",
+    "category": "Pages"
+  },
+  {
+    "url": "/pages/sports.html",
+    "title": "Sports",
+    "desc": "",
+    "category": "Pages"
+  },
+  {
+    "url": "/pages/tcg/pokemon-tcg/ascended-heroes.html",
+    "title": "Ascended Heroes",
+    "desc": "",
+    "category": "Pages"
+  },
+  {
+    "url": "/pages/tcg/pokemon-tcg.html",
+    "title": "Pokémon TCG",
+    "desc": "",
+    "category": "Pages"
+  }
+]

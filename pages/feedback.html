@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Project Ello</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <main class="container">
+        <div class="page-header">
+            <button class="back-btn" onclick="navigateTo('../index.html')">← Back to Home</button>
+            <h2>Submit Feedback</h2>
+            <p class="subtitle">Help us improve Project Ello</p>
+        </div>
+
+        <section class="feedback-section">
+            <div class="feedback-container">
+                <p class="feedback-intro">Found a bug? Want to suggest an edit or new page? Let us know!</p>
+                
+                <form id="feedbackForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-group">
+                        <label for="feedbackType">Type</label>
+                        <select id="feedbackType" name="type" required>
+                            <option value="">Select type...</option>
+                            <option value="bug">Bug Report</option>
+                            <option value="edit">Suggest Edit</option>
+                            <option value="new-page">Request New Page</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="feedbackTitle">Title</label>
+                        <input type="text" id="feedbackTitle" name="title" placeholder="Brief summary..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="feedbackDetails">Details</label>
+                        <textarea id="feedbackDetails" name="details" rows="5" placeholder="Describe the issue, edit, or new page request..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="feedbackImage">Upload Image (Optional)</label>
+                        <input type="file" id="feedbackImage" name="image" accept="image/*">
+                        <small>Screenshots, mockups, or reference images</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="feedbackEmail">Your Email (Optional)</label>
+                        <input type="email" id="feedbackEmail" name="email" placeholder="your@email.com">
+                        <small>In case we need to follow up</small>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Feedback</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/components.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

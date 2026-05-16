@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascended Heroes - Pokémon TCG - Project Ello</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <main class="container">
+        <div class="page-header">
+            <button class="back-btn" onclick="navigateTo('../pokemon-tcg.html')">← Back to Sets</button>
+            <h2>Ascended Heroes</h2>
+            <p class="subtitle">Mega Evolution Series</p>
+        </div>
+
+        <!-- Set Information -->
+        <section class="set-info">
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-label">Series</div>
+                    <div class="info-value">Mega Evolution</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-label">Release Date</div>
+                    <div class="info-value">January 30, 2026</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-label">Cards</div>
+                    <div class="info-value">217 + 78 Secret</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Controls -->
+        <div class="controls-section">
+            <div class="filter-controls">
+                <input type="text" id="cardSearch" placeholder="Search cards..." class="filter-input">
+                <select id="sortBy" class="filter-select">
+                    <option value="number">Sort by Number</option>
+                    <option value="name">Sort by Name</option>
+                    <option value="rarity">Sort by Rarity</option>
+                    <option value="artist">Sort by Artist</option>
+                </select>
+            </div>
+            
+            <div class="view-toggle">
+                <button class="toggle-btn active" id="gridViewBtn" onclick="switchView('grid')">
+                    <span>⊞</span> Grid
+                </button>
+                <button class="toggle-btn" id="listViewBtn" onclick="switchView('list')">
+                    <span>☰</span> List
+                </button>
+            </div>
+        </div>
+
+        <!-- Cards Display -->
+        <section class="cards-display">
+            <div id="cardsContainer" class="cards-grid">
+                <!-- Cards will be loaded dynamically via JavaScript -->
+            </div>
+        </section>
+
+        <div class="feedback-link">
+            <p>Found a bug or want to suggest something? <a href="../../../feedback.html">Submit feedback here</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Project Ello - The source for everything</p>
+        </div>
+    </footer>
+
+    <script src="../../../js/script.js"></script>
+    <script src="../../../js/tcg/pokemon/ascended-heroes.js"></script>
+    <script src="../../../js/components.js"></script>
+</body>
+</html>

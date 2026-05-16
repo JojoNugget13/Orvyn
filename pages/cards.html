@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCG Cards - Project Ello</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <main class="container">
+        <div class="page-header">
+            <button class="back-btn" onclick="navigateTo('../index.html')">← Back to Home</button>
+            <h2>Trading Card Game Cards</h2>
+            <p class="subtitle">Browse trading card games by category</p>
+        </div>
+
+        <div class="filter-section">
+            <div class="filter-controls">
+                <input type="text" id="cardSearch" placeholder="Search within cards..." class="filter-input">
+                <select id="sortBy" class="filter-select">
+                    <option value="name">Sort by Name</option>
+                    <option value="recent">Recently Added</option>
+                    <option value="count">Card Count</option>
+                </select>
+            </div>
+        </div>
+
+        <section class="tcg-categories">
+            <div class="category-grid">
+                
+                <!-- Pokémon TCG -->
+                <div class="tcg-card" data-tcg="pokemon" onclick="navigateTo('tcg/pokemon-tcg.html')">
+                    <div class="tcg-image">
+                        <img src="../images/logos/pokemon-logo.webp" alt="Pokémon TCG" class="tcg-logo">
+                    </div>
+                    <div class="tcg-content">
+                        <h3>Pokémon TCG</h3>
+                        <p class="tcg-description">Gotta catch 'em all! You can collect them too.</p>
+                        <div class="tcg-stats">
+                            <span class="stat-item">
+                                <strong>0</strong>
+                                <span>cards</span>
+                            </span>
+                            <span class="stat-item">
+                                <strong>0</strong>
+                                <span>sets</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Yu-Gi-Oh -->
+                <div class="tcg-card" data-tcg="yugioh" onclick="navigateTo('tcg/yugioh.html')">
+                    <div class="tcg-image">
+                        <img src="../images/logos/yugioh-logo.webp" alt="Yu-Gi-Oh!" class="tcg-logo">
+                    </div>
+                    <div class="tcg-content">
+                        <h3>Yu-Gi-Oh!</h3>
+                        <p class="tcg-description">It's time to duel! Check out all monsters, spells and traps!</p>
+                        <div class="tcg-stats">
+                            <span class="stat-item">
+                                <strong>0</strong>
+                                <span>cards</span>
+                            </span>
+                            <span class="stat-item">
+                                <strong>0</strong>
+                                <span>sets</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Magic: The Gathering -->
+                <div class="tcg-card" data-tcg="mtg" onclick="navigateTo('tcg/mtg.html')">
+                    <div class="tcg-image">
+                        <img src="../images/logos/mtg-logo.webp" alt="Magic: The Gathering" class="tcg-logo">
+                    </div>
+                    <div class="tcg-content">
+                        <h3>Magic: The Gathering</h3>
+                        <p class="tcg-description">Explore MTG's multiverse at your own pace.</p>
+                        <div class="tcg-stats">
+                            <span class="stat-item">
+                                <strong>0</strong>
+                                <span>cards</span>
+                            </span>
+                            <span class="stat-item">
+                                <strong>0</strong>
+                                <span>sets</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lorcana -->
+                <div class="tcg-card" data-tcg="lorcana" onclick="navigateTo('tcg/lorcana.html')">
+                    <div class="tcg-image">
+                        <img src="../images/logos/lorcana-logo.webp" alt="Lorcana" class="tcg-logo">
+                    </div>
+                    <div class="tcg-content">
+                        <h3>Lorcana</h3>
+                        <p class="tcg-description">Your favorite Disney characters between your fingers.</p>
+                        <div class="tcg-stats">
+                            <span class="stat-item">
+                                <strong>0</strong>
+                                <span>cards</span>
+                            </span>
+                            <span class="stat-item">
+                                <strong>0</strong>
+                                <span>sets</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section class="quick-stats">
+    <h3>Collection Overview</h3>
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-number" id="totalCards">0</div>
+            <div class="stat-label">Total Cards</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number" id="totalSets">0</div>
+            <div class="stat-label">Total Sets</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">4</div>
+            <div class="stat-label">TCG Games</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number" id="recentCards">0</div>
+            <div class="stat-label">Added This Month</div>
+        </div>
+    </div>
+</section>
+
+<section class="sets-preview">
+    <div class="sets-grid">
+        
+        <!-- Last Added Sets -->
+        <div class="sets-section">
+            <h3>Last Added Sets</h3>
+            <div class="sets-container">
+                <p class="empty-state">No sets added yet. Start building your collection!</p>
+            </div>
+        </div>
+
+        <!-- Upcoming Sets -->
+        <div class="sets-section">
+            <h3>Upcoming Sets</h3>
+            <div class="sets-container">
+                <p class="empty-state">No upcoming sets tracked. Add release dates to stay updated!</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="feedback-link">
+    <p>Found a bug or want to suggest something? <a href="feedback.html">Submit feedback here</a></p>
+</div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/cards.js"></script>
+    <script src="../js/components.js"></script>
+</body>
+</html>

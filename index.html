@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Ello - The Source for Everything</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>  
+
+    <main class="container">
+        
+        <section class="hero">
+            <h2>Welcome to Project Ello</h2>
+            <p>The place to learn more about everything you love.</p>
+        </section>
+
+        <section class="categories">
+            <h3>Browse Categories</h3>
+            <div class="category-grid">
+                
+                <div class="category-card" data-category="tcg" onclick="navigateTo('pages/cards.html')">
+                    <div class="category-icon">🎴</div>
+                    <h4>Cards</h4>
+                    <p>Trading card game collection</p>
+                    <span class="item-count">295 cards</span>
+                </div>
+
+                <div class="category-card" data-category="currencies" onclick="navigateTo('pages/currencies.html')">
+                    <div class="category-icon">💰</div>
+                    <h4>Currencies</h4>
+                    <p>Current and ancient currencies</p>
+                    <span class="item-count">0 currencies</span>
+                </div>
+
+                <div class="category-card" data-category="games" onclick="navigateTo('pages/games.html')">
+                    <div class="category-icon">🎮</div>
+                    <h4>Games</h4>
+                    <p>Video games, board games...</p>
+                    <span class="item-count">1 game</span>
+                </div>
+
+                <div class="category-card" data-category="laws" onclick="navigateTo('pages/laws.html')">
+                    <div class="category-icon">⚖️</div>
+                    <h4>Laws</h4>
+                    <p>Regulations and legal systems</p>
+                    <span class="item-count">0 laws</span>
+                </div>
+
+                <div class="category-card" data-category="music" onclick="navigateTo('pages/music.html')">
+                    <div class="category-icon">🎵</div>
+                    <h4>Music</h4>
+                    <p>Artists, albums, and genres</p>
+                    <span class="item-count">0 songs</span>
+                </div>
+
+                <div class="category-card" data-category="characters" onclick="navigateTo('pages/characters.html')">
+                    <div class="category-icon">👾</div>
+                    <h4>Series / Movies</h4>
+                    <p>Characters, locations, etc...</p>
+                    <span class="item-count">0 shows</span>
+                </div>
+
+                <div class="category-card" data-category="sports" onclick="navigateTo('pages/sports.html')">
+                    <div class="category-icon">⚽</div>
+                    <h4>Sports</h4>
+                    <p>Athletes, teams, and events</p>
+                    <span class="item-count">0 clubs</span>
+                </div>
+
+                <div class="category-card" data-category="custom">
+                    <div class="category-icon">➕</div>
+                    <h4>Add Category</h4>
+                    <p>Coming soon...</p>
+                    <span class="item-count">Coming soon</span>
+                </div>
+        </section>
+
+        <section class="recent-activity">
+            <h3>Recent Updates</h3>
+            <div id="recentList" class="recent-list">
+                <p class="empty-state">No recent activity. Start adding items to your wiki!</p>
+            </div>
+        </section>
+
+        <section class="stats">
+            <h3>Statistics</h3>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalPages">0</div>
+                    <div class="stat-label">Total Pages</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="totalImages">0</div>
+                    <div class="stat-label">Total Images</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Categories</div>
+                </div>
+                <div class="stat-card clickable" onclick="navigateTo('pages/changelog.html')">
+                    <div class="stat-number" id="currentVersion">v1.0.0</div>
+                    <div class="stat-label">Current Version</div>
+                    <div class="version-date">Released: January 31, 2026</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="feedback-link">
+            <p>Found a bug or want to suggest something? <a href="pages/feedback.html">Submit feedback here</a></p>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/script.js"></script>
+    <script src="js/sports.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

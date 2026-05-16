@@ -1,0 +1,155 @@
+.changelog-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.version-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s;
+}
+
+.version-block:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
+}
+
+.version-block.current {
+    border-color: var(--primary-color);
+    border-width: 2px;
+}
+
+.version-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.version-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.version-number {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.version-badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.current-badge {
+    background: var(--primary-color);
+    color: white;
+}
+
+.version-date {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.version-content {
+    margin-top: 1.5rem;
+}
+
+.change-section {
+    margin-bottom: 1.5rem;
+}
+
+.change-section:last-child {
+    margin-bottom: 0;
+}
+
+.change-type {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.change-type.new {
+    color: var(--success);
+}
+
+.change-type.feature {
+    color: #3b82f6;
+}
+
+.change-type.improvement {
+    color: var(--warning);
+}
+
+.change-type.fix {
+    color: var(--error);
+}
+
+.change-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.change-list li {
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    position: relative;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.change-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.changelog-footer {
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: 3rem;
+    border-top: 1px solid var(--border);
+}
+
+.changelog-footer p {
+    color: var(--text-secondary);
+}
+
+.changelog-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.changelog-footer a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .version-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .version-number {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football - Project Ello</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        /* Search Bar Styling */
+        .search-container {
+            max-width: 800px;
+            margin: 2rem auto 0;
+        }
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            color: white;
+            font-family: 'Unbounded', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <main class="container">
+        <section class="page-header">
+            <button class="back-btn" onclick="navigateTo('../sports.html')">← Back to Sports</button>
+            <h2>Football</h2>
+            <p class="subtitle">The beautiful game. Leagues, clubs, and competitions by region.</p>
+
+            <div class="search-container">
+                <input type="text" id="sportsSearch" placeholder="Search regions or confederations..." class="search-input">
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="category-grid">
+                <!-- Europe -->
+                <div class="category-card" data-category="football-europe" onclick="navigateTo('football/europe.html')">
+                    <div class="category-icon">🏰</div>
+                    <h4>Europe</h4>
+                    <p>UEFA: Champions League, Premier League, La Liga, and more.</p>
+                    <span class="item-count">0 items</span>
+                </div>
+
+                <!-- South America -->
+                <div class="category-card" data-category="football-south-america" onclick="navigateTo('football/south-america.html')">
+                    <div class="category-icon">🐆</div>
+                    <h4>South America</h4>
+                    <p>CONMEBOL: Copa Libertadores, Brasileirão, Argentine Primera.</p>
+                    <span class="item-count">0 items</span>
+                </div>
+
+                <!-- Africa -->
+                <div class="category-card" data-category="football-africa" onclick="navigateTo('football/africa.html')">
+                    <div class="category-icon">🦁</div>
+                    <h4>Africa</h4>
+                    <p>CAF: Champions League, AFCON, and domestic leagues.</p>
+                    <span class="item-count">0 items</span>
+                </div>
+
+                <!-- Asia -->
+                <div class="category-card" data-category="football-asia" onclick="navigateTo('football/asia.html')">
+                    <div class="category-icon">🐉</div>
+                    <h4>Asia</h4>
+                    <p>AFC: Champions League, Saudi Pro League, J-League.</p>
+                    <span class="item-count">0 items</span>
+                </div>
+
+                <!-- North America -->
+                <div class="category-card" data-category="football-north-america" onclick="navigateTo('football/north-america.html')">
+                    <div class="category-icon">🦅</div>
+                    <h4>North America</h4>
+                    <p>CONCACAF: Gold Cup, MLS, Liga MX.</p>
+                    <span class="item-count">0 items</span>
+                </div>
+
+                <!-- Oceania -->
+                <div class="category-card" data-category="football-oceania" onclick="navigateTo('football/oceania.html')">
+                    <div class="category-icon">🌊</div>
+                    <h4>Oceania</h4>
+                    <p>OFC: Nations Cup, Champions League, and regional leagues.</p>
+                    <span class="item-count">0 items</span>
+                </div>
+
+                <!-- Other -->
+                <div class="category-card" data-category="football-other" onclick="navigateTo('football/other.html')">
+                    <div class="category-icon">🌀</div>
+                    <h4>Other</h4>
+                    <p>Non-FIFA competitions: Baller League, Kings League, and more.</p>
+                    <span class="item-count">0 items</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../../js/script.js"></script>
+    <script src="../../js/sports.js"></script>
+    <script src="../../js/components.js"></script>
+</body>
+</html>

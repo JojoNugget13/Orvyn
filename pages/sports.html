@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports - Project Ello</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Search Bar Styling */
+        .search-container {
+            max-width: 800px;
+            margin: 2rem auto 0;
+        }
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            color: white;
+            font-family: 'Unbounded', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <main class="container">
+        <section class="page-header">
+            <button class="back-btn" onclick="navigateTo('../index.html')">← Back to Home</button>
+            <h2>Sports</h2>
+            <p class="subtitle">Athletes, teams, and events</p>
+
+            <div class="search-container">
+                <input type="text" id="sportsSearch" placeholder="Search sports..." class="search-input">
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="category-grid">
+                <!-- Football Category -->
+                <div class="category-card" data-category="football" onclick="navigateTo('sports/football.html')">
+                    <div class="category-icon">⚽</div>
+                    <h4>Football</h4>
+                    <p>The beautiful game. Players, clubs, and tournaments.</p>
+                    <span class="item-count">0 items</span>
+                </div>
+
+                <!-- Add Category Placeholder -->
+                <div class="category-card" data-category="custom">
+                    <div class="category-icon">➕</div>
+                    <h4>Add Sport</h4>
+                    <p>Coming soon...</p>
+                    <span class="item-count">Coming soon</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/sports.js"></script>
+    <script src="../js/components.js"></script>
+</body>
+</html>

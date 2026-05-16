@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Heroes - Mobile Legends - Project Ello</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../../../css/style.css">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../../../css/pages/games/mlbb/list-of-heroes.css">
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+
+<main class="container">
+
+    <!-- Header -->
+    <div class="page-header">
+        <button class="back-btn" onclick="navigateTo('heroes.html')">← Back to Heroes</button>
+        <h2>List of Heroes</h2>
+        <p class="subtitle">Complete roster of Mobile Legends heroes</p>
+    </div>
+
+    <!-- Stats -->
+    <section class="stats-banner" id="heroStats"></section>
+
+    <!-- Intro -->
+    <section class="intro-section">
+        <div class="intro-card">
+            <p>
+                This list shows all heroes across servers, including roles, specialties,
+                lanes, regions, release dates, and prices.
+            </p>
+        </div>
+    </section>
+
+    <!-- Table -->
+    <section class="heroes-table-section">
+        <div class="section-title">
+            <h3>Complete Hero Roster</h3>
+        </div>
+
+        <div class="table-wrapper">
+            <table class="heroes-table">
+                <thead>
+                    <tr>
+                        <th>Icon</th>
+                        <th>Hero</th>
+                        <th>#</th>
+                        <th>Role(s)</th>
+                        <th>Specialties</th>
+                        <th>Best Lane</th>
+                        <th>Region</th>
+                        <th>Price</th>
+                        <th>Release</th>
+                    </tr>
+                </thead>
+                <tbody id="heroesTableBody"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- History section removed -->
+
+</main>
+
+<div id="footer-placeholder"></div>
+
+<!-- Core JS -->
+<script src="../../../js/script.js"></script>
+<script src="../../../js/components.js"></script>
+
+<!-- Page JS -->
+<script src="../../../js/games/mlbb/heroes.js"></script>
+
+</body>
+</html>

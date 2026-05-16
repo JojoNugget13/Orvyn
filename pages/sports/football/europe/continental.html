@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continental - Football - Project Ello</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <link rel="stylesheet" href="../../../../css/pages/wiki.css">
+    <style>
+        /* Flag Icon Styling */
+        .category-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .category-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <main class="container">
+        <section class="page-header">
+            <button class="back-btn" onclick="navigateTo('../europe.html')">← Back to Europe</button>
+            <h2>Continental</h2>
+            <p class="subtitle">Major UEFA tournaments and club competitions.</p>
+        </section>
+
+        <section class="categories">
+            <div class="category-grid">
+                <!-- Continental -->
+                <div class="category-card" data-category="football-continental-ucl" onclick="navigateTo('continental/ucl.html')">
+                    <div class="category-icon"><img src="../../../../images/sports/football/tournaments/ucl.webp" alt="UCL"></div>
+                    <h4>UCL</h4>
+                    <p>UEFA Champions League</p>
+                    <span class="item-count">1 season</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="wiki-layout">
+            <!-- Main Content: Club Competitions -->
+            <div class="wiki-main">
+                <section class="wiki-section">
+                    <div class="section-header"><h3>UEFA Champions League</h3></div>
+                    <div class="section-content">
+                        <p>The ultimate stage of European club football, featuring the top teams from across the continent in a new league phase format.</p>
+                        <button class="wiki-link-btn" onclick="navigateTo('continental/ucl.html')">Explore UCL</button>
+                    </div>
+                </section>
+
+                <section class="wiki-section">
+                    <div class="section-header"><h3>UEFA Europa League</h3></div>
+                    <div class="section-content">
+                        <p>A prestigious competition featuring historic clubs and rising contenders, serving as the gateway to Champions League glory.</p>
+                        <button class="wiki-link-btn" onclick="navigateTo('continental/uel.html')">View Records</button>
+                    </div>
+                </section>
+
+                <section class="wiki-section">
+                    <div class="section-header"><h3>UEFA Conference League</h3></div>
+                    <div class="section-content">
+                        <p>Providing more clubs with the opportunity to experience European nights and compete for continental silverware.</p>
+                        <button class="wiki-link-btn" onclick="navigateTo('continental/uecl.html')">Coming Soon</button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar: International Competitions -->
+            <aside class="wiki-sidebar">
+                <div class="sidebar-box">
+                    <h4 class="sidebar-title">International</h4>
+                    <div class="event-item">
+                        <div class="event-info">
+                            <h5>The Euros</h5>
+                            <p>The flagship national team competition of Europe.</p>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-info">
+                            <h5>Nations League</h5>
+                            <p>UEFA's biennial international competition.</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../../../../js/script.js"></script>
+    <script src="../../../../js/sports.js"></script>
+    <script src="../../../../js/components.js"></script>
+</body>
+</html>

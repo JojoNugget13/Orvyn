@@ -1,0 +1,75 @@
+/* Universal Standings Table Styling - Project Ello */
+
+.standings-wrapper {
+    overflow-x: auto;
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+}
+
+.wiki-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Unbounded', sans-serif;
+    font-size: 0.85rem;
+    color: #f8fafc;
+    text-align: center;
+}
+
+.wiki-table th {
+    background: #1e293b;
+    padding: 12px 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    color: #94a3b8;
+    position: sticky;
+    top: 0;
+}
+
+.wiki-table td {
+    padding: 14px 8px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.05);
+}
+
+.wiki-table tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.team-col {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 15px !important;
+}
+
+.team-col a {
+    color: #a855f7;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.team-badge-small {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.rank-col { font-weight: 800; color: #94a3b8; width: 40px; }
+.pts-col { font-weight: 900; color: #a855f7; }
+
+/* Standings Status Coloring */
+.status-qualified { border-left: 4px solid #10b981; background: rgba(16, 185, 129, 0.03); }
+.status-playoffs { border-left: 4px solid #3b82f6; background: rgba(59, 130, 246, 0.03); }
+.status-eliminated { border-left: 4px solid #ef4444; background: rgba(239, 68, 68, 0.03); }
+
+.text-success { color: #10b981; }
+.text-danger { color: #ef4444; }
+
+@media (max-width: 768px) {
+    .hide-mobile { display: none; }
+}

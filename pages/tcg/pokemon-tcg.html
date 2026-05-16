@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon TCG - Project Ello</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <main class="container">
+        <div class="page-header">
+            <button class="back-btn" onclick="navigateTo('../cards.html')">← Back to TCG Cards</button>
+            <h2>Pokémon TCG Sets</h2>
+            <p class="subtitle">Browse your Pokémon trading card sets</p>
+        </div>
+
+        <div class="controls-section">
+            <div class="filter-controls">
+                <input type="text" id="setSearch" placeholder="Search sets..." class="filter-input">
+                <select id="sortBy" class="filter-select">
+                    <option value="recent">Sort by Release Date</option>
+                    <option value="name">Sort by Name</option>
+                    <option value="cards">Sort by Card Count</option>
+                </select>
+            </div>
+            
+            <div class="view-toggle">
+                <button class="toggle-btn active" id="gridViewBtn" onclick="switchView('grid')">
+                    <span>⊞</span> Grid
+                </button>
+                <button class="toggle-btn" id="listViewBtn" onclick="switchView('list')">
+                    <span>☰</span> List
+                </button>
+            </div>
+        </div>
+
+        <section class="sets-display">
+            <div id="setsContainer" class="sets-grid">
+                
+                <!-- Ascended Heroes Set -->
+                <div class="set-card" data-set="ascended-heroes" onclick="navigateTo('pokemon-tcg/ascended-heroes.html')">
+                    <div class="set-image">
+                        <img src="../../images/sets/pokemon/ascended-heroes.webp" alt="Ascended Heroes" class="set-logo">
+                    </div>
+                    <div class="set-content">
+                        <h3>Ascended Heroes</h3>
+                        <div class="set-meta">
+                            <span class="meta-item">
+                                <span class="meta-icon">📅</span>
+                                <span class="meta-text">January 30, 2026</span>
+                            </span>
+                            <span class="meta-item">
+                                <span class="meta-icon">🃏</span>
+                                <span class="meta-text">295 cards</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <div class="feedback-link">
+            <p>Found a bug or want to suggest something? <a href="../../feedback.html">Submit feedback here</a></p>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../../js/script.js"></script>
+    <script src="../../js/pokemon-tcg.js"></script>
+    <script src="../../js/components.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
