@@ -44,10 +44,9 @@ function performSearch() {
     if (pagesIndex !== -1) {
         rootPrefix = '../'.repeat(parts.length - pagesIndex - 1);
     }
-    const prefix = pagesIndex !== -1 ? '' : 'pages/';
 
     // Redirect to search page with query
-    window.location.href = `${rootPrefix}${prefix}search.html?q=${encodeURIComponent(query)}`;
+    window.location.href = `${rootPrefix}pages/components/search.html?q=${encodeURIComponent(query)}`;
 }
 
 /**
@@ -77,7 +76,7 @@ function initLinkInterceptor() {
                         depth = parts.length - pagesIndex - 1;
                     }
                     const rootPrefix = '../'.repeat(depth);
-                    window.location.href = `${rootPrefix}404.html`;
+                    window.location.href = `${rootPrefix}pages/components/404.html`;
                 }
             } catch (err) {
                 console.error('Error checking link existence:', err);
@@ -90,7 +89,7 @@ function initLinkInterceptor() {
                     depth = parts.length - pagesIndex - 1;
                 }
                 const rootPrefix = '../'.repeat(depth);
-                window.location.href = `${rootPrefix}404.html`;
+                window.location.href = `${rootPrefix}pages/components/404.html`;
             }
         }
     });
@@ -218,10 +217,10 @@ function calculateTotalPages() {
     
     // Main pages
     total += 1; // index.html
-    total += 1; // pages/cards.html
-    total += 1; // pages/games.html
-    total += 1; // pages/changelog.html
-    total += 1; // pages/feedback.html
+    total += 1; // pages/components/cards.html
+    total += 1; // pages/components/games.html
+    total += 1; // pages/components/changelog.html
+    total += 1; // pages/components/feedback.html
     
     // TCG pages
     total += 1; // pages/tcg/pokemon-tcg.html

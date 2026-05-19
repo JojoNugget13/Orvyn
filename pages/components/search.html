@@ -3,25 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Results - Project Ello</title>
+    <title>Search Results</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/pages/search.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pages/search.css">
 </head>
 <body>
 
     <div id="navbar-placeholder"></div>
 
     <main class="search-page">
-
         <div class="search-header">
-            <button class="back-btn" onclick="history.back()">
-                <svg class="back-arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z" fill="currentColor"></path>
-                </svg>
-                Back
+            <button class="back-btn" onclick="navigateTo('../../index.html')">
+                ← Home
             </button>
             <h1 class="search-title">Search Results</h1>
             <p class="search-query-label">
@@ -32,13 +28,12 @@
         <p class="search-stats" id="searchStats"></p>
 
         <div id="searchResults" class="results-grid"></div>
-
     </main>
 
     <div id="footer-placeholder"></div>
 
-    <script src="../js/script.js"></script>
-    <script src="../js/components.js"></script>
-    <script src="../js/search.js"></script>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/components.js"></script>
+    <script src="../../js/search.js"></script>
 </body>
 </html>

@@ -1,16 +1,3 @@
-// ============================================================
-//  build-search-index.js  –  Project Ello
-//
-//  Run from your PROJECT ROOT:
-//    node build-search-index.js
-//
-//  Crawls every .html file in your project, reads its
-//  <title> and <meta name="description">, and writes
-//  search-index.json to the project root.
-//
-//  Re-run this whenever you add or rename pages.
-// ============================================================
-
 const fs   = require('fs');
 const path = require('path');
 
@@ -83,7 +70,7 @@ function collectHtml(dir, rootDir, results = []) {
 // ── Main ──────────────────────────────────────────────────────
 
 const ROOT      = process.cwd();
-const OUT_FILE  = path.join(ROOT, 'search-index.json');
+const OUT_FILE  = path.join(ROOT, 'js', 'components', 'search-index.json');
 
 console.log(`\n📂 Crawling: ${ROOT}\n`);
 
@@ -109,4 +96,4 @@ for (const filePath of htmlFiles) {
 }
 
 fs.writeFileSync(OUT_FILE, JSON.stringify(index, null, 2), 'utf8');
-console.log(`\n✅  Written ${index.length} entries → search-index.json\n`);
+console.log(`\n✅  Written ${index.length} entries → js/components/search-index.json\n`);

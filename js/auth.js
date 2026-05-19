@@ -39,7 +39,7 @@ function handleLogin(event) {
         }
         
         alert(`Welcome back, ${user.username}!`);
-        window.location.href = '../index.html';
+        window.location.href = '../../index.html';
     } else {
         alert('Invalid email/username or password');
     }

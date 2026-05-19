@@ -20,12 +20,12 @@ function getHomePath() {
 
 // Get the correct path to login based on current location
 function getLoginPath() {
-    return getRootPrefix() + 'pages/login.html';
+    return getRootPrefix() + 'pages/components/login.html';
 }
 
 // Get the correct path to components based on current location
 function getComponentPath() {
-    return getRootPrefix() + 'components/';
+    return getRootPrefix() + 'pages/components/';
 }
 
 // Check if user is logged in
@@ -170,7 +170,7 @@ function getUserAvatarColor(user) {
 
 // Get profile path based on current location
 function getProfilePath() {
-    return getRootPrefix() + 'pages/profile.html';
+    return getRootPrefix() + 'pages/components/profile.html';
 }
 
 // Toggle dropdown menu

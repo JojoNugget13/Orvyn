@@ -2974,6 +2974,50 @@ const uclData2425 = {
                     awayBadge: "../../../../../../images/sports/football/clubs/fc-barcelona.webp",
                     id: "sl-benfica-vs-fc-barcelona-05-03-2025"
                 },
+                { 
+                    home: "FC Barcelona", 
+                    away: "SL Benfica", 
+                    homeScore: 3,
+                    awayScore: 1,
+                    date: "March 11, 2025",
+                    homeBadge: "../../../../../../images/sports/football/clubs/fc-barcelona.webp",
+                    awayBadge: "../../../../../../images/sports/football/clubs/sl-benfica.webp",
+                    id: "fc-barcelona-vs-sl-benfica-11-03-2025",
+                    note: "FC Barcelona qualifies, 4-1 on aggregate"
+                },
+                { 
+                    home: "Bayer 04 Leverkusen", 
+                    away: "FC Bayern Munich", 
+                    homeScore: 0,
+                    awayScore: 2,
+                    date: "March 11, 2025",
+                    homeBadge: "../../../../../../images/sports/football/clubs/fc-bayern-munich.webp",
+                    awayBadge: "../../../../../../images/sports/football/clubs/bayer-04-leverkusen.webp",
+                    id: "bayer-04-leverkusen-vs-fc-bayern-munich-11-03-2025",
+                    note: "FC Bayern Munich qualifies, 0-5 on aggregate"
+                },
+                { 
+                    home: "Inter Milan", 
+                    away: "Feyenoord Rotterdam", 
+                    homeScore: 2,
+                    awayScore: 1,
+                    date: "March 11, 2025",
+                    homeBadge: "../../../../../../images/sports/football/clubs/inter-milan.webp",
+                    awayBadge: "../../../../../../images/sports/football/clubs/feyenoord-rotterdam.webp",
+                    id: "inter-milan-vs-feyenoord-rotterdam-11-03-2025",
+                    note: "FC Barcelona qualifies, 4-1 on aggregate"
+                },
+                { 
+                    home: "Liverpool FC", 
+                    away: "Paris Saint-Germain FC", 
+                    homeScore: 0,
+                    awayScore: 1,
+                    date: "March 11, 2025",
+                    homeBadge: "../../../../../../images/sports/football/clubs/liverpool-fc.webp",
+                    awayBadge: "../../../../../../images/sports/football/clubs/paris-saint-germain-fc.webp",
+                    id: "liverpool-fc-vs-paris-saint-germain-fc-11-03-2025",
+                    note: "Paris Saint-Germain FC qualifies, 1-1 (p. 1-4) on aggregate"
+                },
             ]
         },
         {
