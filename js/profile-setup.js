@@ -111,7 +111,7 @@ function selectPfpColor(color) {
     updatePfpPreview();
     
     // Highlight selected color
-    document.querySelectorAll('.color-options .color-btn').forEach(btn => {
+    document.querySelectorAll('#pfpColorOptions .color-btn').forEach(btn => {
         if (btn.dataset.color === color) {
             btn.style.transform = 'scale(1.2)';
             btn.style.border = '3px solid var(--primary-color)';
@@ -128,6 +128,17 @@ function selectBannerColor(color) {
     uploadedBanner = null; // Clear uploaded image
     document.getElementById('bannerPic').value = ''; // Clear file input
     updateBannerPreview();
+
+    // Highlight selected color
+    document.querySelectorAll('#bannerColorOptions .color-btn').forEach(btn => {
+        if (btn.dataset.color === color) {
+            btn.style.transform = 'scale(1.2)';
+            btn.style.border = '3px solid var(--primary-color)';
+        } else {
+            btn.style.transform = 'scale(1)';
+            btn.style.border = btn.dataset.color === '#ffffff' ? '2px solid #475569' : 'none';
+        }
+    });
 }
 
 // Update profile picture preview
