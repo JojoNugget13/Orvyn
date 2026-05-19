@@ -304,6 +304,7 @@ function initImagePreview() {
     const modal = document.createElement('div');
     modal.id = 'imagePreviewModal';
     modal.className = 'image-preview-modal';
+    modal.style.display = 'none';
     
     let modalHtml = '<span class="close-preview">&times;</span>';
     modalHtml += '<img class="modal-content" id="previewImg">';

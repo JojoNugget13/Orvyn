@@ -2944,6 +2944,36 @@ const uclData2425 = {
                     awayBadge: "../../../../../../images/sports/football/clubs/inter-milan.webp",
                     id: "feyenoord-rotterdam-vs-inter-milan-05-03-2025"
                 },
+                { 
+                    home: "FC Bayern Munich", 
+                    away: "Bayer 04 Leverkusen", 
+                    homeScore: 3,
+                    awayScore: 0,
+                    date: "March 5, 2025",
+                    homeBadge: "../../../../../../images/sports/football/clubs/fc-bayern-munich.webp",
+                    awayBadge: "../../../../../../images/sports/football/clubs/bayer-04-leverkusen.webp",
+                    id: "fc-bayern-munich-vs-bayer-04-leverkusen-05-03-2025"
+                },
+                { 
+                    home: "Paris Saint-Germain FC", 
+                    away: "Liverpool FC", 
+                    homeScore: 0,
+                    awayScore: 1,
+                    date: "March 5, 2025",
+                    homeBadge: "../../../../../../images/sports/football/clubs/paris-saint-germain-fc.webp",
+                    awayBadge: "../../../../../../images/sports/football/clubs/liverpool-fc.webp",
+                    id: "paris-saint-germain-fc-vs-liverpool-fc-05-03-2025"
+                },
+                { 
+                    home: "SL Benfica", 
+                    away: "FC Barcelona", 
+                    homeScore: 0,
+                    awayScore: 1,
+                    date: "March 5, 2025",
+                    homeBadge: "../../../../../../images/sports/football/clubs/sl-benfica.webp",
+                    awayBadge: "../../../../../../images/sports/football/clubs/fc-barcelona.webp",
+                    id: "sl-benfica-vs-fc-barcelona-05-03-2025"
+                },
             ]
         },
         {
