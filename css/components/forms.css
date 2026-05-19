@@ -44,55 +44,6 @@
     margin-top: 0.5rem;
 }
 
-/* Custom Checkbox */
-.checkbox-label {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    cursor: pointer;
-    user-select: none;
-}
-
-.checkbox-label input[type="checkbox"] {
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    min-width: 20px;
-    border: 2px solid var(--border);
-    border-radius: 4px;
-    background: var(--surface-light);
-    cursor: pointer;
-    position: relative;
-    transition: all 0.3s;
-    margin-top: 2px;
-}
-
-.checkbox-label input[type="checkbox"]:hover {
-    border-color: var(--primary-color);
-}
-
-.checkbox-label input[type="checkbox"]:checked {
-    background: var(--primary-color);
-    border-color: var(--primary-color);
-}
-
-.checkbox-label input[type="checkbox"]:checked::after {
-    content: '✓';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.checkbox-label span {
-    flex: 1;
-}
-
 /* Custom File Upload */
 .form-group input[type="file"] {
     padding: 0;
@@ -162,4 +113,84 @@
         width: 100%;
         min-width: 100%;
     }
+}
+
+/* ── Custom Checkbox System ──────────────────────────────────── */
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    position: relative;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    user-select: none;
+    line-height: 1.5;
+}
+
+.checkbox-label input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: relative;
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    background-color: var(--surface-light);
+    border: 2px solid var(--border);
+    border-radius: 4px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    flex-shrink: 0; /* Prevents checkbox from squishing */
+    margin-top: 2px; /* Aligns with the first line of text */
+}
+
+.checkbox-label:hover input ~ .checkmark {
+    border-color: var(--primary-color);
+    background-color: rgba(99, 102, 241, 0.05);
+}
+
+.checkbox-label input:checked ~ .checkmark {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 12px rgba(99, 102, 241, 0.3);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 50%;
+    top: 45%;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.checkbox-label input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Styling for links within the checkbox label */
+.checkbox-label span a {
+    color: var(--primary-color); /* Make links stand out */
+    text-decoration: underline; /* Ensure it's clearly a link */
+    font-weight: 600;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.checkbox-label span a:hover {
+    color: var(--primary-dark); /* Slightly darker on hover */
+    text-decoration: none; /* Remove underline on hover for a subtle effect */
+}
+
+/* Ensure the text part of the label is not affected by link styles */
+.checkbox-label span:not(.checkmark) {
+    color: var(--text-secondary);
 }

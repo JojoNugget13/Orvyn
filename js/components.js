@@ -1,4 +1,4 @@
-// Component Loader for Project Ello - FIXED VERSION
+// Component Loader for Orvyn - FIXED VERSION
 
 // Helper to get the relative prefix to the root directory
 function getRootPrefix() {
@@ -171,6 +171,14 @@ function getUserAvatarColor(user) {
 // Get profile path based on current location
 function getProfilePath() {
     return getRootPrefix() + 'pages/components/profile.html';
+}
+
+// Logout mechanism
+function logout() {
+    localStorage.removeItem('currentUser');
+    sessionStorage.removeItem('currentUser');
+    alert('You have been logged out');
+    window.location.href = getHomePath();
 }
 
 // Toggle dropdown menu

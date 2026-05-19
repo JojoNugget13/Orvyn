@@ -1,4 +1,4 @@
-// Authentication System for Project Ello
+// Authentication System for Orvyn
 
 const OWNER_EMAIL = 'jojojkjk2010@gmail.com'; // Replace with your actual email
 
@@ -135,14 +135,6 @@ function isLoggedIn() {
 function getCurrentUser() {
     const userData = localStorage.getItem('currentUser') || sessionStorage.getItem('currentUser');
     return userData ? JSON.parse(userData) : null;
-}
-
-// Logout
-function logout() {
-    localStorage.removeItem('currentUser');
-    sessionStorage.removeItem('currentUser');
-    alert('You have been logged out');
-    window.location.href = getHomePath();
 }
 
 // Promote user to moderator (Owner only)

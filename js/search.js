@@ -1,5 +1,5 @@
 /**
- * Search Engine Logic - Project Ello
+ * Search Engine Logic - Orvyn
  * Fetches the site index and filters results based on URL query.
  */
 

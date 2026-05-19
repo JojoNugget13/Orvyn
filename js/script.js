@@ -354,6 +354,6 @@ function debounce(func, wait) {
 }
 
 // Console message for developers
-console.log('%c🎴 Project Ello', 'color: #6366f1; font-size: 24px; font-weight: bold;');
+console.log('%c🎴 Orvyn', 'color: #6366f1; font-size: 24px; font-weight: bold;');
 console.log('%cWelcome to your wiki! Data is stored in localStorage.', 'color: #8b5cf6; font-size: 14px;');
 console.log('%cTip: Use testAddActivity() to test recent activity feature', 'color: #10b981; font-size: 12px;');

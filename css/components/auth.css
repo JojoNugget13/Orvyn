@@ -128,7 +128,7 @@
 
 .auth-switch a {
     color: var(--primary-color);
-    text-decoration: none;
+    text-decoration: underline; /* Make it clearly a link */
     font-weight: 600;
     transition: color 0.3s;
 }
@@ -136,6 +136,7 @@
 .auth-switch a:hover {
     color: var(--secondary-color);
     text-decoration: underline;
+    text-decoration: none; /* Remove underline on hover for a subtle effect */
 }
 
 .error-message {

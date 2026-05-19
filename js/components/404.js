@@ -1,5 +1,5 @@
 /**
- * 404 Page Logic - Project Ello
+ * 404 Page Logic - Orvyn
  * Handles interactive effects and navigation for the error page.
  */
 
