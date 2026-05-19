@@ -73,8 +73,8 @@ function handleProfileSetup(event) {
     };
     localStorage.setItem('currentUser', JSON.stringify(sessionData));
     
-    alert(`Welcome to Project Ello, ${username}!`);
-    window.location.href = '../index.html';
+    alert(`Welcome to Orvyn, ${username}!`);
+    window.location.href = getHomePath();
 }
 
 // Preview profile picture
@@ -84,10 +84,7 @@ function previewProfilePic(event) {
         const reader = new FileReader();
         reader.onload = function(e) {
             uploadedPfp = { type: 'image', data: e.target.result };
-            const preview = document.getElementById('pfpPreview');
-            preview.style.backgroundImage = `url(${e.target.result})`;
-            preview.style.backgroundColor = 'transparent';
-            preview.innerHTML = '';
+            updatePfpPreview();
         };
         reader.readAsDataURL(file);
     }
@@ -100,9 +97,7 @@ function previewBanner(event) {
         const reader = new FileReader();
         reader.onload = function(e) {
             uploadedBanner = { type: 'image', data: e.target.result };
-            const preview = document.getElementById('bannerPreview');
-            preview.style.backgroundImage = `url(${e.target.result})`;
-            preview.style.backgroundColor = 'transparent';
+            updateBannerPreview();
         };
         reader.readAsDataURL(file);
     }
@@ -141,17 +136,37 @@ function updatePfpPreview() {
     const preview = document.getElementById('pfpPreview');
     const letter = document.getElementById('pfpLetter');
     
-    preview.style.backgroundColor = selectedPfpColor;
-    preview.style.backgroundImage = 'none';
-    letter.textContent = username ? username.charAt(0).toUpperCase() : '?';
-    letter.style.color = selectedPfpColor === '#ffffff' ? '#000000' : '#ffffff';
+    if (!preview || !letter) return;
+
+    if (uploadedPfp) {
+        preview.style.backgroundImage = `url(${uploadedPfp.data})`;
+        preview.style.backgroundColor = 'transparent';
+        preview.style.backgroundSize = 'cover';
+        preview.style.backgroundPosition = 'center';
+        letter.style.display = 'none';
+    } else {
+        preview.style.backgroundImage = 'none';
+        preview.style.backgroundColor = selectedPfpColor;
+        letter.style.display = '';
+        letter.textContent = username ? username.charAt(0).toUpperCase() : '?';
+        letter.style.color = selectedPfpColor === '#ffffff' ? '#000000' : '#ffffff';
+    }
 }
 
 // Update banner preview
 function updateBannerPreview() {
     const preview = document.getElementById('bannerPreview');
-    preview.style.backgroundColor = selectedBannerColor;
-    preview.style.backgroundImage = 'none';
+    if (!preview) return;
+
+    if (uploadedBanner) {
+        preview.style.backgroundImage = `url(${uploadedBanner.data})`;
+        preview.style.backgroundColor = 'transparent';
+        preview.style.backgroundSize = 'cover';
+        preview.style.backgroundPosition = 'center';
+    } else {
+        preview.style.backgroundImage = 'none';
+        preview.style.backgroundColor = selectedBannerColor;
+    }
 }
 
 // Update preview when username changes
