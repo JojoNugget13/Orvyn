@@ -115,7 +115,7 @@
     }
 }
 
-/* ── Custom Checkbox System ──────────────────────────────────── */
+/* Custom Checkbox System */
 .checkbox-label {
     display: flex;
     align-items: flex-start;
@@ -176,21 +176,18 @@
 .checkbox-label input:checked ~ .checkmark:after {
     display: block;
 }
-
-/* Styling for links within the checkbox label */
 .checkbox-label span a {
-    color: var(--primary-color); /* Make links stand out */
-    text-decoration: underline; /* Ensure it's clearly a link */
+    color: var(--primary-color);
+    text-decoration: underline;
     font-weight: 600;
     transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
 .checkbox-label span a:hover {
-    color: var(--primary-dark); /* Slightly darker on hover */
-    text-decoration: none; /* Remove underline on hover for a subtle effect */
+    color: var(--primary-dark);
+    text-decoration: none;
 }
 
-/* Ensure the text part of the label is not affected by link styles */
 .checkbox-label span:not(.checkmark) {
     color: var(--text-secondary);
 }

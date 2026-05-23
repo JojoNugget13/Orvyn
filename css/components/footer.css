@@ -1,19 +1,13 @@
-/* =========================================================
-   footer.css  –  Orvyn
-   Uses variables from style.css:
-   --primary-color, --surface, --border, --text-primary, --text-secondary
-   ========================================================= */
-
 footer {
-    background-color: var(--surface); /* Dark background for the footer */
-    color: var(--text-secondary);     /* Default text color */
+    background-color: var(--surface);
+    color: var(--text-secondary);
     padding: 3rem 1.5rem;
-    font-family: 'Unbounded', sans-serif; /* Use the Unbounded font */
-    border-top: 1px solid var(--border); /* Subtle border at the top */
+    font-family: 'Unbounded', sans-serif;
+    border-top: 1px solid var(--border);
 }
 
 .footer-container {
-    max-width: 1200px; /* Match main content width */
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -22,13 +16,13 @@ footer {
 
 .footer-main {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 2rem;
 }
 
 .footer-brand {
-    flex-basis: 250px; /* Give brand section a fixed width */
+    flex-basis: 250px;
     flex-grow: 1;
 }
 
@@ -36,7 +30,7 @@ footer {
     font-family: 'Unbounded', sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--primary-color); /* Highlight brand name */
+    color: var(--primary-color);
     margin: 0 0 0.5rem;
     line-height: 1;
 }
@@ -50,9 +44,9 @@ footer {
 .footer-nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem 4rem; /* Gap between columns and rows */
-    flex-grow: 2; /* Allow nav to take more space */
-    justify-content: flex-end; /* Align columns to the right */
+    gap: 2rem 4rem;
+    flex-grow: 2;
+    justify-content: flex-end;
 }
 
 .footer-column {
@@ -64,7 +58,7 @@ footer {
 .footer-column h3 {
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--text-primary); /* Section titles */
+    color: var(--text-primary);
     margin: 0 0 1rem;
 }
 
@@ -76,7 +70,7 @@ footer {
 }
 
 .footer-column a:hover {
-    color: var(--primary-color); /* Hover effect */
+    color: var(--primary-color);
 }
 
 .footer-divider {
@@ -96,43 +90,37 @@ footer {
 }
 
 .social-media-column {
-    /* Ensure social icons are displayed horizontally within their column */
-    align-items: flex-start; /* Align items to the start of the cross axis */
+    align-items: flex-start;
 }
 
 .social-icons {
     display: flex;
-    gap: 1rem; /* Space between icons */
-    /* Removed margin-top as it's now handled by column gap */
+    gap: 1rem;
 }
 
 .social-icons a {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Removed width, height, border-radius, background-color */
-    transition: transform 0.2s ease, opacity 0.2s ease; /* Keep transform for hover, add opacity transition */
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .social-icons a:hover {
     transform: translateY(-2px);
-    opacity: 1; /* Full opacity on hover */
+    opacity: 1;
 }
 
 .social-icons img.social-icon {
-    width: 20px; /* Size of the actual icon image */
+    width: 20px;
     height: 20px;
-    /* Removed filter: invert(1) */
-    opacity: 0.8; /* Slightly dim by default */
+    opacity: 0.8;
     transition: opacity 0.2s ease;
 }
 
 .social-icons a:hover img.social-icon {
-    /* Removed filter: invert(0) */
-    opacity: 1; /* Full opacity on hover */
+    opacity: 1;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .footer-main {
         flex-direction: column;

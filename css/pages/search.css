@@ -1,10 +1,4 @@
-/* =========================================================
-   search.css  –  Orvyn
-   Uses variables from style.css:
-   --primary-color, --surface, --border, --text-secondary
-   ========================================================= */
-
-/* ── Page layout (footer always at bottom) ──────────────── */
+/* Layout */
 body {
     display: flex;
     flex-direction: column;
@@ -22,22 +16,22 @@ body {
     box-sizing: border-box;
 }
 
-/* ── Header ─────────────────────────────────────────────── */
+/* Header */
 .search-header {
     margin-bottom: 2rem;
 }
 
 .back-btn {
-    display: flex; /* Changed from inline-flex to flex for block-level behavior */
+    display: flex;
     align-items: center;
-    gap: 8px; /* Slightly reduced gap for better visual flow with SVG */
+    gap: 8px;
     background: rgba(30, 41, 59, 0.7);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--border);
     color: var(--text-primary);
     padding: 8px 20px;
-    border-radius: 100px; /* Pill shape */
+    border-radius: 100px;
     font-family: 'Unbounded', sans-serif;
     font-weight: 700;
     font-size: 0.75rem;
@@ -52,18 +46,18 @@ body {
 .back-btn .back-arrow-icon {
     width: 16px;
     height: 16px;
-    fill: currentColor; /* Inherit color from parent */
+    fill: currentColor;
     transition: transform 0.3s ease;
 }
 .back-btn:hover {
     background: var(--primary-color);
     border-color: var(--primary-color);
     color: white;
-    transform: translateX(-8px); /* Slides slightly left for a dynamic feel */
+    transform: translateX(-8px);
     box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
 }
 .back-btn:hover .back-arrow-icon {
-    transform: translateX(-2px); /* Subtle arrow movement on hover */
+    transform: translateX(-2px);
 }
 .back-btn:active {
     transform: translateX(-4px) scale(0.98);
@@ -87,7 +81,7 @@ body {
     font-weight: 600;
 }
 
-/* ── Stats line ─────────────────────────────────────────── */
+/* Stats */
 .search-stats {
     font-size: 0.82rem;
     color: var(--text-secondary);
@@ -103,14 +97,14 @@ body {
     font-weight: 600;
 }
 
-/* ── Results grid ───────────────────────────────────────── */
+/* Results Grid */
 .results-grid {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-/* ── Updated Search Result Card (Matches search.js) ─────── */
+/* Search Result Card */
 .search-result-card {
     position: relative;
     background: var(--surface);
@@ -188,7 +182,7 @@ body {
     gap: 10px;
 }
 
-/* ── Highlight marks ────────────────────────────────────── */
+/* Highlight marks */
 mark {
     background: rgba(99, 102, 241, 0.28);
     color: #c7d2fe;
@@ -196,7 +190,7 @@ mark {
     padding: 0 2px;
 }
 
-/* ── Empty state ────────────────────────────────────────── */
+/* Empty state */
 .empty-state {
     text-align: center;
     padding: 5rem 2rem;
