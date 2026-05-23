@@ -1,92 +1,68 @@
 [
   {
-    "url": "/pages/cards.html",
+    "url": "/pages/components/cards.html",
     "title": "TCG Cards",
-    "desc": "",
-    "category": "Pages"
+    "desc": "Orvyn's TCG cards category.",
+    "category": "Category"
   },
   {
-    "url": "/pages/changelog.html",
+    "url": "/pages/components/changelog.html",
     "title": "Changelog",
-    "desc": "",
-    "category": "Pages"
+    "desc": "Orvyn's changelog.",
+    "category": "Changelog"
   },
   {
-    "url": "/pages/feedback.html",
+    "url": "/pages/components/feedback.html",
     "title": "Feedback",
-    "desc": "",
-    "category": "Pages"
+    "desc": "Give us feedback.",
+    "category": "Feedback"
+  },
+  {
+    "url": "/pages/components/games.html",
+    "title": "Games",
+    "desc": "Orvyn's games category.",
+    "category": "Category"
+  },
+  {
+    "url": "/pages/components/sportd.html",
+    "title": "Sports",
+    "desc": "Orvyn's sports category.",
+    "category": "Category"
   },
   {
     "url": "/pages/games/mlbb/heroes/balmond.html",
     "title": "Balmond",
-    "desc": "",
+    "desc": "The Bloody Beast.",
     "category": "Mobile Legends: Bang Bang - Heroes"
   },
   {
     "url": "/pages/games/mlbb/heroes/miya.html",
     "title": "Miya",
-    "desc": "",
-    "category": "Heroes"
+    "desc": "The Moonlight Archer.",
+    "category": "Mobile Legends: Bang Bang - Heroes"
   },
   {
     "url": "/pages/games/mlbb/heroes.html",
     "title": "Heroes",
-    "desc": "",
-    "category": "MLBB"
+    "desc": "MLBB's heroes' roles, specialties etc.",
+    "category": "Mobile Legends: Bang Bang"
   },
   {
     "url": "/pages/games/mlbb/list-of-heroes.html",
     "title": "List of Heroes",
-    "desc": "",
-    "category": "MLBB"
+    "desc": "All of MLBB's heroes.",
+    "category": "Mobile Legends: Bang Bang"
   },
   {
     "url": "/pages/games/mobile-legends.html",
     "title": "Mobile Legends: Bang Bang",
-    "desc": "",
+    "desc": "A 5v5 MOBA game developed by Moonton.",
     "category": "Games"
   },
   {
-    "url": "/pages/games.html",
-    "title": "Games",
-    "desc": "",
-    "category": "Pages"
-  },
-  {
-    "url": "/pages/login.html",
-    "title": "Login",
-    "desc": "",
-    "category": "Pages"
-  },
-  {
-    "url": "/pages/profile.html",
-    "title": "Profile",
-    "desc": "",
-    "category": "Pages"
-  },
-  {
-    "url": "/pages/search.html",
-    "title": "Search Results",
-    "desc": "",
-    "category": "Pages"
-  },
-  {
-    "url": "/pages/setup-profile.html",
-    "title": "Setup Profile",
-    "desc": "",
-    "category": "Pages"
-  },
-  {
-    "url": "/pages/signup.html",
-    "title": "Sign Up",
-    "desc": "",
-    "category": "Pages"
-  },
-  {
     "url": "/pages/sports/football/europe/continental/ucl/ucl20242025.html",
-    "title": "UCL 24/25 Season",
-    "desc": "",
+    "title": "UCL 2024/2025 Season",
+    "desc": "Paris Saint-Germain's 1st UCL title.",
     "category": "Pages"
   },
   {

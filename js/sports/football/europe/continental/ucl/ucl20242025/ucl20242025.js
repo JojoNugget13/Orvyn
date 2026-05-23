@@ -3018,21 +3018,201 @@ const uclData2425 = {
                     id: "liverpool-fc-vs-paris-saint-germain-fc-11-03-2025",
                     note: "Paris Saint-Germain FC qualifies, 1-1 (p. 1-4) on aggregate"
                 },
+                { 
+                    home: "Lille OSC", 
+                    away: "Borussia Dortmund", 
+                    homeScore: 1,
+                    awayScore: 2,
+                    date: "March 12, 2025",
+                    homeBadge: "../../../../../../images/sports/football/clubs/lille-osc.webp",
+                    awayBadge: "../../../../../../images/sports/football/clubs/borussia-dortmund.webp",
+                    id: "lille-osc-vs-borussia-dortmund-12-03-2025",
+                    note: "Borussia Dortmund qualifies, 2-3 on aggregate"
+                },
+                { 
+                    home: "Aston Villa FC", 
+                    away: "Club Brugge KV", 
+                    homeScore: 3,
+                    awayScore: 0,
+                    date: "March 12, 2025",
+                    homeBadge: "../../../../../../images/sports/football/clubs/aston-villa-fc.webp",
+                    awayBadge: "../../../../../../images/sports/football/clubs/club-brugge-kv.webp",
+                    id: "aston-villa-fc-vs-club-brugge-kv-12-03-2025",
+                    note: "Aston Villa FC qualifies, 6-1 on aggregate"
+                },
+                { 
+                    home: "Atlético Madrid", 
+                    away: "Real Madrid CF", 
+                    homeScore: 1,
+                    awayScore: 0,
+                    date: "March 12, 2025",
+                    homeBadge: "../../../../../../images/sports/football/clubs/atletico-madrid.webp",
+                    awayBadge: "../../../../../../images/sports/football/clubs/real-madrid-cf.webp",
+                    id: "atletico-madrid-vs-real-madrid-cf-12-03-2025",
+                    note: "Real Madrid CF qualifies, 2-2 (p. 2-4) on aggregate"
+                },
+                { 
+                    home: "Arsenal FC", 
+                    away: "PSV Eindhoven", 
+                    homeScore: 2,
+                    awayScore: 2,
+                    date: "March 12, 2025",
+                    homeBadge: "../../../../../../images/sports/football/clubs/arsenal-fc.webp",
+                    awayBadge: "../../../../../../images/sports/football/clubs/psv-eindhoven.webp",
+                    id: "arsenal-fc-vs-psv-eindhoven-12-03-2025",
+                    note: "Arsenal FC qualifies, 9-3 on aggregate"
+                },
+            ]
+        },
+        {
+            matchday: "Quarter-Finals",
+            games: [
+                { 
+                    home: "FC Bayern Munich", 
+                    away: "Inter Milan", 
+                    homeScore: 1,
+                    awayScore: 2,
+                    date: "April 8, 2025",
+                    homeBadge: "../../../../../../images/sports/football/clubs/fc-bayern-munich.webp",
+                    awayBadge: "../../../../../../images/sports/football/clubs/inter-milan.webp",
+                    id: "fc-bayern-munich-vs-inter-milan-08-04-2025"
+                },
+                { 
+                    home: "Arsenal FC", 
+                    away: "Real Madrid CF", 
+                    homeScore: 3,
+                    awayScore: 0,
+                    date: "April 8, 2025",
+                    homeBadge: "../../../../../../images/sports/football/clubs/arsenal-fc.webp",
+                    awayBadge: "../../../../../../images/sports/football/clubs/real-madrid-cf.webp",
+                    id: "arsenal-fc-vs-real-madrid-cf-08-04-2025"
+                },
+                { 
+                    home: "FC Barcelona", 
+                    away: "Borussia Dortmund", 
+                    homeScore: 4,
+                    awayScore: 0,
+                    date: "April 9, 2025",
+                    homeBadge: "../../../../../../images/sports/football/clubs/fc-barcelona.webp",
+                    awayBadge: "../../../../../../images/sports/football/clubs/borussia-dortmund.webp",
+                    id: "fc-barcelona-vs-borussia-dortmund-09-04-2025"
+                },
+                { 
+                    home: "Paris Saint-Germain FC", 
+                    away: "Aston Villa FC", 
+                    homeScore: 3,
+                    awayScore: 1,
+                    date: "April 9, 2025",
+                    homeBadge: "../../../../../../images/sports/football/clubs/paris-saint-germain-fc.webp",
+                    awayBadge: "../../../../../../images/sports/football/clubs/aston-villa-fc.webp",
+                    id: "paris-saint-germain-fc-vs-aston-villa-fc-09-04-2025"
+                },
+                { 
+                    home: "Borussia Dortmund", 
+                    away: "FC Barcelona", 
+                    homeScore: 3,
+                    awayScore: 1,
+                    date: "April 15, 2025",
+                    homeBadge: "../../../../../../images/sports/football/clubs/borussia-dortmund.webp",
+                    awayBadge: "../../../../../../images/sports/football/clubs/fc-barcelona.webp",
+                    id: "borussia-dortmund-vs-fc-barcelona-15-04-2025",
+                    note: "FC Barcelona qualifies, 3-5 on aggregate"
+                },
+                { 
+                    home: "Aston Villa FC", 
+                    away: "Paris Saint-Germain FC", 
+                    homeScore: 3,
+                    awayScore: 2,
+                    date: "April 15, 2025",
+                    homeBadge: "../../../../../../images/sports/football/clubs/aston-villa-fc.webp",
+                    awayBadge: "../../../../../../images/sports/football/clubs/paris-saint-germain-fc.webp",
+                    id: "aston-villa-fc-vs-paris-saint-germain-fc-15-04-2025",
+                    note: "Paris Saint-Germain FC qualifies, 4-5 on aggregate"
+                },
+                { 
+                    home: "Inter Milan", 
+                    away: "FC Bayern Munich", 
+                    homeScore: 2,
+                    awayScore: 2,
+                    date: "April 16, 2025",
+                    homeBadge: "../../../../../../images/sports/football/clubs/inter-milan.webp",
+                    awayBadge: "../../../../../../images/sports/football/clubs/fc-bayern-munich.webp",
+                    id: "inter-milan-vs-fc-bayern-munich-16-04-2025",
+                    note: "Inter Milan qualifies, 4-3 on aggregate"
+                },
+                { 
+                    home: "Real Madrid CF", 
+                    away: "Arsenal FC", 
+                    homeScore: 1,
+                    awayScore: 2,
+                    date: "April 16, 2025",
+                    homeBadge: "../../../../../../images/sports/football/clubs/real-madrid-cf.webp",
+                    awayBadge: "../../../../../../images/sports/football/clubs/arsenal-fc.webp",
+                    id: "real-madrid-cf-vs-arsenal-fc-16-04-2025",
+                    note: "Arsenal FC qualifies, 1-5 on aggregate"
+                },
+            ],
+        },
+        {
+            matchday: "Semi-Finals",
+            games: [
+                { 
+                    home: "Arsenal FC", 
+                    away: "Paris Saint-Germain FC", 
+                    homeScore: 0,
+                    awayScore: 1,
+                    date: "April 29, 2025",
+                    homeBadge: "../../../../../../images/sports/football/clubs/arsenal-fc.webp",
+                    awayBadge: "../../../../../../images/sports/football/clubs/paris-saint-germain-fc.webp",
+                    id: "arsenal-fc-vs-paris-saint-germain-fc-29-04-2025"
+                },
+                { 
+                    home: "FC Barcelona", 
+                    away: "Inter Milan", 
+                    homeScore: 3,
+                    awayScore: 3,
+                    date: "April 30, 2025",
+                    homeBadge: "../../../../../../images/sports/football/clubs/fc-barcelona.webp",
+                    awayBadge: "../../../../../../images/sports/football/clubs/inter-milan.webp",
+                    id: "fc-barcelona-vs-inter-milan-30-04-2025"
+                },
+                { 
+                    home: "Inter Milan", 
+                    away: "FC Barcelona", 
+                    homeScore: 4,
+                    awayScore: 3,
+                    date: "May 6, 2025",
+                    homeBadge: "../../../../../../images/sports/football/clubs/inter-milan.webp",
+                    awayBadge: "../../../../../../images/sports/football/clubs/fc-barcelona.webp",
+                    id: "inter-milan-vs-fc-barcelona-06-05-2025",
+                    note: "Inter Milan qualifies, 7-6 on aggregate (a.e.t.)"
+                },
+                { 
+                    home: "Paris Saint-Germain FC", 
+                    away: "Arsenal FC", 
+                    homeScore: 2,
+                    awayScore: 1,
+                    date: "May 7, 2025",
+                    homeBadge: "../../../../../../images/sports/football/clubs/paris-saint-germain-fc.webp",
+                    awayBadge: "../../../../../../images/sports/football/clubs/arsenal-fc.webp",
+                    id: "paris-saint-germain-fc-vs-arsenal-fc-07-05-2025",
+                    note: "Paris Saint-Germain FC qualifies, 3-1 on aggregate"
+                },
             ]
         },
         {
             matchday: "Final",
             games: [
                 { 
-                    home: "Paris Saint-Germain", 
+                    home: "Paris Saint-Germain FC", 
                     away: "Inter Milan", 
                     homeScore: 5,
                     awayScore: 0,
                     date: "May 31, 2025",
-                    homeBadge: "../../../../../../images/sports/football/clubs/paris-saint-germain.webp",
+                    homeBadge: "../../../../../../images/sports/football/clubs/paris-saint-germain-fc.webp",
                     awayBadge: "../../../../../../images/sports/football/clubs/inter-milan.webp",
-                    id: "psg-int-ucl-31-05-2025",
-                    note: "Allianz Arena, Munich"
+                    id: "paris-saint-germain-fc-vs-inter-milan-31-05-2025",
+                    note: "Paris Saint-Germain FC's 1st UCL title"
                 },
             ]
         }

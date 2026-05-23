@@ -1,6 +1,6 @@
 // Hero data for Balmond
 // Rendering logic moved here from shared helpers to support local file loading
-const IMAGES = '../../../../../images/games/mlbb/'; // Base path for MLBB images
+const IMAGES = '../../../../images/games/mlbb/'; // Base path for MLBB images
 
 
 // ========================================================================= //

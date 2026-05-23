@@ -2592,7 +2592,7 @@ if (tbody) {
         <tr class="hero-row">
           <td class="icon-col">
             <div class="hero-icon-wrapper">
-              <img src="../../../../${hero.icon}" class="hero-icon">
+              <img src="../../../${hero.icon}" class="hero-icon">
             </div>
           </td>
           <td>
@@ -2608,7 +2608,7 @@ if (tbody) {
           <td>${hero.region}</td>
           <td>
             ${hero.price.map(p =>
-              `<img class="currency-icon" src="../../../../images/games/mlbb/currencies/${p.type}.webp"> ${p.value}`
+              `<img class="currency-icon" src="../../../images/games/mlbb/currencies/${p.type}.webp"> ${p.value}`
             ).join("<br>")}        </td>
           <td class="date-col">${hero.release}</td>
         </tr>
