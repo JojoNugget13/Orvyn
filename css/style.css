@@ -5,7 +5,6 @@
 @import url('core/variables.css');
 @import url('core/base.css');
 @import url('core/layout.css');
-@import url('global.css');
 
 /* Components */
 @import url('components/navbar.css');
@@ -14,6 +13,7 @@
 @import url('components/cards.css');
 @import url('components/auth.css');
 @import url('components/footer.css');
+@import url('components/links.css');
 
 /* Pages */
 @import url('pages/home.css');
