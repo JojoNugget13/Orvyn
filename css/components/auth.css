@@ -106,37 +106,11 @@
     margin-bottom: 1.5rem;
 }
 
-.forgot-link {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-.forgot-link:hover {
-    color: var(--secondary-color);
-    text-decoration: underline;
-}
-
 .auth-switch {
     text-align: center;
     margin-top: 1.5rem;
     color: var(--text-secondary);
     font-size: 0.95rem;
-}
-
-.auth-switch a {
-    color: var(--primary-color);
-    text-decoration: underline; /* Make it clearly a link */
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-.auth-switch a:hover {
-    color: var(--secondary-color);
-    text-decoration: underline;
-    text-decoration: none; /* Remove underline on hover for a subtle effect */
 }
 
 .error-message {

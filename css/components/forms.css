@@ -176,17 +176,6 @@
 .checkbox-label input:checked ~ .checkmark:after {
     display: block;
 }
-.checkbox-label span a {
-    color: var(--primary-color);
-    text-decoration: underline;
-    font-weight: 600;
-    transition: color 0.2s ease, text-decoration 0.2s ease;
-}
-
-.checkbox-label span a:hover {
-    color: var(--primary-dark);
-    text-decoration: none;
-}
 
 .checkbox-label span:not(.checkmark) {
     color: var(--text-secondary);

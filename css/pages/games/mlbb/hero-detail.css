@@ -32,42 +32,6 @@
     cursor: pointer;
 }
 
-/* Global Link Design */
-a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 600;
-    position: relative;
-    padding: 0 2px;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: var(--secondary-color);
-}
-
-a::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-a:hover::after {
-    width: 100%;
-}
-
-.section-content p a,
-.story-block p a,
-.trivia-list li a {
-    background: rgba(99, 102, 241, 0.08);
-    border-radius: 4px;
-}
-
 .hero-header {
     padding-bottom: 2rem;
 }

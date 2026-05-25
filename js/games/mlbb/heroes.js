@@ -2586,32 +2586,96 @@ function toHeroSlug(name) {
     .replace(/^-+|-+$/g, "");
 }
 
-if (tbody) {
-    heroes.forEach(hero => {
-      tbody.innerHTML += `
-        <tr class="hero-row">
-          <td class="icon-col">
-            <div class="hero-icon-wrapper">
-              <img src="../../../${hero.icon}" class="hero-icon">
-            </div>
-          </td>
-          <td>
-            <div class="hero-name-wrapper">
-              <a class="hero-name hero-name-link" href="heroes/${toHeroSlug(hero.name)}.html">${hero.name}</a>
-              <span class="hero-title">${hero.title}</span>
-            </div>
-          </td>
-          <td class="order-col"><span class="hero-number">${hero.order}</span></td>
-          <td>${hero.roles.map(r => `<span class="role-tag ${r.key}">${r.label}</span>`).join("")}</td>
-          <td>${hero.specialties.map(s => `<span class="specialty-tag">${s}</span>`).join("")}</td>
-          <td>${hero.lanes.map(lane => `<span class="lane-tag ${lane.key}">${lane.label}</span>`).join(" ")}</td>
-          <td>${hero.region}</td>
-          <td>
-            ${hero.price.map(p =>
-              `<img class="currency-icon" src="../../../images/games/mlbb/currencies/${p.type}.webp"> ${p.value}`
-            ).join("<br>")}        </td>
-          <td class="date-col">${hero.release}</td>
-        </tr>
-      `;
+let currentIndex = 0;
+const BATCH_SIZE = 20;
+
+function renderHeroBatch() {
+    if (!tbody) return;
+
+    const fragment = document.createDocumentFragment();
+    const heroesToRender = heroes.slice(currentIndex, currentIndex + BATCH_SIZE);
+
+    heroesToRender.forEach(hero => {
+        const row = document.createElement('tr');
+        row.className = 'hero-row';
+
+        row.innerHTML = `
+            <td class="order-col"><span class="hero-number">${hero.order}</span></td>
+            <td class="icon-col">
+                <div class="hero-icon-wrapper">
+                    <img src="../../../${hero.icon}" class="hero-icon" alt="${hero.name} icon">
+                </div>
+            </td>
+            <td>
+                <div class="hero-name-wrapper">
+                    <a class="hero-name hero-name-link" href="heroes/${toHeroSlug(hero.name)}.html">${hero.name}</a>
+                    <span class="hero-title">${hero.title}</span>
+                </div>
+            </td>
+            <td>
+                <div class="role-tags">
+                    ${hero.roles.map(r => `<span class="role-tag ${r.key}">${r.label}</span>`).join("")}
+                </div>
+            </td>
+            <td>
+                <div class="specialty-tags">
+                    ${hero.specialties.map(s => `<span class="specialty-tag">${s}</span>`).join("")}
+                </div>
+            </td>
+            <td>
+                <div class="lane-tags">
+                    ${hero.lanes.map(lane => `<span class="lane-tag ${lane.key}">${lane.label}</span>`).join(" ")}
+                </div>
+            </td>
+            <td>${hero.region}</td>
+            <td>
+                ${hero.price.map(p =>
+                    `<div class="price-item"><img class="currency-icon" src="../../../images/games/mlbb/currencies/${p.type}.webp" alt="${p.type}"> <span>${p.value}</span></div>`
+                ).join("")}
+            </td>
+            <td class="date-col">${hero.release}</td>
+        `;
+        fragment.appendChild(row);
     });
+
+    tbody.appendChild(fragment);
+    currentIndex += BATCH_SIZE;
+
+    if (currentIndex >= heroes.length) {
+        observer.unobserve(sentinel);
+        sentinel.remove();
+    }
 }
+
+const sentinel = document.createElement('div');
+sentinel.id = 'load-more-sentinel';
+sentinel.style.height = '1px';
+sentinel.style.margin = '20px 0';
+sentinel.style.background = 'transparent';
+
+const tableWrapper = document.querySelector('.table-wrapper');
+if (tableWrapper) {
+    tableWrapper.appendChild(sentinel);
+} else if (tbody && tbody.parentNode) {
+    tbody.parentNode.appendChild(sentinel);
+}
+
+const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting && currentIndex < heroes.length) {
+        renderHeroBatch();
+    }
+}, {
+    root: null,
+    rootMargin: '200px',
+    threshold: 0.1
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (tbody) {
+        tbody.innerHTML = '';
+    }
+    renderHeroBatch();
+    if (sentinel && currentIndex < heroes.length) {
+        observer.observe(sentinel);
+    }
+});
