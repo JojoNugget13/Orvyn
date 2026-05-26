@@ -2079,7 +2079,7 @@ const uclData2425 = {
                     date: "November 27, 2024",
                     homeBadge: "../../../../../../images/sports/football/clubs/sk-sturm-graz.webp",
                     awayBadge: "../../../../../../images/sports/football/clubs/girona-fc.webp",
-                    id: "red-star-belgrade-vs-vfb-stuttgart-27-11-2024",
+                    id: "sk-sturm-graz-vs-girona-fc-27-11-2024",
                 },
                 { 
                     home: "Red Star Belgrade", 
@@ -3005,7 +3005,7 @@ const uclData2425 = {
                     homeBadge: "../../../../../../images/sports/football/clubs/inter-milan.webp",
                     awayBadge: "../../../../../../images/sports/football/clubs/feyenoord-rotterdam.webp",
                     id: "inter-milan-vs-feyenoord-rotterdam-11-03-2025",
-                    note: "FC Barcelona qualifies, 4-1 on aggregate"
+                    note: "Inter Milan qualifies, 4-1 on aggregate"
                 },
                 { 
                     home: "Liverpool FC", 
