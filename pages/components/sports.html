@@ -7,49 +7,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../y
-        /* Search Bar Styling */
-        .search-container {
-            max-width: 800px;
-            margin: 2rem auto 0;
-        }
-        .search-input {
-            width: 100%;
-            padding: 1rem 1.5rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            color: white;
-            font-family: 'Unbounded', sans-serif;
-            font-size: 1rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .search-input:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            background: rgba(255, 255, 255, 0.08);
-            box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
-            transform: translateY(-2px);
-        }
-    </style>
-</headsty>e
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
 <body>
     <div id="navbar-placeholder"></div>
 
     <main class="container">
         <section class="page-header">
             <button class="back-btn" onclick="navigateTo('../../index.html')">← Home</button>
-            <h2>Sports</h2>s/
+            <h2>Sports</h2>
 
             <div class="search-container">
-                <input type="text" id="sportsSearch" placeholder="Search sports..." class="search-input">
+                <input type="text" id="globalSearch" placeholder="Search sports..." class="search-input">
             </div>
         </section>
 
         <section class="categories">
             <div class="category-grid">
                 <!-- Football Category -->
-                <div class="category-card" data-category="football" onclick="navigateTo('sports/football.html')">
+                <div class="category-card" data-category="football" onclick="navigateTo('../sports/football.html')">
                     <div class="category-icon">⚽</div>
                     <h4>Football</h4>
                     <p>The beautiful game. Players, clubs, and tournaments.</p>
@@ -70,3 +46,6 @@
     <div id="footer-placeholder"></div>
 
     <script src="../../js/script.js"></script>
+    <script src="../../js/components.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-/* Orvyn - Main Stylesheet */
+/* Font */
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
 
 /* Core Styles */
@@ -14,6 +14,8 @@
 @import url('components/auth.css');
 @import url('components/footer.css');
 @import url('components/links.css');
+@import url('components/player-stats.css');
+@import url('components/searchbar.css');
 
 /* Pages */
 @import url('pages/home.css');

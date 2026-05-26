@@ -1708,7 +1708,7 @@ const uclData2425 = {
                     awayScore: 1,
                     date: "October 23, 2024",
                     homeBadge: "../../../../../../images/sports/football/clubs/stade-brestois-29.webp",
-                    awayBadge: "../../../../../../images/sports/football/clubs/slovan-bratislava.webp",
+                    awayBadge: "../../../../../../images/sports/football/clubs/bayer-04-leverkusen.webp",
                     id: "stade-brestois-29-vs-bayer-04-leverkusen-23-10-2024",
                 },
                 { 
@@ -2079,7 +2079,7 @@ const uclData2425 = {
                     date: "November 27, 2024",
                     homeBadge: "../../../../../../images/sports/football/clubs/sk-sturm-graz.webp",
                     awayBadge: "../../../../../../images/sports/football/clubs/girona-fc.webp",
-                    id: "sk-sturm-graz-vs-girona-fc-27-11-2024",
+                    id: "red-star-belgrade-vs-vfb-stuttgart-27-11-2024",
                 },
                 { 
                     home: "Red Star Belgrade", 
@@ -2089,7 +2089,7 @@ const uclData2425 = {
                     date: "November 27, 2024",
                     homeBadge: "../../../../../../images/sports/football/clubs/red-star-belgrade.webp",
                     awayBadge: "../../../../../../images/sports/football/clubs/vfb-stuttgart.webp",
-                    id: "sk-sturm-graz-vs-girona-fc-27-11-2024",
+                    id: "red-star-belgrade-vs-vfb-stuttgart-27-11-2024",
                 },
                 { 
                     home: "PSV Eindhoven", 
@@ -3218,12 +3218,55 @@ const uclData2425 = {
         }
     ],
     playerStats: {
-        scorers: [
-            { name: "Robert Lewandowski", team: "Barcelona", goals: 7 },
-            { name: "Harry Kane", team: "Bayern Munich", goals: 5 }
+        attacking: [
+            {
+                category: "Goals",
+                players: [
+                    { name: "Robert Lewandowski", team: "FC Barcelona", value: 7 },
+                    { name: "Harry Kane", team: "FC Bayern Munich", value: 7 },
+                    { name: "Raphinha", team: "FC Barcelona", value: 6 },
+                    { name: "Viktor Gyökeres", team: "Sporting CP", value: 5 },
+                    { name: "Erling Haaland", team: "Manchester City", value: 5 },
+                    { name: "Vinícius Júnior", team: "Real Madrid", value: 5 },
+                    { name: "Jonathan David", team: "Lille OSC", value: 4 }
+                ]
+            },
+            {
+                category: "Assists",
+                players: [
+                    { name: "Mohamed Salah", team: "Liverpool FC", value: 4 },
+                    { name: "Bradley Barcola", team: "Paris Saint-Germain", value: 3 },
+                    { name: "Lamine Yamal", team: "FC Barcelona", value: 3 },
+                    { name: "Bukayo Saka", team: "Arsenal FC", value: 3 }
+                ]
+            }
         ],
-        assists: [
-            { name: "Raphinha", team: "Barcelona", assists: 4 }
+        defending: [
+            {
+                category: "Tackles Won",
+                players: [
+                    { name: "Willian Pacho", team: "Paris Saint-Germain", value: 18 },
+                    { name: "Gabriel Magalhães", team: "Arsenal FC", value: 14 },
+                    { name: "Pau Cubarsí", team: "FC Barcelona", value: 12 },
+                    { name: "Ibrahima Konaté", team: "Liverpool FC", value: 11 }
+                ]
+            },
+            {
+                category: "Balls Recovered",
+                players: [
+                    { name: "Vitinha", team: "Paris Saint-Germain", value: 42 },
+                    { name: "Declan Rice", team: "Arsenal FC", value: 38 }
+                ]
+            }
+        ],
+        goalkeeping: [
+            {
+                category: "Saves",
+                players: [
+                    { name: "Gianluigi Donnarumma", team: "Paris Saint-Germain", value: 28 },
+                    { name: "David Raya", team: "Arsenal FC", value: 24 }
+                ]
+            }
         ]
     },
     teamStats: [
@@ -3731,19 +3774,65 @@ function buildFinalTie(tie) {
     `;
 }
 
+/**
+ * Renders all player stats in a clean vertical list.
+ */
 function renderPlayerStats() {
     const container = document.getElementById('player-stats-container');
     if (!container) return;
+    
+    let html = '';
 
-    let html = '<div class="stats-card"><h4>Top Scorers</h4><div class="stats-list">';
-    uclData2425.playerStats.scorers.forEach(p => {
-        html += `
-            <div class="stat-row">
-                <span class="stat-label"><strong>${p.name}</strong> <small>${p.team}</small></span>
-                <span class="stat-value">${p.goals} Goals</span>
-            </div>`;
+    const buildStatGroup = (group) => {
+        const slug = group.category.toLowerCase().replace(/\s+/g, '-');
+        const topPlayers = group.players.slice(0, 5);
+        const morePlayers = group.players.slice(5);
+
+        return `<div class="stats-card" id="stat-${slug}">
+            <h4>${group.category}</h4>
+            <div class="stats-list">
+                ${topPlayers.map(p => `
+                    <div class="stat-row">
+                        <div class="stat-player-meta">
+                            <span class="stat-player-name">${p.name}</span>
+                            <span class="stat-player-team">${p.team}</span>
+                        </div>
+                        <span class="stat-value">${p.value}</span>
+                    </div>
+                `).join('')}
+                ${morePlayers.length > 0 ? `
+                    <div class="hidden-players" style="display: none;">
+                        ${morePlayers.map(p => `
+                            <div class="stat-row">
+                                <div class="stat-player-meta">
+                                    <span class="stat-player-name">${p.name}</span>
+                                    <span class="stat-player-team">${p.team}</span>
+                                </div>
+                                <span class="stat-value">${p.value}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div class="show-more-container">
+                        <button class="show-more-btn" onclick="togglePlayerStats('${slug}')">Show All</button>
+                    </div>
+                ` : ''}
+            </div>
+        </div>`;
+    };
+
+    const categories = [
+        { name: 'Attacking', data: uclData2425.playerStats.attacking },
+        { name: 'Defending', data: uclData2425.playerStats.defending },
+        { name: 'Goalkeeping', data: uclData2425.playerStats.goalkeeping }
+    ];
+
+    categories.forEach(cat => {
+        html += `<div class="stats-category-group">
+            <h3 class="category-main-title">${cat.name}</h3>
+            ${cat.data.map(group => buildStatGroup(group)).join('')}
+        </div>`;
     });
-    html += '</div></div>';
+
     container.innerHTML = html;
 }
 
@@ -3757,3 +3846,24 @@ function renderTeamStats() {
     });
     container.innerHTML = html;
 }
+
+/**
+ * Toggles the visibility of additional player stats for a given category.
+ * @param {string} categorySlug - The slugified name of the category (e.g., 'goals', 'tackles-won').
+ */
+window.togglePlayerStats = function(categorySlug) {
+    const categoryElement = document.getElementById(`stat-${categorySlug}`);
+    if (!categoryElement) return;
+
+    const hiddenPlayers = categoryElement.querySelector('.hidden-players');
+    const button = categoryElement.querySelector('.show-more-btn');
+
+    if (hiddenPlayers.style.display === 'none') {
+        hiddenPlayers.style.display = 'block';
+        button.textContent = 'Minimize';
+    } else {
+        hiddenPlayers.style.display = 'none';
+        button.textContent = 'Show All';
+        categoryElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+};

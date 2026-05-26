@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="../../../../../../css/components/brackets.css">
     <link rel="stylesheet" href="../../../../../../css/components/horizontal-scroll.css">
     <link rel="stylesheet" href="../../../../../../css/components/dropdowns.css">
+    <!-- Main tabs (hero-tabs) are styled by css/components/tabs.css -->
+    <!-- Player Stats sub-tabs are styled by css/components/player-stats.css, which is imported via style.css -->
     
     <script src="../../../../../../js/script.js" defer></script>
     <script src="../../../../../../js/components.js" defer></script>
@@ -65,9 +67,13 @@
 
         <div id="player-stats" class="tab-content">
             <section class="wiki-section">
-                <div class="section-header"><h3>Player Stats</h3></div>
-                <div class="section-content" id="player-stats-container">
-                    <p class="empty-state">Top scorers, assists, and clean sheets for the 24/25 campaign.</p>
+                <div class="section-header">
+                    <h3>Player Stats</h3>
+                </div>
+                <div class="section-content">
+                    <div id="player-stats-container" class="player-stats-vertical-feed">
+                        <p class="empty-state">Loading player data...</p>
+                    </div>
                 </div>
             </section>
         </div>
@@ -96,6 +102,11 @@
             tabContents.forEach(content => {
                 content.classList.toggle('active', content.id === tabName);
             });
+
+            // Render Player Stats if tab is selected
+            if (tabName === 'player-stats') {
+                if (typeof window.renderPlayerStats === 'function') window.renderPlayerStats();
+            }
         }
 
         tabBtns.forEach(btn => {

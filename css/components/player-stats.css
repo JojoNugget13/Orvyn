@@ -1,0 +1,106 @@
+.player-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.stat-category {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    height: fit-content;
+}
+
+.stat-category:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.stat-category h4 {
+    margin-bottom: 1.25rem;
+    color: var(--text-primary);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.5rem;
+}
+
+.player-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border-light);
+    transition: transform 0.2s;
+}
+
+.player-stat-card:last-child {
+    border-bottom: none;
+}
+
+.player-rank {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    width: 20px;
+}
+
+.player-stat-img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: var(--surface-light);
+    border: 1px solid var(--border);
+}
+
+.player-stat-info {
+    flex: 1;
+}
+
+.player-stat-name {
+    display: block;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.player-stat-club {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.player-stat-value {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #a855f7; /* High-contrast purple for the stat value */
+}
+
+.show-more-btn {
+    margin-top: 1.25rem;
+    width: 100%;
+    padding: 0.6rem;
+    background: var(--surface-light);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text-secondary);
+    font-family: 'Unbounded', sans-serif;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.show-more-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}

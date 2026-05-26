@@ -8,43 +8,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/style.css">
-    <style>
-        /* Search Bar Styling */
-        .search-container {
-            max-width: 800px;
-            margin: 2rem auto 0;
-        }
-        .search-input {
-            width: 100%;
-            padding: 1rem 1.5rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            color: white;
-            font-family: 'Unbounded', sans-serif;
-            font-size: 1rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .search-input:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            background: rgba(255, 255, 255, 0.08);
-            box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
-            transform: translateY(-2px);
-        }
-    </style>
 </head>
 <body>
     <div id="navbar-placeholder"></div>
 
     <main class="container">
         <section class="page-header">
-            <button class="back-btn" onclick="navigateTo('../sports.html')">← Sports</button>
+            <button class="back-btn" onclick="navigateTo('../components/sports.html')">← Sports</button>
             <h2>Football</h2>
             <p class="subtitle">The beautiful game. Leagues, clubs, and competitions by region.</p>
 
             <div class="search-container">
-                <input type="text" id="sportsSearch" placeholder="Search regions or confederations..." class="search-input">
+                <input type="text" id="globalSearch" placeholder="Search regions or confederations..." class="search-input">
             </div>
         </section>
 
