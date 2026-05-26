@@ -1,106 +1,120 @@
-.player-stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-}
-
-.stat-category {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.5rem;
+.stats-category-group {
     display: flex;
     flex-direction: column;
-    transition: all 0.3s ease;
-    height: fit-content;
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
-.stat-category:hover {
-    border-color: var(--primary-color);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.stat-category h4 {
-    margin-bottom: 1.25rem;
-    color: var(--text-primary);
-    font-size: 1rem;
+.category-main-title {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 1.2rem;
+    color: var(--primary-color);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    border-bottom: 2px solid var(--border);
-    padding-bottom: 0.5rem;
+    letter-spacing: 2px;
+    border-left: 4px solid var(--primary-color);
+    padding: 0.2rem 0 0.2rem 1rem;
+    margin-bottom: 0.5rem;
 }
 
-.player-stat-card {
+.stats-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    margin-bottom: 0.5rem;
+}
+
+.stats-card:hover {
+    border-color: rgba(99, 102, 241, 0.4);
+    transform: translateY(-5px);
+}
+
+.stats-card h4 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.stats-list {
     display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.8rem 0;
-    border-bottom: 1px solid var(--border-light);
-    transition: transform 0.2s;
+    flex-direction: column;
 }
 
-.player-stat-card:last-child {
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.stat-row:last-child {
     border-bottom: none;
 }
 
-.player-rank {
+.stat-row:hover {
+    background: rgba(99, 102, 241, 0.05);
+    border-radius: 12px;
+}
+
+.stat-player-meta {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.stat-player-name {
     font-family: 'Unbounded', sans-serif;
-    font-weight: 700;
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    width: 20px;
-}
-
-.player-stat-img {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    object-fit: cover;
-    background: var(--surface-light);
-    border: 1px solid var(--border);
-}
-
-.player-stat-info {
-    flex: 1;
-}
-
-.player-stat-name {
-    display: block;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--text-primary);
 }
 
-.player-stat-club {
-    display: block;
-    font-size: 0.75rem;
+.stat-player-team {
+    font-size: 0.65rem;
     color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.7;
 }
 
-.player-stat-value {
+.stat-value {
     font-family: 'Unbounded', sans-serif;
-    font-weight: 800;
-    font-size: 1.1rem;
-    color: #a855f7; /* High-contrast purple for the stat value */
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--primary-color);
+}
+
+.show-more-container {
+    margin-top: 1.5rem;
+    text-align: center;
 }
 
 .show-more-btn {
-    margin-top: 1.25rem;
-    width: 100%;
-    padding: 0.6rem;
-    background: var(--surface-light);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    color: var(--text-secondary);
-    font-family: 'Unbounded', sans-serif;
-    font-size: 0.75rem;
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.8rem 2.5rem;
+    border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s;
+    font-family: 'Unbounded', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .show-more-btn:hover {
     background: var(--primary-color);
     color: white;
-    border-color: var(--primary-color);
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+    transform: scale(1.05);
 }
