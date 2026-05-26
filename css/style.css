@@ -15,7 +15,7 @@
 @import url('components/footer.css');
 @import url('components/links.css');
 @import url('components/player-stats.css');
-@import url('components/searchbar.css');
+@import url('components/searchbar.css'); /* Ensure this is lowercase to match file system */
 
 /* Pages */
 @import url('pages/home.css');
