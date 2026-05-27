@@ -3222,62 +3222,159 @@ const uclData2425 = {
             {
                 category: "Goals (Penalties)",
                 players: [
-                    { name: "<a href='../../../../../football/players/raphael-dias-belloli.html'>Raphinha</a>", team: "FC Barcelona", value: "13 (p. 0)" },
-                    { name: "<a href='../../../../../football/players/serhou-yadaly-guirassy.html'>Serhou Guirassy</a>", team: "Borussia Dortmund", value: "13 (p. 5)" },
-                    { name: "<a href='../../../../../football/players/robert-lewandowski.html'>Robert Lewandowski</a>", team: "FC Barcelona", value: "11 (p. 3)" },
-                    { name: "<a href='../../../../../football/players/harry-edward-kane.html'>Harry Kane</a>", team: "FC Bayern Munich", value: "11 (p. 4)" },
-                    { name: "<a href='../../../../../football/players/lautaro-javier-martinez.html'>Lautaro Martínez</a>", team: "Inter Milan", value: "9 (p. 1)" },
-                    { name: "<a href='../../../../../football/players/jonathan-christian-david.html'>Jonathan David</a>", team: "Lille OSC", value: "9 (p. 3)" },
-                    { name: "<a href='../../../../../football/players/masour-ousmane-dembele.html'>Ousmane Dembélé</a>", team: "Paris Saint-Germain FC", value: "8 (p. 0)" },
-                    { name: "<a href='../../../../../football/players/vinicius-jose-paixao-de-oliveira-junior.html'>Vinicius Junior</a>", team: "Real Madrid CF", value: "8 (p. 1)" },
-                    { name: "<a href='../../../../../football/players/erling-braut-haaland.html'>Erling Haaland</a>", team: "Manchester City FC", value: "8 (p. 2)" },
-                    { name: "<a href='../../../../../football/players/julian-alvarez.html'>Julián Álvarez</a>", team: "Atlético Madrid", value: "7 (p. 0)" },
-                    { name: "<a href='../../../../../football/players/kylian-mbappe-lottin.html'>Kylian Mbappé</a>", team: "Real Madrid CF", value: "7 (p. 0)" },
-                    { name: "<a href='../../../../../football/players/vangelis-pavlidis.html'>Vangelis Pavlidis</a>", team: "SL Benfica", value: "7 (p. 2)" },
-                    { name: "<a href='../../../../../football/players/antoine-griezmann.html'>Antoine Griezmann</a>", team: "Atlético Madrid", value: "6 (p. 0)" },
-                    { name: "<a href='../../../../../football/players/bukayo-saka.html'>Bukayo Saka</a>", team: "Arsenal FC", value: "6 (p. 1)" },
-                    { name: "<a href='../../../../../football/players/florian-richard-wirtz.html'>Florian Wirtz</a>", team: "Bayer 04 Leverkusen", value: "6 (p. 1)" },
-                    { name: "<a href='../../../../../football/players/santiago-tomas-gimenez.html'>Santiago Giménez</a>", team: "AC Milan", value: "6 (p. 1)" },
-                    { name: "<a href='../../../../../football/players/viktor-einar-gyokeres.html'>Viktor Gyökeres</a>", team: "Sporting CP", value: "6 (p. 2)" },
-                    { name: "<a href='../../../../../football/players/ademola-olajade-alade-aylola-lookman.html'>Ademola Lookman</a>", team: "Atalanta BC", value: "5 (p. 0)" },
-                    { name: "<a href='../../../../../football/players/desire-nonka-maho-doué.html'>Désiré Doué</a>", team: "Paris Saint-Germain FC", value: "5 (p. 0)" },
-                    { name: "<a href='../../../../../football/players/karim-david-adeyemi.html'>Karim Adeyemi</a>", team: "Borussia Dortmund", value: "5 (p. 0)" },
-                    { name: "<a href='../../../../../football/players/lamine-yamal-nasraoui-ebana.html'>Lamine Yamal</a>", team: "FC Barcelona", value: "5 (p. 0)" },
-                    { name: "<a href='../../../../../football/players/rodrygo-silva-de-goes.html'>Rodrygo</a>", team: "Real Madrid CF", value: "5 (p. 0)" },
-                    { name: "<a href='../../../../../football/players/sandro-kulenovic.html'>Sandro Kulenovic</a>", team: "GNK Dinamo Zagreb", value: "5 (p. 0)" },
-                    { name: "<a href='../../../../../football/players/david-strelec.html'>David Strelec</a>", team: "Slovan Bratislava", value: "5 (p. 1)" },
-                    { name: "<a href='../../../../../football/players/michael-akpovie-olise.html'>Michael Olise</a>", team: "FC Bayern Munich", value: "5 (p. 1)" },
-                    { name: "<a href='../../../../../football/players/achraf-hakimi.html'>Achraf Hakimi</a>", team: "Paris Saint-Germain FC", value: "4 (p. 0)" },
-                    { name: "<a href='../../../../../football/players/christian-mate-pulisic.html'>Christian Pulisic</a>", team: "AC Milan", value: "4 (p. 0)" },
-                    { name: "<a href='../../../../../football/players/daizen-maeda.html'>Daizen Maeda</a>", team: "Celtic FC", value: "4 (p. 0)" },
-                    { name: "<a href='../../../../../football/players/declan-rice.html'>Declan Rice</a>", team: "Arsenal FC", value: "4 (p. 0)" },
+                    { name: "<a href='../../../../../football/players/raphael-dias-belloli.html'>Raphinha</a>", team: "FC Barcelona", value: "13 (0)" },
+                    { name: "<a href='../../../../../football/players/serhou-yadaly-guirassy.html'>Serhou Guirassy</a>", team: "Borussia Dortmund", value: "13 (5)" },
+                    { name: "<a href='../../../../../football/players/robert-lewandowski.html'>Robert Lewandowski</a>", team: "FC Barcelona", value: "11 (3)" },
+                    { name: "<a href='../../../../../football/players/harry-edward-kane.html'>Harry Kane</a>", team: "FC Bayern Munich", value: "11 (4)" },
+                    { name: "<a href='../../../../../football/players/lautaro-javier-martinez.html'>Lautaro Martínez</a>", team: "Inter Milan", value: "9 (1)" },
+                    { name: "<a href='../../../../../football/players/jonathan-christian-david.html'>Jonathan David</a>", team: "Lille OSC", value: "9 (3)" },
+                    { name: "<a href='../../../../../football/players/masour-ousmane-dembele.html'>Ousmane Dembélé</a>", team: "Paris Saint-Germain FC", value: "8 (0)" },
+                    { name: "<a href='../../../../../football/players/vinicius-jose-paixao-de-oliveira-junior.html'>Vinicius Junior</a>", team: "Real Madrid CF", value: "8 (1)" },
+                    { name: "<a href='../../../../../football/players/erling-braut-haaland.html'>Erling Haaland</a>", team: "Manchester City FC", value: "8 (2)" },
+                    { name: "<a href='../../../../../football/players/julian-alvarez.html'>Julián Álvarez</a>", team: "Atlético Madrid", value: "7 (0)" }
+                ]
+            },
+            {
+                category: "Expected Goals (Goals)",
+                players: [
+                    { name: "<a href='../../../../../football/players/serhou-yadaly-guirassy.html'>Serhou Guirassy</a>", team: "Borussia Dortmund", value: "12.26 (13)" },
+                    { name: "<a href='../../../../../football/players/harry-edward-kane.html'>Harry Kane</a>", team: "FC Bayern Munich", value: "10.57 (11)" },
+                    { name: "<a href='../../../../../football/players/robert-lewandowski.html'>Robert Lewandowski</a>", team: "FC Barcelona", value: "10.44 (11)" },
+                    { name: "<a href='../../../../../football/players/kylian-mbappe-lottin.html'>Kylian Mbappé</a>", team: "Real Madrid CF", value: "9.19 (7)" },
+                    { name: "<a href='../../../../../football/players/erling-braut-haaland.html'>Erling Haaland</a>", team: "Manchester City FC", value: "9.13 (8)" },
+                    { name: "<a href='../../../../../football/players/masour-ousmane-dembele.html'>Ousmane Dembélé</a>", team: "Paris Saint-Germain FC", value: "8.28 (8)" },
+                    { name: "<a href='../../../../../football/players/vangelis-pavlidis.html'>Vangelis Pavlidis</a>", team: "SL Benfica", value: "7.93 (7)" },
+                    { name: "<a href='../../../../../football/players/vinicius-jose-paixao-de-oliveira-junior.html'>Vinicius Junior</a>", team: "Real Madrid CF", value: "6.67 (8)" },
+                    { name: "<a href='../../../../../football/players/bradley-jean-manuel-essolisam-addo-barcola.html'>Bradley Barcola</a>", team: "Paris Saint-Germain FC", value: "6.09 (3)" },
+                    { name: "<a href='../../../../../football/players/ademola-olajade-alade-aylola-lookman.html'>Ademola Lookman</a>", team: "Atalanta BC", value: "5.35 (5)" }
                 ]
             },
             {
                 category: "Assists",
                 players: [
-                    { name: "Mohamed Salah", team: "Liverpool FC", value: 4 },
-                    { name: "Bradley Barcola", team: "Paris Saint-Germain", value: 3 },
-                    { name: "Lamine Yamal", team: "FC Barcelona", value: 3 },
-                    { name: "Bukayo Saka", team: "Arsenal FC", value: 3 }
+                    { name: "<a href='../../../../../football/players/raphael-dias-belloli.html'>Raphinha</a>", team: "FC Barcelona", value: "8" },
+                    { name: "<a href='../../../../../football/players/masour-ousmane-dembele.html'>Ousmane Dembélé</a>", team: "Paris Saint-Germain FC", value: "6" },
+                    { name: "<a href='../../../../../football/players/davide-zappacosta.html'>Davide Zappacosta</a>", team: "Atalanta BC", value: "5" },
+                    { name: "<a href='../../../../../football/players/charles-de-ketelaere.html'>Charles de Ketelaere</a>", team: "Atalanta BC", value: "5" },
+                    { name: "<a href='../../../../../football/players/julian-brandt.html'>Julian Brandt</a>", team: "Borussia Dortmund", value: "5" },
+                    { name: "<a href='../../../../../football/players/achraf-hakimi.html'>Achraf Hakimi</a>", team: "Paris Saint-Germain FC", value: "5" },
+                    { name: "<a href='../../../../../football/players/marcos-llorente-moreno.html'>Marcos Llorente</a>", team: "Atlético Madrid", value: "4" },
+                    { name: "<a href='../../../../../football/players/mohamed-salah-hamed-ghaly.html'>Mohamed Salah</a>", team: "Liverpool FC", value: "4" },
+                    { name: "<a href='../../../../../football/players/igor-guilherme-barbosa-de-paixao.html'>Igor Paixão</a>", team: "Feyenoord Rotterdam", value: "4" },
+                    { name: "<a href='../../../../../football/players/oliver-george-arthur-watkins.html'>Ollie Watkins</a>", team: "Aston Villa FC", value: "4" }
                 ]
-            }
+            },
+            {
+                category: "Expected Assists (Assists)",
+                players: [
+                    { name: "<a href='../../../../../football/players/michael-akpovie-olise.html'>Michael Olise</a>", team: "FC Bayern Munich", value: "4.96 (2)" },
+                    { name: "<a href='../../../../../football/players/joshua-walter-kimmich.html'>Joshua Kimmich</a>", team: "FC Bayern Munich", value: "4.48 (4)" },
+                    { name: "<a href='../../../../../football/players/davide-zappacosta.html'>Davide Zappacosta</a>", team: "Atalanta BC", value: "4.07 (5)" },
+                    { name: "<a href='../../../../../football/players/achraf-hakimi.html'>Achraf Hakimi</a>", team: "Paris Saint-Germain FC", value: "3.62 (5)" },
+                    { name: "<a href='../../../../../football/players/jamal-musiala.html'>Jamal Musiala</a>", team: "FC Bayern Munich", value: "3.55 (3)" },
+                    { name: "<a href='../../../../../football/players/gabriel-teodoro-martinelli-silva.html'>Gabriel Martinelli</a>", team: "Arsenal FC", value: "3.46 (1)" },
+                    { name: "<a href='../../../../../football/players/bradley-jean-manuel-essolisam-addo-barcola.html'>Bradley Barcola</a>", team: "Paris Saint-Germain FC", value: "3.31 (4)" },
+                    { name: "<a href='../../../../../football/players/charles-de-ketelaere.html'>Charles de Ketelaere</a>", team: "Atalanta BC", value: "3.23 (5)" },
+                    { name: "<a href='../../../../../football/players/pascal-alexander-gross.html'>Pascal Groß</a>", team: "Borussia Dortmund", value: "3.19 (2)" },
+                    { name: "<a href='../../../../../football/players/chris-jan-fuhrich.html'>Chris Führich</a>", team: "VfB Stuttgart", value: "2.94 (0)" }
+                ]
+            },
+            {
+                category: "Goals and Assists",
+                players: [
+                    { name: "<a href='../../../../../football/players/raphael-dias-belloli.html'>Raphinha</a>", team: "FC Barcelona", value: "21" },
+                    { name: "<a href='../../../../../football/players/serhou-yadaly-guirassy.html'>Serhou Guirassy</a>", team: "Borussia Dortmund", value: "17" },
+                    { name: "<a href='../../../../../football/players/masour-ousmane-dembele.html'>Ousmane Dembélé</a>", team: "Paris Saint-Germain FC", value: "14" },
+                    { name: "<a href='../../../../../football/players/harry-edward-kane.html'>Harry Kane</a>", team: "FC Bayern Munich", value: "13" },
+                    { name: "<a href='../../../../../football/players/robert-lewandowski.html'>Robert Lewandowski</a>", team: "FC Barcelona", value: "11" },
+                    { name: "<a href='../../../../../football/players/vinicius-jose-paixao-de-oliveira-junior.html'>Vinicius Junior</a>", team: "Real Madrid CF", value: "10" },
+                    { name: "<a href='../../../../../football/players/jonathan-christian-david.html'>Jonathan David</a>", team: "Lille OSC", value: "9" },
+                    { name: "<a href='../../../../../football/players/lautaro-javier-martinez.html'>Lautaro Martínez</a>", team: "Inter Milan", value: "9" },
+                    { name: "<a href='../../../../../football/players/vangelis-pavlidis.html'>Vangelis Pavlidis</a>", team: "SL Benfica", value: "9" },
+                    { name: "<a href='../../../../../football/players/achraf-hakimi.html'>Achraf Hakimi</a>", team: "Paris Saint-Germain FC", value: "9" }
+                ]
+            },
+            {
+                category: "Expected Goals and Assists (G+A)",
+                players: [
+                    { name: "<a href='../../../../../football/players/serhou-yadaly-guirassy.html'>Serhou Guirassy</a>", team: "Borussia Dortmund", value: "14.44 (17)" },
+                    { name: "<a href='../../../../../football/players/harry-edward-kane.html'>Harry Kane</a>", team: "FC Bayern Munich", value: "12.25 (13)" },
+                    { name: "<a href='../../../../../football/players/masour-ousmane-dembele.html'>Ousmane Dembélé</a>", team: "Paris Saint-Germain FC", value: "11.03 (14)" },
+                    { name: "<a href='../../../../../football/players/kylian-mbappe-lottin.html'>Kylian Mbappé</a>", team: "Real Madrid CF", value: "10.81 (8)" },
+                    { name: "<a href='../../../../../football/players/michael-akpovie-olise.html'>Michael Olise</a>", team: "FC Bayern Munich", value: "10.02 (7)" },
+                    { name: "<a href='../../../../../football/players/bradley-jean-manuel-essolisam-addo-barcola.html'>Bradley Barcola</a>", team: "Paris Saint-Germain FC", value: "9.44 (7)" },
+                    { name: "<a href='../../../../../football/players/erling-braut-haaland.html'>Erling Haaland</a>", team: "Manchester City FC", value: "9.30 (8)" },
+                    { name: "<a href='../../../../../football/players/vinicius-jose-paixao-de-oliveira-junior.html'>Vinicius Junior</a>", team: "Real Madrid CF", value: "9.29 (10)" },
+                    { name: "<a href='../../../../../football/players/vangelis-pavlidis.html'>Vangelis Pavlidis</a>", team: "SL Benfica", value: "9.04 (9)" },
+                    { name: "<a href='../../../../../football/players/ademola-olajade-alade-aylola-lookman.html'>Ademola Lookman</a>", team: "Atalanta BC", value: "7.98 (6)" },
+                    { name: "<a href='../../../../../football/players/gabriel-teodoro-martinelli-silva.html'>Gabriel Martinelli</a>", team: "Arsenal FC", value: "7.62 (3)" }
+                ]
+            },
+            
         ],
         defending: [
             {
                 category: "Tackles Won",
                 players: [
-                    { name: "Willian Pacho", team: "Paris Saint-Germain", value: 18 },
-                    { name: "Gabriel Magalhães", team: "Arsenal FC", value: 14 },
-                    { name: "Pau Cubarsí", team: "FC Barcelona", value: 12 },
-                    { name: "Ibrahima Konaté", team: "Liverpool FC", value: 11 }
+                    { name: "<a href='../../../../../football/players/stefan-posch.html'>Stefan Posch</a>", team: "Atalanta BC", value: "2.9" },
+                    { name: "<a href='../../../../../football/players/manuel-locatelli.html'>Manuel Locatelli</a>", team: "Juventus FC", value: "2.3" },
+                    { name: "<a href='../../../../../football/players/dimitri-dominique-lavalee.html'>Dimitri Lavalée</a>", team: "SK Sturm Graz", value: "2.3" },
+                    { name: "<a href='../../../../../football/players/joao-pedro-goncalves-neves.html'>João Neves</a>", team: "Paris Saint-Germain FC", value: "2.2" },
+                    { name: "<a href='../../../../../football/players/marc-casado-torras.html'>Marc Casadó</a>", team: "FC Barcelona", value: "2.1" },
+                    { name: "<a href='../../../../../football/players/florentino-ibrain-morris-luis.html'>Florentino Luís</a>", team: "SL Benfica", value: "2.1" },
+                    { name: "<a href='../../../../../football/players/maximilian-mittelstadt.html'>Maximilian Mittelstadt</a>", team: "VfB Stuttgart", value: "2.0" },
+                    { name: "<a href='../../../../../football/players/raul-torrente-navarro.html'>Raúl Torrente</a>", team: "GNK Dinamo Zagreb", value: "2.0" },
+                    { name: "<a href='../../../../../football/players/cesar-rodolfo-blackman-camarena.html'>César Blackman</a>", team: "Slovan Bratislava", value: "1.9" },
+                    { name: "<a href='../../../../../football/players/tomas-lemos-araujo.html'>Tomás Araújo</a>", team: "SL Benfica", value: "1.9" },
+                    { name: "<a href='../../../../../football/players/brendan-chardonnet.html'>Brendan Chardonnet</a>", team: "Stade Brestois 29", value: "1.9" }
                 ]
             },
             {
-                category: "Balls Recovered",
+                category: "Interceptions",
                 players: [
-                    { name: "Vitinha", team: "Paris Saint-Germain", value: 42 },
-                    { name: "Declan Rice", team: "Arsenal FC", value: 38 }
+                    { name: "<a href='../../../../../football/players/juraj-kucka.html'>Juraj Kucka</a>", team: "Slovan Bratislava", value: "3.0" },
+                    { name: "<a href='../../../../../football/players/tiago-carvalho-santos.html'>Tiago Santos</a>", team: "Lille OSC", value: "3.0" },
+                    { name: "<a href='../../../../../football/players/pedro-henrique-azevedo-pereira.html'>Pedro Henrique</a>", team: "FC Shakhtar Donetsk", value: "2.7" },
+                    { name: "<a href='../../../../../football/players/ryan-jiro-gravenberch.html'>Ryan Gravenberch</a>", team: "Liverpool FC", value: "2.5" },
+                    { name: "<a href='../../../../../football/players/uros-spajic.html'>Uros Spajic</a>", team: "Red Star Belgrade", value: "2.4" },
+                    { name: "<a href='../../../../../football/players/florentino-ibrain-morris-luis.html'>Florentino Luís</a>", team: "SL Benfica", value: "2.3" },
+                    { name: "<a href='../../../../../football/players/denis-lemi-zakaria-lako-lado.html'>Denis Zakaria</a>", team: "AS Monaco FC", value: "2.3" },
+                    { name: "<a href='../../../../../football/players/samy-alexandre-mmaee-anwambeben.html'>Samy Mmaee</a>", team: "GNK Dinamo Zagreb", value: "2.3" },
+                    { name: "<a href='../../../../../football/players/kevin-wimmer.html'>Kevin Wimmer</a>", team: "Slovan Bratislava", value: "2.0" },
+                    { name: "<a href='../../../../../football/players/nicolas-hernan-gonzalo-otamendi.html'>Nicolás Otamendi</a>", team: "SL Benfica", value: "2.0" },
+                    { name: "<a href='../../../../../football/players/alvaro-fernandez-carreras.html'>Álvaro Carreras</a>", team: "SL Benfica", value: "2.0" }
+                ]
+            },
+            {
+                category: "Yellow Cards",
+                players: [
+                    { name: "<a href='../../../../../football/players/marko-tolic.html'>Marko Tolic</a>", team: "Slovan Bratislava", value: "5" },
+                    { name: "<a href='../../../../../football/players/alexis-mac-allister.html'>Alexis Mac Allister</a>", team: "Liverpool FC", value: "5" },
+                    { name: "<a href='../../../../../football/players/alvaro-fernandez-carreras.html'>Álvaro Carreras</a>", team: "SL Benfica", value: "5" },
+                    { name: "<a href='../../../../../football/players/lucas-gourna-douath.html'>Lucas Gourna-Douath</a>", team: "FC Red Bull Salzburg", value: "5" },
+                    { name: "<a href='../../../../../football/players/ederson-jose-dos-santos-lourenco-da-silva.html'>Éderson</a>", team: "Atalanta BC", value: "4" },
+                    { name: "<a href='../../../../../football/players/guram-kashia.html'>Guram Kashia</a>", team: "Slovan Bratislava", value: "4" },
+                    { name: "<a href='../../../../../football/players/jose-maria-giminez-de-vargas.html'>José María Giménez</a>", team: "Atlético Madrid", value: "4" },
+                    { name: "<a href='../../../../../football/players/julien-le-cardinal.html'>Julien le Cardinal</a>", team: "Stade Brestois 29", value: "4" },
+                    { name: "<a href='../../../../../football/players/kenan-bajric.html'>Kenan Bajric</a>", team: "Slovan Bratislava", value: "4" },
+                    { name: "<a href='../../../../../football/players/leon-christoph-goretzka.html'>Leon Goretzka</a>", team: "FC Bayern Munich", value: "4" },
+                    { name: "<a href='../../../../../football/players/lucas-vasquez-iglesias.html'>Lucas Vázquez</a>", team: "Real Madrid CF", value: "4" }
+                ]
+            },
+            {
+                category: "Red Cards",
+                players: [
+                    { name: "<a href='../../../../../football/players/aissa-mandi.html'>Aïssa Mandi</a>", team: "Lille OSC", value: "2" },
+                    { name: "<a href='../../../../../football/players/marko-tolic.html'>Marko Tolic</a>", team: "Slovan Bratislava", value: "1" },
+                    { name: "<a href='../../../../../football/players/christian-mawissa-elebi.html'>Christian Mawissa</a>", team: "AS Monaco FC", value: "1" },
+                    { name: "<a href='../../../../../football/players/eduardo-celmi-camavinga.html'>Eduardo Camavinga</a>", team: "Real Madrid CF", value: "1" },
+                    { name: "<a href='../../../../../football/players/kyriakos-savvidis.html'>Kyriakos Savvidis</a>", team: "Slovan Bratislava", value: "1" },
+                    { name: "<a href='../../../../../football/players/pau-cubarsi-paredes.html'>Pau Cubarsí</a>", team: "FC Barcelona", value: "1" },
+                    { name: "<a href='../../../../../football/players/raphael-onyedika-nwadike.html'>Raphael Onyedika</a>", team: "Club Brugge KV", value: "1" },
+                    { name: "<a href='../../../../../football/players/theo-bernard-francois-hernandez.html'>Theo Hernández</a>", team: "AC Milan", value: "1" },
+                    { name: "<a href='../../../../../football/players/adilson-angel-abreu-de-almeida-gomes.html'>Angel Gomes</a>", team: "Lille OSC", value: "1" },
+                    { name: "<a href='../../../../../football/players/arnau-martinez-lopez.html'>Arnau Martínez</a>", team: "Girona FC", value: "1" },
+                    { name: "<a href='../../../../../football/players/daizen-maeda.html'>Daizen Maeda</a>", team: "Celtic FC", value: "1" }
                 ]
             }
         ],
