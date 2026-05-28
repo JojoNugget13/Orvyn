@@ -3306,8 +3306,7 @@ const uclData2425 = {
                     { name: "<a href='../../../../../football/players/erling-braut-haaland.html'>Erling Haaland</a>", team: "Manchester City FC", value: "9.30 (8)" },
                     { name: "<a href='../../../../../football/players/vinicius-jose-paixao-de-oliveira-junior.html'>Vinicius Junior</a>", team: "Real Madrid CF", value: "9.29 (10)" },
                     { name: "<a href='../../../../../football/players/vangelis-pavlidis.html'>Vangelis Pavlidis</a>", team: "SL Benfica", value: "9.04 (9)" },
-                    { name: "<a href='../../../../../football/players/ademola-olajade-alade-aylola-lookman.html'>Ademola Lookman</a>", team: "Atalanta BC", value: "7.98 (6)" },
-                    { name: "<a href='../../../../../football/players/gabriel-teodoro-martinelli-silva.html'>Gabriel Martinelli</a>", team: "Arsenal FC", value: "7.62 (3)" }
+                    { name: "<a href='../../../../../football/players/ademola-olajade-alade-aylola-lookman.html'>Ademola Lookman</a>", team: "Atalanta BC", value: "7.98 (6)" }
                 ]
             },
             
@@ -3325,8 +3324,7 @@ const uclData2425 = {
                     { name: "<a href='../../../../../football/players/maximilian-mittelstadt.html'>Maximilian Mittelstadt</a>", team: "VfB Stuttgart", value: "2.0" },
                     { name: "<a href='../../../../../football/players/raul-torrente-navarro.html'>Raúl Torrente</a>", team: "GNK Dinamo Zagreb", value: "2.0" },
                     { name: "<a href='../../../../../football/players/cesar-rodolfo-blackman-camarena.html'>César Blackman</a>", team: "Slovan Bratislava", value: "1.9" },
-                    { name: "<a href='../../../../../football/players/tomas-lemos-araujo.html'>Tomás Araújo</a>", team: "SL Benfica", value: "1.9" },
-                    { name: "<a href='../../../../../football/players/brendan-chardonnet.html'>Brendan Chardonnet</a>", team: "Stade Brestois 29", value: "1.9" }
+                    { name: "<a href='../../../../../football/players/tomas-lemos-araujo.html'>Tomás Araújo</a>", team: "SL Benfica", value: "1.9" }
                 ]
             },
             {
@@ -3341,8 +3339,7 @@ const uclData2425 = {
                     { name: "<a href='../../../../../football/players/denis-lemi-zakaria-lako-lado.html'>Denis Zakaria</a>", team: "AS Monaco FC", value: "2.3" },
                     { name: "<a href='../../../../../football/players/samy-alexandre-mmaee-anwambeben.html'>Samy Mmaee</a>", team: "GNK Dinamo Zagreb", value: "2.3" },
                     { name: "<a href='../../../../../football/players/kevin-wimmer.html'>Kevin Wimmer</a>", team: "Slovan Bratislava", value: "2.0" },
-                    { name: "<a href='../../../../../football/players/nicolas-hernan-gonzalo-otamendi.html'>Nicolás Otamendi</a>", team: "SL Benfica", value: "2.0" },
-                    { name: "<a href='../../../../../football/players/alvaro-fernandez-carreras.html'>Álvaro Carreras</a>", team: "SL Benfica", value: "2.0" }
+                    { name: "<a href='../../../../../football/players/nicolas-hernan-gonzalo-otamendi.html'>Nicolás Otamendi</a>", team: "SL Benfica", value: "2.0" }
                 ]
             },
             {
@@ -3357,8 +3354,7 @@ const uclData2425 = {
                     { name: "<a href='../../../../../football/players/jose-maria-giminez-de-vargas.html'>José María Giménez</a>", team: "Atlético Madrid", value: "4" },
                     { name: "<a href='../../../../../football/players/julien-le-cardinal.html'>Julien le Cardinal</a>", team: "Stade Brestois 29", value: "4" },
                     { name: "<a href='../../../../../football/players/kenan-bajric.html'>Kenan Bajric</a>", team: "Slovan Bratislava", value: "4" },
-                    { name: "<a href='../../../../../football/players/leon-christoph-goretzka.html'>Leon Goretzka</a>", team: "FC Bayern Munich", value: "4" },
-                    { name: "<a href='../../../../../football/players/lucas-vasquez-iglesias.html'>Lucas Vázquez</a>", team: "Real Madrid CF", value: "4" }
+                    { name: "<a href='../../../../../football/players/leon-christoph-goretzka.html'>Leon Goretzka</a>", team: "FC Bayern Munich", value: "4" }
                 ]
             },
             {
@@ -3373,24 +3369,95 @@ const uclData2425 = {
                     { name: "<a href='../../../../../football/players/raphael-onyedika-nwadike.html'>Raphael Onyedika</a>", team: "Club Brugge KV", value: "1" },
                     { name: "<a href='../../../../../football/players/theo-bernard-francois-hernandez.html'>Theo Hernández</a>", team: "AC Milan", value: "1" },
                     { name: "<a href='../../../../../football/players/adilson-angel-abreu-de-almeida-gomes.html'>Angel Gomes</a>", team: "Lille OSC", value: "1" },
-                    { name: "<a href='../../../../../football/players/arnau-martinez-lopez.html'>Arnau Martínez</a>", team: "Girona FC", value: "1" },
-                    { name: "<a href='../../../../../football/players/daizen-maeda.html'>Daizen Maeda</a>", team: "Celtic FC", value: "1" }
+                    { name: "<a href='../../../../../football/players/arnau-martinez-lopez.html'>Arnau Martínez</a>", team: "Girona FC", value: "1" }
                 ]
             }
         ],
         goalkeeping: [
             {
+                category: "Clean Sheets",
+                players: [
+                    { name: "<a href='../../../../../football/players/yann-sommer.html'>Yann Sommer</a>", team: "Inter Milan", value: "7" },
+                    { name: "<a href='../../../../../football/players/david-raya-martin.html'>David Raya</a>", team: "Arsenal FC", value: "6" },
+                    { name: "<a href='../../../../../football/players/gianluigi-donnarumma.html'>Gianluigi Donnarumma</a>", team: "Paris Saint-Germain FC", value: "6" },
+                    { name: "<a href='../../../../../football/players/marco-carnesecchi.html'>Marco Carnesecchi</a>", team: "Atalanta BC", value: "5" },
+                    { name: "<a href='../../../../../football/players/damian-emiliano-martinez-romero.html'>Emiliano Martínez</a>", team: "Aston Villa FC", value: "5" },
+                    { name: "<a href='../../../../../football/players/anatoliy-volodymyrovych-trubin.html'>Anatoliy Trubin</a>", team: "SL Benfica", value: "4" },
+                    { name: "<a href='../../../../../football/players/gregor-kobel.html'>Gregor Kobel</a>", team: "Borussia Dortmund", value: "4" },
+                    { name: "<a href='../../../../../football/players/caoimhin-odhran-kelleher.html'>Caoimhín Kelleher</a>", team: "Liverpool FC", value: "3" },
+                    { name: "<a href='../../../../../football/players/alisson-ramses-becker.html'>Alisson</a>", team: "Liverpool FC", value: "3" },
+                    { name: "<a href='../../../../../football/players/matej-kovar.html'>Matej Kovar</a>", team: "Bayer 04 Leverkusen", value: "3" }
+                ]
+            },
+            {
+                category: "Goals Conceded",
+                players: [
+                    { name: "<a href='../../../../../football/players/alisson-ramses-becker.html'>Alisson</a>", team: "Liverpool FC", value: "0.4" },
+                    { name: "<a href='../../../../../football/players/david-raya-martin.html'>David Raya</a>", team: "Arsenal FC", value: "0.7" },
+                    { name: "<a href='../../../../../football/players/gianluigi-donnarumma.html'>Gianluigi Donnarumma</a>", team: "Paris Saint-Germain FC", value: "0.9" },
+                    { name: "<a href='../../../../../football/players/michele-di-gregorio.html'>Michele Di Gregorio</a>", team: "Juventus FC", value: "0.9" },
+                    { name: "<a href='../../../../../football/players/damian-emiliano-martinez-romero.html'>Emiliano Martínez</a>", team: "Aston Villa FC", value: "1" },
+                    { name: "<a href='../../../../../football/players/marco-carnesecchi.html'>Marco Carnesecchi</a>", team: "Atalanta BC", value: "1" },
+                    { name: "<a href='../../../../../football/players/matej-kovar.html'>Matej Kovar</a>", team: "Bayer 04 Leverkusen", value: "1" },
+                    { name: "<a href='../../../../../football/players/yann-sommer.html'>Yann Sommer</a>", team: "Inter Milan", value: "1.1" },
+                    { name: "<a href='../../../../../football/players/manuel-peter-neuer.html'>Manuel Neuer</a>", team: "FC Bayern Munich", value: "1.1" },
+                    { name: "<a href='../../../../../football/players/lukasz-skorupski.html'>Lukasz Skorupski</a>", team: "Bologna FC 1909", value: "1.1" }
+                ]
+            },
+            {
                 category: "Saves",
                 players: [
-                    { name: "Gianluigi Donnarumma", team: "Paris Saint-Germain", value: 28 },
-                    { name: "David Raya", team: "Arsenal FC", value: 24 }
+                    { name: "<a href='../../../../../football/players/peter-vindahl-jensen.html'>Peter Vindahl</a>", team: "AC Sparta Prague", value: "5.1" },
+                    { name: "<a href='../../../../../football/players/dmytro-hryhorovych-riznyk.html'>Dmytro Riznyk</a>", team: "FC Shakhtar Donetsk", value: "4.9" },
+                    { name: "<a href='../../../../../football/players/dominik-takac.html'>Dominik Takac</a>", team: "Slovan Bratislava", value: "4.8" },
+                    { name: "<a href='../../../../../football/players/alexander-schlager.html'>Alexander Schlager</a>", team: "FC Red Bull Salzburg", value: "4.5" },
+                    { name: "<a href='../../../../../football/players/paulo-dino-gazzaniga-farias.html'>Paulo Gazzaniga</a>", team: "Girona FC", value: "4.4" },
+                    { name: "<a href='../../../../../football/players/thibaut-nicolas-marc-courtois.html'>Thibaut Courtois</a>", team: "Real Madrid CF", value: "4.3" },
+                    { name: "<a href='../../../../../football/players/marvin-keller.html'>Marvin Keller</a>", team: "BSC Young Boys", value: "4.2" },
+                    { name: "<a href='../../../../../football/players/damian-emiliano-martinez-romero.html'>Emiliano Martínez</a>", team: "Aston Villa FC", value: "4.1" },
+                    { name: "<a href='../../../../../football/players/kjell-scherpen.html'>Kjell Scherpen</a>", team: "SK Sturm Graz", value: "4" },
+                    { name: "<a href='../../../../../football/players/kasper-peter-schmeichel.html'>Kasper Schmeichel</a>", team: "Celtic FC", value: "3.9" }
                 ]
-            }
+            },
+            {
+                category: "Penalties Saved",
+                players: [
+                    { name: "<a href='../../../../../football/players/david-raya-martin.html'>David Raya</a>", team: "Arsenal FC", value: "2/4" },
+                    { name: "<a href='../../../../../football/players/timon-janis-wellenreuther.html'>Timon Wellenreuther</a>", team: "Feyenoord Rotterdam", value: "2/5" },
+                    { name: "<a href='../../../../../football/players/caoimhin-odhran-kelleher.html'>Caoimhin Kelleher</a>", team: "Liverpool FC", value: "1/1" },
+                    { name: "<a href='../../../../../football/players/david-von-ballmoos.html'>David von Ballmoos</a>", team: "BSC Young Boys", value: "1/1" },
+                    { name: "<a href='../../../../../football/players/marvin-keller.html'>Marvin Keller</a>", team: "BSC Young Boys", value: "1/1" },
+                    { name: "<a href='../../../../../football/players/rui-tiago-dantas-da-silva.html'>Rui Silva</a>", team: "Sporting CP", value: "1/1" },
+                    { name: "<a href='../../../../../football/players/dmytro-hryhorovych-riznyk.html'>Dmytro Riznyk</a>", team: "FC Shakhtar Donetsk", value: "1/2" },
+                    { name: "<a href='../../../../../football/players/dominik-takac.html'>Dominik Takac</a>", team: "Slovan Bratislava", value: "1/2" },
+                    { name: "<a href='../../../../../football/players/lukasz-skorupski.html'>Lukasz Skorupski</a>", team: "FC Bologna 1909", value: "1/2" },
+                    { name: "<a href='../../../../../football/players/mattia-perin.html'>Mattia Perin</a>", team: "Juventus FC", value: "1/2" }
+                ]
+            },
         ]
     },
     teamStats: [
-        { team: "Manchester City", possession: "65%", shots: 88 },
-        { team: "Real Madrid", possession: "54%", shots: 72 }
+        {
+            category: "Average Possession (%)",
+            teams: [
+                { name: "Manchester City FC", value: "65%" },
+                { name: "FC Bayern Munich", value: "62%" },
+                { name: "FC Barcelona", value: "60%" },
+                { name: "Paris Saint-Germain FC", value: "59%" },
+                { name: "Arsenal FC", value: "58%" },
+                { name: "Liverpool FC", value: "57%" }
+            ]
+        },
+        {
+            category: "Goals Scored",
+            teams: [
+                { name: "FC Barcelona", value: "28" },
+                { name: "Borussia Dortmund", value: "22" },
+                { name: "Atlético Madrid", value: "20" },
+                { name: "FC Bayern Munich", value: "20" },
+                { name: "Real Madrid CF", value: "20" }
+            ]
+        }
     ]
 };
 
@@ -3959,10 +4026,49 @@ function renderTeamStats() {
     const container = document.getElementById('team-stats-container');
     if (!container) return;
 
-    let html = '<h4>Possession Leaders</h4>';
-    uclData2425.teamStats.forEach(t => {
-        html += `<div class="stat-row"><span class="stat-label">${t.team}</span><span class="stat-value">${t.possession}</span></div>`;
+    let html = '';
+
+    const buildTeamStatGroup = (group) => {
+        const slug = 'team-' + group.category.toLowerCase().replace(/\s+/g, '-');
+        const topTeams = group.teams.slice(0, 5);
+        const moreTeams = group.teams.slice(5);
+
+        return `<div class="stats-card" id="stat-${slug}">
+            <h4>${group.category}</h4>
+            <div class="stats-list">
+                ${topTeams.map(t => `
+                    <div class="stat-row">
+                        <div class="stat-player-meta">
+                            <span class="stat-player-name">${t.name}</span>
+                        </div>
+                        <span class="stat-value">${t.value}</span>
+                    </div>
+                `).join('')}
+                ${moreTeams.length > 0 ? `
+                    <div class="hidden-players" style="display: none;">
+                        ${moreTeams.map(t => `
+                            <div class="stat-row">
+                                <div class="stat-player-meta">
+                                    <span class="stat-player-name">${t.name}</span>
+                                </div>
+                                <span class="stat-value">${t.value}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div class="show-more-container">
+                        <button class="show-more-btn" onclick="togglePlayerStats('${slug}')">Show All</button>
+                    </div>
+                ` : ''}
+            </div>
+        </div>`;
+    };
+
+    uclData2425.teamStats.forEach(group => {
+        html += `<div class="stats-category-group">
+            ${buildTeamStatGroup(group)}
+        </div>`;
     });
+
     container.innerHTML = html;
 }
 
