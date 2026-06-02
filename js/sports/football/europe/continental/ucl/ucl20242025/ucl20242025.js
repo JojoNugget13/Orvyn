@@ -3438,26 +3438,95 @@ const uclData2425 = {
     },
     teamStats: [
         {
-            category: "Average Possession (%)",
+            category: "Goals Per Game (Total Goals)",
             teams: [
-                { name: "Manchester City FC", value: "65%" },
-                { name: "FC Bayern Munich", value: "62%" },
-                { name: "FC Barcelona", value: "60%" },
-                { name: "Paris Saint-Germain FC", value: "59%" },
-                { name: "Arsenal FC", value: "58%" },
-                { name: "Liverpool FC", value: "57%" }
+                { name: "<a href='../../../../football/clubs/fc-barcelona.html'>FC Barcelona</a>", value: "3.07 (43)" },
+                { name: "<a href='../../../../football/clubs/paris-saint-germain-fc.html'>Paris Saint-Germain FC</a>", value: "2.24 (38)" },
+                { name: "<a href='../../../../football/clubs/arsenal-fc.html'>Arsenal FC</a>", value: "2.21 (31)" },
+                { name: "<a href='../../../../football/clubs/fc-bayern-munich.html'>FC Bayern Munich</a>", value: "2.21 (31)" },
+                { name: "<a href='../../../../football/clubs/borussia-dortmund.html'>Borussia Dortmund</a>", value: "2.21 (31)" },
+                { name: "<a href='../../../../football/clubs/atalanta-bc.html'>Atalanta BC</a>", value: "2.20 (22)" },
+                { name: "<a href='../../../../football/clubs/atletico-madrid.html'>Atlético Madrid</a>", value: "2.20 (22)" },
+                { name: "<a href='../../../../football/clubs/manchester-city-fc.html'>Manchester City FC</a>", value: "2.10 (21)" },
+                { name: "<a href='../../../../football/clubs/real-madrid-cf.html'>Real Madrid CF</a>", value: "2.07 (29)" },
+                { name: "<a href='../../../../football/clubs/aston-villa-fc.html'>Aston Villa FC</a>", value: "1.92 (23)" },
             ]
         },
         {
-            category: "Goals Scored",
+            category: "Goals Conceded Per Game (Total Goals Conceded)",
             teams: [
-                { name: "FC Barcelona", value: "28" },
-                { name: "Borussia Dortmund", value: "22" },
-                { name: "Atlético Madrid", value: "20" },
-                { name: "FC Bayern Munich", value: "20" },
-                { name: "Real Madrid CF", value: "20" }
+                { name: "<a href='../../../../football/clubs/liverpool-fc.html'>Liverpool FC</a>", value: "0.60 (6)" },
+                { name: "<a href='../../../../football/clubs/arsenal-fc.html'>Arsenal FC</a>", value: "0.71 (10)" },
+                { name: "<a href='../../../../football/clubs/paris-saint-germain-fc.html'>Paris Saint-Germain FC</a>", value: "0.88 (15)" },
+                { name: "<a href='../../../../football/clubs/aston-villa-fc.html'>Aston Villa FC</a>", value: "1.00 (12)" },
+                { name: "<a href='../../../../football/clubs/inter-milan.html'>Inter Milan</a>", value: "1.07 (16)" },
+                { name: "<a href='../../../../football/clubs/atalanta-bc.html'>Atalanta BC</a>", value: "1.10 (11)" },
+                { name: "<a href='../../../../football/clubs/juventus-fc.html'>Juventus FC</a>", value: "1.10 (11)" },
+                { name: "<a href='../../../../football/clubs/bologna-fc-1909.html'>Bologna FC 1909</a>", value: "1.12 (9)" },
+                { name: "<a href='../../../../football/clubs/bayer-04-leverkusen.html'>Bayer 04 Leverkusen</a>", value: "1.20 (12)" },
+                { name: "<a href='../../../../football/clubs/fc-bayern-munich.html'>FC Bayern Munich</a>", value: "1.29 (18)" },
             ]
-        }
+        },
+        {
+            category: "Clean Sheets (Games Played)",
+            teams: [
+                { name: "<a href='../../../../football/clubs/inter-milan.html'>Inter Milan</a>", value: "8 (15)" },
+                { name: "<a href='../../../../football/clubs/paris-saint-germain-fc.html'>Paris Saint-Germain FC</a>", value: "7 (17)" },
+                { name: "<a href='../../../../football/clubs/liverpool-fc.html'>Liverpool FC</a>", value: "6 (10)" },
+                { name: "<a href='../../../../football/clubs/arsenal-fc.html'>Arsenal FC</a>", value: "6 (14)" },
+                { name: "<a href='../../../../football/clubs/atalanta-bc.html'>Atalanta BC</a>", value: "5 (10)" },
+                { name: "<a href='../../../../football/clubs/bayer-04-leverkusen.html'>Bayer 04 Leverkusen</a>", value: "5 (10)" },
+                { name: "<a href='../../../../football/clubs/aston-villa-fc.html'>Aston Villa FC</a>", value: "5 (12)" },
+                { name: "<a href='../../../../football/clubs/borussia-dortmund.html'>Borussia Dortmund</a>", value: "5 (14)" },
+                { name: "<a href='../../../../football/clubs/sl-benfica.html'>SL Benfica</a>", value: "4 (13)" },
+                { name: "<a href='../../../../football/clubs/fc-bayern-munich.html'>FC Bayern Munich</a>", value: "4 (14)" },
+            ]
+        },
+        {
+            category: "Ball Possession",
+            teams: [
+                { name: "<a href='../../../../football/clubs/fc-bayern-munich.html'>FC Bayern Munich</a>", value: "65%" },
+                { name: "<a href='../../../../football/clubs/manchester-city-fc.html'>Manchester City FC</a>", value: "64%" },
+                { name: "<a href='../../../../football/clubs/fc-barcelona.html'>FC Barcelona</a>", value: "63%" },
+                { name: "<a href='../../../../football/clubs/paris-saint-germain-fc.html'>Paris Saint-Germain FC</a>", value: "62%" },
+                { name: "<a href='../../../../football/clubs/vfb-stuttgart.html'>VfB Stuttgart</a>", value: "59%" },
+                { name: "<a href='../../../../football/clubs/bayer-04-leverkusen.html'>Bayer 04 Leverkusen</a>", value: "57%" },
+                { name: "<a href='../../../../football/clubs/psv-eindhoven.html'>PSV Eindhoven</a>", value: "55%" },
+                { name: "<a href='../../../../football/clubs/real-madrid-cf.html'>Real Madrid CF</a>", value: "53%" },
+                { name: "<a href='../../../../football/clubs/ac-milan.html'>AC Milan</a>", value: "53%" },
+                { name: "<a href='../../../../football/clubs/atalanta-bc.html'>Atalanta BC</a>", value: "53%" },
+            ]
+        },
+        {
+            category: "Corners Per Game (Total Corners)",
+            teams: [
+                { name: "<a href='../../../../football/clubs/fc-bayern-munich.html'>FC Bayern Munich</a>", value: "7.50 (105)" },
+                { name: "<a href='../../../../football/clubs/manchester-city-fc.html'>Manchester City FC</a>", value: "7.50 (75)" },
+                { name: "<a href='../../../../football/clubs/vfb-stuttgart.html'>VfB Stuttgart</a>", value: "7.50 (60)" },
+                { name: "<a href='../../../../football/clubs/real-madrid-cf.html'>Real Madrid CF</a>", value: "6.64 (93)" },
+                { name: "<a href='../../../../football/clubs/atalanta-bc.html'>Atalanta BC</a>", value: "6.50 (65)" },
+                { name: "<a href='../../../../football/clubs/paris-saint-germain-fc.html'>Paris Saint-Germain FC</a>", value: "6.24 (106)" },
+                { name: "<a href='../../../../football/clubs/borussia-dortmund.html'>Borussia Dortmund</a>", value: "5.93 (83)" },
+                { name: "<a href='../../../../football/clubs/celtic-fc.html'>Celtic FC</a>", value: "5.80 (58)" },
+                { name: "<a href='../../../../football/clubs/psv-eindhoven.html'>PSV Eindhoven</a>", value: "5.75 (69)" },
+                { name: "<a href='../../../../football/clubs/arsenal-fc.html'>Arsenal FC</a>", value: "5.50 (77)" },
+            ]
+        },
+        {
+            category: "Penalties Scored",
+            teams: [
+                { name: "<a href='../../../../football/clubs/borussia-dortmund.html'>Borussia Dortmund</a>", value: "7/8" },
+                { name: "<a href='../../../../football/clubs/fc-bayern-munich.html'>FC Bayern Munich</a>", value: "5/5" },
+                { name: "<a href='../../../../football/clubs/sl-benfica.html'>SL Benfica</a>", value: "5/5" },
+                { name: "<a href='../../../../football/clubs/fc-barcelona.html'>FC Barcelona</a>", value: "5/5" },
+                { name: "<a href='../../../../football/clubs/inter-milan.html'>Inter Milan</a>", value: "5/7" },
+                { name: "<a href='../../../../football/clubs/manchester-city-fc.html'>Manchester City FC</a>", value: "3/4" },
+                { name: "<a href='../../../../football/clubs/club-brugge-kv.html'>Club Brugge KV</a>", value: "2/2" },
+                { name: "<a href='../../../../football/clubs/lille-osc.html'>Lille OSC</a>", value: "2/2" },
+                { name: "<a href='../../../../football/clubs/sporting-cp.html'>Sporting CP</a>", value: "2/2" },
+                { name: "<a href='../../../../football/clubs/feyenoord-rotterdam.html'>Feyenoord Rotterdam</a>", value: "2/3" },
+            ]
+        },
     ]
 };
 
