@@ -3527,6 +3527,51 @@ const uclData2425 = {
                 { name: "<a href='../../../../football/clubs/feyenoord-rotterdam.html'>Feyenoord Rotterdam</a>", value: "2/3" },
             ]
         },
+        {
+            category: "Penalties Conceded",
+            teams: [
+                { name: "<a href='../../../../football/clubs/fc-barcelona.html'>FC Barcelona</a>", value: "5/5" },
+                { name: "<a href='../../../../football/clubs/sl-benfica.html'>SL Benfica</a>", value: "4/4" },
+                { name: "<a href='../../../../football/clubs/gnk-dinamo-zagreb.html'>GNK Dinamo Zagreb</a>", value: "4/4" },
+                { name: "<a href='../../../../football/clubs/atletico-madrid.html'>Atlético Madrid</a>", value: "4/5" },
+                { name: "<a href='../../../../football/clubs/stade-brestois-29.html'>Stade Brestois 29</a>", value: "3/3" },
+                { name: "<a href='../../../../football/clubs/as-monaco-fc.html'>AS Monaco FC</a>", value: "3/3" },
+                { name: "<a href='../../../../football/clubs/real-madrid-cf.html'>Real Madrid CF</a>", value: "3/5" },
+                { name: "<a href='../../../../football/clubs/lille-osc.html'>Lille OSC</a>", value: "2/2" },
+                { name: "<a href='../../../../football/clubs/manchester-city-fc.html'>Manchester City FC</a>", value: "2/2" },
+                { name: "<a href='../../../../football/clubs/celtic-fc.html'>Celtic FC</a>", value: "2/3" },
+            ]
+        },
+        {
+            category: "Yellow Cards",
+            teams: [
+                { name: "<a href='../../../../football/clubs/real-madrid-cf.html'>Real Madrid CF</a>", value: "33" },
+                { name: "<a href='../../../../football/clubs/inter-milan.html'>Inter Milan</a>", value: "33" },
+                { name: "<a href='../../../../football/clubs/sl-benfica.html'>SL Benfica</a>", value: "30" },
+                { name: "<a href='../../../../football/clubs/bologna-fc-1909.html'>Bologna FC 1909</a>", value: "28" },
+                { name: "<a href='../../../../football/clubs/arsenal-fc.html'>Arsenal FC</a>", value: "27" },
+                { name: "<a href='../../../../football/clubs/bsc-young-boys.html'>BSC Young Boys</a>", value: "24" },
+                { name: "<a href='../../../../football/clubs/ac-milan.html'>AC Milan</a>", value: "24" },
+                { name: "<a href='../../../../football/clubs/psv-eindhoven.html'>PSV Eindhoven</a>", value: "24" },
+                { name: "<a href='../../../../football/clubs/borussia-dortmund.html'>Borussia Dortmund</a>", value: "24" },
+                { name: "<a href='../../../../football/clubs/girona-fc.html'>Girona FC</a>", value: "23" },
+            ]
+        },
+        {
+            category: "Red Cards",
+            teams: [
+                { name: "<a href='../../../../football/clubs/as-monaco-fc.html'>AS Monaco FC</a>", value: "3" },
+                { name: "<a href='../../../../football/clubs/ac-milan.html'>AC Milan</a>", value: "2" },
+                { name: "<a href='../../../../football/clubs/bayer-04-leverkusen.html'>Bayer 04 Leverkusen</a>", value: "2" },
+                { name: "<a href='../../../../football/clubs/juventus-fc.html'>Juventus FC</a>", value: "2" },
+                { name: "<a href='../../../../football/clubs/lille-osc.html'>Lille OSC</a>", value: "2" },
+                { name: "<a href='../../../../football/clubs/club-brugge-kv.html'>Club Brugge KV</a>", value: "2" },
+                { name: "<a href='../../../../football/clubs/feyenoord-rotterdam.html'>Feyenoord Rotterdam</a>", value: "2" },
+                { name: "<a href='../../../../football/clubs/sl-benfica.html'>SL Benfica</a>", value: "2" },
+                { name: "<a href='../../../../football/clubs/fc-barcelona.html'>FC Barcelona</a>", value: "2" },
+                { name: "<a href='../../../../football/clubs/girona-fc.html'>Girona FC</a>", value: "1" },
+            ]
+        },
     ]
 };
 
