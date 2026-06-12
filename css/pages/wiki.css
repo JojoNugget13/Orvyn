@@ -866,9 +866,115 @@ main {
     object-fit: contain;
 }
 
+.match-header-card {
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Added a subtle shadow */
+}
+
+.match-team-hero {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease-in-out; /* Added hover effect */
+}
+
+.team-logo:hover {
+    transform: scale(1.05);
+}
+
+.team-name {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 1.5rem; /* Adjusted font size */
+    margin: 0;
+}
+
+.team-name .wiki-link {
+    color: var(--text-primary); /* Ensure link color is consistent */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.team-name .wiki-link:hover {
+    color: var(--primary-color);
+}
+
+.match-score-hero {
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-display {
+    font-size: 4.5rem; /* Made score larger */
+    font-weight: 900;
+    font-family: 'Unbounded', sans-serif;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Increased gap */
+    line-height: 1; /* Prevent extra space */
+}
+
+.score-number {
+    text-shadow: 0 0 15px rgba(var(--primary-color-rgb), 0.5); /* Added subtle glow */
+}
+
+.score-separator {
+    color: var(--text-secondary);
+    opacity: 0.5;
+}
+
+.match-status {
+    background: var(--surface-light);
+    padding: 0.5rem 1.2rem; /* Adjusted padding */
+    border-radius: 25px; /* More rounded */
+    font-size: 0.9rem; /* Slightly larger font */
+    color: var(--text-secondary);
+    display: inline-block;
+    margin-top: 1.5rem; /* Increased margin */
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .match-header-card {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+    }
+    .team-logo { width: 100px; height: 100px; }
+    .team-name { font-size: 1.3rem; }
+    .score-display { font-size: 3.5rem; gap: 1rem; }
+    .match-status { margin-top: 1rem; font-size: 0.8rem; }
+}
+
 .player-event-icon {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     object-fit: contain;
     vertical-align: middle;
     margin-left: 3px;
@@ -880,7 +986,7 @@ main {
 }
 
 .player-event-text {
-    font-size: 0.85rem;
+    font-size: 0.7rem;
     color: var(--text-secondary);
     margin-left: 5px;
 }

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris Saint-Germain FC - Wiki</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <!-- Paths set for 4 levels deep: Root/pages/sports/football/clubs/ -->
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <link rel="stylesheet" href="../../../../css/pages/wiki.css">
+    <link rel="stylesheet" href="../../../../css/components/tabs.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <main class="container">
+        <section class="page-header">
+            <button class="back-btn" onclick="navigateTo('../../football.html')">
+                <svg class="back-arrow-icon" viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                Football
+            </button>
+            <h2>Paris Saint-Germain FC</h2>
+            <p class="subtitle">Founded August 12, 1970 • Paris, France</p>
+        </section>
+
+        <section class="club-content" style="margin-top: 2rem;">
+            <!-- Tab Navigation -->
+            <nav class="tabs-container">
+                <button class="tab-btn active" data-tab="details">Details</button>
+                <button class="tab-btn" data-tab="trophies">Trophies</button>
+                <button class="tab-btn" data-tab="squad">Squad</button>
+            </nav>
+
+            <!-- Tab Content: Details -->
+            <div id="details" class="tab-pane active">
+                <div class="wiki-section" style="margin-bottom: 1.5rem;">
+                    <div class="section-header">
+                        <h3>Club Information</h3>
+                    </div>
+                    <div class="section-content">
+                        <div class="match-info-grid">
+                            <div class="info-item">
+                                <div class="info-icon">🏟️</div>
+                                <div class="info-content">
+                                    <span class="info-label">Stadium</span>
+                                    <span class="info-value">Parc des Princes</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">👥</div>
+                                <div class="info-content">
+                                    <span class="info-label">Head Coach</span>
+                                    <span class="info-value">Luis Enrique</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">🏢</div>
+                                <div class="info-content">
+                                    <span class="info-label">Owner</span>
+                                    <span class="info-value">Qatar Sports Investments</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">📅</div>
+                                <div class="info-content">
+                                    <span class="info-label">Founded</span>
+                                    <span class="info-value">August 12, 1970</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-top: 2rem;">
+                            <h4>History</h4>
+                            <p>Paris Saint-Germain Football Club, commonly referred to as Paris Saint-Germain (French: [paʁi sɛ̃ʒɛʁmɛ̃], pa-ree-sauh-sher-mon), PSG, Paris, or Paris SG, is a French professional football club based in Paris. The club was founded in 1970 by the merger of Paris FC and Stade Saint-Germain, and competes in Ligue 1, the top tier of French football. PSG play their home matches at the Parc des Princes. With a total of 60 trophies, including 59 major titles, PSG are the most successful club in France. The club is also the most popular football club in the country and one of the most widely-supported teams worldwide. PSG have rivalries with Olympique de Marseille, with whom they contest Le Classique, and with Paris FC in the Paris derby.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Trophies -->
+            <div id="trophies" class="tab-pane">
+                <div class="wiki-section">
+                    <div class="section-header">
+                        <h3>Honours</h3>
+                    </div>
+                    <div class="section-content" id="trophies-container">
+                        <!-- Generated by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Squad -->
+            <div id="squad" class="tab-pane">
+                <div class="wiki-section">
+                    <div class="section-header">
+                        <h3>First Team Squad</h3>
+                    </div>
+                    <div class="section-content" id="squad-container">
+                        <!-- Generated by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../../../../js/script.js"></script>
+    <script src="../../../../js/components.js"></script>
+    <script src="../../../../js/sports/football/clubs/paris-saint-germain-fc.js"></script>
+</body>
+</html>

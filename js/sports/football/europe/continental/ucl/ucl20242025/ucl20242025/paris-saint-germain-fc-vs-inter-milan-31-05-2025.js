@@ -56,7 +56,7 @@ const lineupData = {
     home: {
         team: "PSG",
         formation: "4-3-3",
-        manager: "Luis Enrique",
+        manager: "<a href='../../../../../football/managers/luis-enrique-martinez-garcia.html'>Luis Enrique</a>",
         gk: [{ name: "<a href='../../../../../football/players/gianluigi-donnarumma.html'>Gianluigi Donnarumma</a>", events: [] }],
         df: [
             { name: "<a href='../../../../../football/players/achraf-hakimi.html'>Achraf Hakimi</a>", events: ["goal", "yellow"] },
@@ -93,34 +93,43 @@ const lineupData = {
     away: {
         team: "Inter Milan",
         formation: "3-5-2",
-        manager: "Simone Inzaghi",
-        gk: [{ name: "Yann Sommer", events: [] }],
+        manager: "<a href='../../../../../football/managers/simone-inzaghi.html'>Simone Inzaghi</a>",
+        gk: [{ name: "<a href='../../../../../football/players/yann-sommer.html'>Yann Sommer</a>", events: [] }],
         df: [
-            { name: "Benjamin Pavard", events: ["🔄"] },
-            { name: "Francesco Acerbi", events: ["🟨"] },
-            { name: "Alessandro Bastoni", events: [] }
+            { name: "<a href='../../../../../football/players/benjamin-jacques-marcel-pavard.html'>Benjamin Pavard</a>", events: ["subbed-off"] },
+            { name: "<a href='../../../../../football/players/francesco-acerbi.html'>Francesco Acerbi</a>", events: ["yellow"] },
+            { name: "<a href='../../../../../football/players/alessandro-bastoni.html'>Alessandro Bastoni</a>", events: [] }
         ],
         mf: [
-            { name: "Matteo Darmian", events: [] },
-            { name: "Nicolò Barella", events: [] },
-            { name: "Hakan Çalhanoğlu", events: ["🔄"] },
-            { name: "Henrikh Mkhitaryan", events: ["🔄"] },
-            { name: "Federico Dimarco", events: ["🔄"] }
+            { name: "<a href='../../../../../football/players/denzel-justus-morris-dumfries.html'>Denzel Dumfries</a>", events: [] },
+            { name: "<a href='../../../../../football/players/nicolo-barella.html'>Nicolò Barella</a>", events: [] },
+            { name: "<a href='../../../../../football/players/hakan-calhanoglu.html'>Hakan Çalhanoğlu</a>", events: ["subbed-off"] },
+            { name: "<a href='../../../../../football/players/henrikh-mkhitaryan.html'>Henrikh Mkhitaryan</a>", events: ["subbed-off"] },
+            { name: "<a href='../../../../../football/players/federico-dimarco.html'>Federico Dimarco</a>", events: ["subbed-off"] }
         ],
         fw: [
-            { name: "Marcus Thuram", events: ["🟨"] },
-            { name: "Lautaro Martínez", events: [] }
+            { name: "<a href='../../../../../football/players/marcus-lilian-thuram-ulien.html'>Marcus Thuram</a>", events: ["yellow"] },
+            { name: "<a href='../../../../../football/players/lautaro-javier-martinez.html'>Lautaro Martínez</a>", events: [] }
         ],
         subs: [
-            { name: "Yann Bisseck", events: ["🔄"] },
-            { name: "Nicola Zalewski", events: ["🟨", "🔄"] },
-            { name: "Carlos Augusto", events: [] }
+            { name: "<a href='../../../../../football/players/nicola-zalewski.html'>Nicola Zalewski</a>", events: ["yellow", "subbed-on"] },
+            { name: "<a href='../../../../../football/players/yann-aurel-ludger-bisseck.html'>Yann Bisseck</a>", events: ["subbed-on", "subbed-off"] },
+            { name: "<a href='../../../../../football/players/carlos-augusto-zopolato-neves.html'>Carlos Augusto</a>", events: ["subbed-on"] },
+            { name: "<a href='../../../../../football/players/matteo-darmian.html'>Matteo Darmian</a>", events: ["subbed-on"] },
+            { name: "<a href='../../../../../football/players/kristjan-asllani.html'>Kristjan Asllani</a>", events: [""] }
         ],
         bench: [
-            { name: "Josep Martínez", events: [] },
-            { name: "Davide Frattesi", events: [] }
+            { name: "<a href='../../../../../football/players/raffaele-di-gennaro.html'>Raffaele Di Gennaro</a>", events: [] },
+            { name: "<a href='../../../../../football/players/josep-martinez-riera.html'>Josep Martínez</a>", events: [] },
+            { name: "<a href='../../../../../football/players/stefan-de-vrij.html'>Stefan de Vrij</a>", events: [] },
+            { name: "<a href='../../../../../football/players/davide-frattesi.html'>Davide Frattesi</a>", events: [] },
+            { name: "<a href='../../../../../football/players/piotr-sebastian-zielinski.html'>Piotr Zielinski</a>", events: [] },
+            { name: "<a href='../../../../../football/players/marko-arnautovic.html'>Marko Arnautović</a>", events: [] },
+            { name: "<a href='../../../../../football/players/mehdi-taremi.html'>Mehdi Taremi</a>", events: [] },
         ],
-        missing: []
+        missing: [
+            { name: "<a href='../../../../../football/players/valentin-carboni.html'>Valentín Carboni</a>", events: ["injured"] },
+        ]
     }
 };
 
