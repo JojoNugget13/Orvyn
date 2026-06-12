@@ -1,5 +1,3 @@
-// Sports and Football page JavaScript
-
 document.addEventListener('DOMContentLoaded', function() {
     initializeSportsPage();
 });
@@ -8,7 +6,6 @@ function initializeSportsPage() {
     setupSportsSearch();
 }
 
-// Logic to retrieve counts for specific sports/regions
 function getSportsItemCount(category) {
     let count = 0;
     
@@ -23,7 +20,6 @@ function getSportsItemCount(category) {
     return count;
 }
 
-// Setup search functionality (similar to games.js)
 function setupSportsSearch() {
     const searchInput = document.getElementById('sportsSearch');
     if (searchInput) {
@@ -48,12 +44,7 @@ function filterSportsCards(query) {
     });
 }
 
-/**
- * Global function used by script.js to aggregate football totals
- */
 window.getFootballTotalCount = function() {
     const subs = ['europe', 'south-america', 'africa', 'asia', 'north-america', 'oceania', 'other'];
     return subs.reduce((total, sub) => total + getSportsItemCount(`football-${sub}`), 0);
 };
-
-console.log('⚽ Sports logic loaded');

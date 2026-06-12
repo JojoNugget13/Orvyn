@@ -1,22 +1,11 @@
-// Hero data for Balmond
-// Rendering logic moved here from shared helpers to support local file loading
-const IMAGES = '../../../../images/games/mlbb/'; // Base path for MLBB images
+const IMAGES = '../../../../images/games/mlbb/';
 
-
-// ========================================================================= //
-// DATA: RATINGS                                                              //
-// ========================================================================= //
 const heroRatings = [
     {label: "Durability", value: 8},
     {label: "Offense", value: 3},
     {label: "Control Effects", value: 2},
     {label: "Difficulty", value: 1}
 ];
-
-
-// ========================================================================= //
-// RENDER HELPERS (Moved from shared helpers for compatibility)              //
-// ========================================================================= //
 
 function buildCost(cost, IMAGES_PATH) {
     if (cost.type === 'default') {
@@ -169,10 +158,6 @@ function buildAudioListHtml(data) {
     `).join('');
 }
 
-
-// ========================================================================= //
-// DATA: ABILITIES                                                            //
-// ========================================================================= //
 const heroAbilities = [
     {
         name: "Bloodthirst",
@@ -261,10 +246,6 @@ const heroAbilities = [
     }
 ];
 
-
-// ========================================================================= //
-// DATA: STATS                                                                //
-// ========================================================================= //
 const heroStats = {
     hp:             [2558, 6212, 261],
     hpRegen:        [9.4, 17.8, 0.6],
@@ -297,20 +278,12 @@ const heroStatsLabelMap = {
     basicAtkRange:  "Basic Attack Range"
 };
 
-
-// ========================================================================= //
-// DATA: TRIVIA                                                               //
-// ========================================================================= //
 const heroTrivia = [
     "Balmond's old design is still visible on his Passive design.",
     "In his old lore, he went from being <a href='alice.html'>Alice</a>'s slave to being a mutually exploited ally in the new lore.",
     "Balmond's 'Celestial General' (now 'God of Mountains') is the skin with the longest release postponement; it was supposed to be released at 2018 but the skin was released on August 2021 for the Grand Collection event."
 ];
 
-
-// ========================================================================= //
-// DATA: MASTERY CODE                                                         //
-// ========================================================================= //
 const heroMasteryCode = [
     {
         chapter: 1,
@@ -338,10 +311,6 @@ const heroMasteryCode = [
     }
 ];
 
-
-// ========================================================================= //
-// DATA: PATCH HISTORY                                                        //
-// ========================================================================= //
 const heroPatchHistory = [
     {
         version: "1.8.44",
@@ -368,10 +337,6 @@ const heroPatchHistory = [
     }
 ];
 
-
-// ========================================================================= //
-// DATA: COSMETICS — SKINS                                                    //
-// ========================================================================= //
 const heroSkins = [
     {
         name: "Bloody Beast",
@@ -444,22 +409,9 @@ const heroSkins = [
     }
 ];
 
-
-// ========================================================================= //
-// DATA: COSMETICS — PAINTED SKINS                                           //
-// ========================================================================= //
 const heroPaintedSkins = [];
-
-
-// ========================================================================= //
-// DATA: COSMETICS — STATUES                                                  //
-// ========================================================================= //
 const heroStatues = [];
 
-
-// ========================================================================= //
-// DATA: COSMETICS — ICONS                                                    //
-// ========================================================================= //
 const heroIcons = [
     { name: "Balmond",          image: `${IMAGES}heroes/icons/balmond-default-icon.webp`        },
     { name: "Fallen Angel",     image: `${IMAGES}heroes/icons/balmond-fallen-angel-icon.webp`   },
@@ -469,10 +421,6 @@ const heroIcons = [
     { name: "Summoners Rift S9",image: `${IMAGES}heroes/icons/balmond-summoners-rift-s9-icon.webp` }
 ];
 
-
-// ========================================================================= //
-// DATA: COSMETICS — SPLASH ART                                               //
-// ========================================================================= //
 const heroSplashArt = [
     { name: "Balmond",          image: `${IMAGES}heroes/splashes/balmond-default-splash.webp`        },
     { name: "Fallen Angel",     image: `${IMAGES}heroes/splashes/balmond-fallen-angel-splash.webp`   },
@@ -482,10 +430,6 @@ const heroSplashArt = [
     { name: "Summoners Rift S9",image: `${IMAGES}heroes/splashes/balmond-summoners-rift-s9-splash.webp` }
 ];
 
-
-// ========================================================================= //
-// DATA: AUDIO                                                                //
-// ========================================================================= //
 const heroAudioData = {
     en: {
         default: {
@@ -561,10 +505,6 @@ const heroAudioData = {
     }
 };
 
-
-// ========================================================================= //
-// DATA: ARCHIVE — PREVIOUS ABILITIES                                        //
-// ========================================================================= //
 const heroArchiveAbilities = [
     {
         name: "Soul Lock",
@@ -586,19 +526,11 @@ const heroArchiveAbilities = [
     }
 ];
 
-
-// ========================================================================= //
-// DATA: ARCHIVE — PREVIOUS SKINS (GALLERY)                                 //
-// ========================================================================= //
 const heroArchiveSkins = [
     {name: "Balmond (2016)", image: `${IMAGES}heroes/skins/balmond-default-archive01.webp`},
     {name: "Fallen Angel (2016-2019)", image: `${IMAGES}heroes/skins/balmond-fallen-angel-archive01.webp`}
 ];
 
-
-// ========================================================================= //
-// DATA: ARCHIVE — PREVIOUS LORE                                             //
-// ========================================================================= //
 const heroArchiveLore = [
     {
         version: "Original (2016)",
@@ -607,10 +539,6 @@ const heroArchiveLore = [
     }
 ];
 
-
-// ========================================================================= //
-// DATA: STRATEGY                                                             //
-// ========================================================================= //
 const heroStrategy = {
     recommendations: {
         builds: [
@@ -658,11 +586,6 @@ const heroStrategy = {
         weakAgainst: ["<a href='karrie.html'>Karrie</a>", "<a href='nana.html'>Nana</a>", "<a href='chou.html'>Chou</a>", "<a href='lancelot.html'>Lancelot</a>", "<a href='layla.html'>Layla</a>", "<a href='irithel.html'>Irithel</a>"]
     }
 };
-
-
-// ========================================================================= //
-// RENDER FUNCTIONS                                                           //
-// ========================================================================= //
 
 function renderRatings() {
     const container = document.getElementById('ratings-container');
@@ -821,11 +744,6 @@ window.renderAudioList = function(lang, skin, category) {
     renderAudioIntoContainer(containerId, heroAudioData, lang, skin, category);
 }
 
-
-// ========================================================================= //
-// ARCHIVE RENDER FUNCTIONS                                                   //
-// ========================================================================= //
-
 function renderArchiveAbilities() {
     const container = document.getElementById('archive-abilities-container');
     if (!container) return;
@@ -965,10 +883,6 @@ function renderStrategy() {
     }
 }
 
-
-// ========================================================================= //
-// INITIALIZATION                                                             //
-// ========================================================================= //
 function initHeroPage() {
     renderRatings();
     renderAbilities();

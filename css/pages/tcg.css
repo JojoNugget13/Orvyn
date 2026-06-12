@@ -234,7 +234,6 @@
     }
 }
 
-/* Set Information Section */
 .set-info {
     margin-bottom: 3rem;
 }
@@ -274,7 +273,6 @@
     font-weight: 700;
 }
 
-/* Cards Display */
 .cards-display {
     margin-bottom: 3rem;
 }
@@ -366,9 +364,6 @@
 .meta-value {
     color: var(--text-primary);
     font-size: 0.9rem;
-}
-
-.rarity-badge {
     padding: 0.25rem 0.75rem;
     border-radius: 12px;
     font-size: 0.75rem;
@@ -378,7 +373,6 @@
     white-space: nowrap;
 }
 
-/* Rarity Colors */
 .rarity-none {
     background: #475569;
     color: white;
@@ -583,7 +577,6 @@
     color: white;
 }
 
-/* List View for Cards */
 .cards-list .card-item {
     display: flex;
     flex-direction: row;

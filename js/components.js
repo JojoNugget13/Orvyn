@@ -1,6 +1,3 @@
-// Component Loader for Orvyn - FIXED VERSION
-
-// Helper to get the relative prefix to the root directory
 function getRootPrefix() {
     const path = window.location.pathname;
     const parts = path.split('/').filter(Boolean);
@@ -13,42 +10,34 @@ function getRootPrefix() {
     return '../'.repeat(depth);
 }
 
-// Get the correct path to home based on current location
 function getHomePath() {
     return getRootPrefix() + 'index.html';
 }
 
-// Get the correct path to login based on current location
 function getLoginPath() {
     return getRootPrefix() + 'pages/components/login.html';
 }
 
-// Get the correct path to components based on current location
 function getComponentPath() {
     return getRootPrefix() + 'pages/components/';
 }
 
-// Check if user is logged in
 function isLoggedIn() {
     return localStorage.getItem('currentUser') || sessionStorage.getItem('currentUser');
 }
 
-// Get current user
 function getCurrentUser() {
     const userData = localStorage.getItem('currentUser') || sessionStorage.getItem('currentUser');
     return userData ? JSON.parse(userData) : null;
 }
 
-// Load navbar component
 async function loadNavbar() {
     const navbarPlaceholder = document.getElementById('navbar-placeholder');
     if (!navbarPlaceholder) {
-        console.warn('⚠️ navbar-placeholder not found');
         return;
     }
     
     const componentPath = getComponentPath();
-    console.log('📍 Loading navbar from:', componentPath + 'navbar.html');
     
     try {
         const response = await fetch(componentPath + 'navbar.html');
@@ -58,26 +47,19 @@ async function loadNavbar() {
         const html = await response.text();
         navbarPlaceholder.innerHTML = html;
         
-        // Update navbar based on login status
         updateNavbar();
-        console.log('✅ Navbar loaded successfully');
     } catch (error) {
-        console.error('❌ Error loading navbar:', error);
-        console.error('   Tried path:', componentPath + 'navbar.html');
-        console.error('   Full URL:', window.location.origin + '/' + componentPath + 'navbar.html');
+        console.error('Error loading navbar:', error);
     }
 }
 
-// Load footer component
 async function loadFooter() {
     const footerPlaceholder = document.getElementById('footer-placeholder');
     if (!footerPlaceholder) {
-        console.warn('⚠️ footer-placeholder not found');
         return;
     }
     
     const componentPath = getComponentPath();
-    console.log('📍 Loading footer from:', componentPath + 'footer.html');
     
     try {
         const response = await fetch(componentPath + 'footer.html');
@@ -86,26 +68,20 @@ async function loadFooter() {
         }
         const html = await response.text();
         footerPlaceholder.innerHTML = html;
-        console.log('✅ Footer loaded successfully');
     } catch (error) {
-        console.error('❌ Error loading footer:', error);
-        console.error('   Tried path:', componentPath + 'footer.html');
-        console.error('   Full URL:', window.location.origin + '/' + componentPath + 'footer.html');
+        console.error('Error loading footer:', error);
     }
 }
 
-// Update navbar based on login status
 function updateNavbar() {
     const user = getCurrentUser();
     const navButtons = document.getElementById('navButtons');
     
     if (!navButtons) {
-        console.warn('⚠️ navButtons element not found');
         return;
     }
     
     if (user) {
-        // User is logged in - show profile dropdown
         navButtons.innerHTML = `
             <button class="nav-btn" id="forumBtn">Forum</button>
             <div class="nav-profile-dropdown">
@@ -127,7 +103,6 @@ function updateNavbar() {
             </div>
         `;
     } else {
-        // User not logged in - show login button
         navButtons.innerHTML = `
             <button class="nav-btn" id="forumBtn">Forum</button>
             <button class="nav-btn" id="loginBtn" onclick="navigateTo(getLoginPath())">Log In / Sign Up</button>
@@ -135,14 +110,12 @@ function updateNavbar() {
     }
 }
 
-// Get user avatar (image or letter)
 function getUserAvatar(user) {
     const userData = JSON.parse(localStorage.getItem('users') || '[]');
     const fullUser = userData.find(u => u.username === user.username);
     
     if (fullUser && fullUser.profile && fullUser.profile.pfp) {
         if (fullUser.profile.pfp.type === 'image') {
-            // Fix: Resolve image path relative to root to prevent broken images on deep pages
             const pfpData = fullUser.profile.pfp.data;
             const resolvedSrc = (pfpData.startsWith('data:') || pfpData.startsWith('http')) 
                 ? pfpData 
@@ -156,7 +129,6 @@ function getUserAvatar(user) {
     return user.username.charAt(0).toUpperCase();
 }
 
-// Get user avatar color
 function getUserAvatarColor(user) {
     const userData = JSON.parse(localStorage.getItem('users') || '[]');
     const fullUser = userData.find(u => u.username === user.username);
@@ -165,15 +137,13 @@ function getUserAvatarColor(user) {
         return fullUser.profile.pfp.color;
     }
     
-    return '#3b82f6'; // Default blue
+    return '#3b82f6';
 }
 
-// Get profile path based on current location
 function getProfilePath() {
     return getRootPrefix() + 'pages/components/profile.html';
 }
 
-// Logout mechanism
 function logout() {
     localStorage.removeItem('currentUser');
     sessionStorage.removeItem('currentUser');
@@ -181,7 +151,6 @@ function logout() {
     window.location.href = getHomePath();
 }
 
-// Toggle dropdown menu
 function toggleProfileDropdown() {
     const dropdown = document.getElementById('navProfileMenu');
     const btn = document.querySelector('.nav-profile-btn');
@@ -194,9 +163,7 @@ function toggleProfileDropdown() {
     }
 }
 
-// Close dropdown when clicking outside
 document.addEventListener('click', function(event) {
-    // Handle Profile Dropdown
     const profileMenu = document.getElementById('navProfileMenu');
     const profileBtn = document.querySelector('.nav-profile-btn');
     if (profileMenu && !event.target.closest('.nav-profile-dropdown')) {
@@ -204,7 +171,6 @@ document.addEventListener('click', function(event) {
         if (profileBtn) profileBtn.classList.remove('active');
     }
 
-    // Handle generic custom dropdowns (like the new Matchday menu)
     const customMenus = document.querySelectorAll('.dropdown-container.show');
     customMenus.forEach(menu => {
         if (!event.target.closest('.custom-dropdown-wrapper')) {
@@ -213,10 +179,7 @@ document.addEventListener('click', function(event) {
     });
 });
 
-// Load components when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🚀 Components.js loaded, initializing...');
-    console.log('📂 Current path:', window.location.pathname);
     loadNavbar();
     loadFooter();
 });

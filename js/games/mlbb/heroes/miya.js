@@ -1,22 +1,11 @@
-// Cosmetic data for Miya
-// Rendering logic moved here from shared helpers to support local file loading
-const IMAGES = '../../../../images/games/mlbb/'; // Base path for MLBB images
+const IMAGES = '../../../../images/games/mlbb/';
 
-
-// ========================================================================= //
-// DATA: RATINGS                                                              //
-// ========================================================================= //
 const heroRatings = [
     {label: "Durability", value: 1},
     {label: "Offense", value: 7},
     {label: "Control Effects", value: 4},
     {label: "Difficulty", value: 1}
 ];
-
-
-// ========================================================================= //
-// RENDER HELPERS (Moved from shared helpers for compatibility)              //
-// ========================================================================= //
 
 function buildCost(cost, IMAGES_PATH) {
     if (cost.type === 'default') {
@@ -169,10 +158,6 @@ function buildAudioListHtml(data) {
     `).join('');
 }
 
-
-// ========================================================================= //
-// DATA: ABILITIES                                                            //
-// ========================================================================= //
 const heroAbilities = [
     {
         name: "Moon Blessing",
@@ -270,10 +255,6 @@ const heroAbilities = [
     }
 ];
 
-
-// ========================================================================= //
-// DATA: STATS                                                                //
-// ========================================================================= //
 const heroStats = {
     hp:             [2225, 4367, 153],
     hpRegen:        [6.0, 9.0, 0.2143],
@@ -306,26 +287,17 @@ const heroStatsLabelMap = {
     basicAtkRange:  "Basic Attack Range"
 };
 
-
-// ========================================================================= //
-// DATA: TRIVIA                                                               //
-// ========================================================================= //
 const heroTrivia = [
     "In Japanese, Miya (宮) means '<b>shrine</b>' or '<b>palace</b>', often referring to sacred places or nobility. This fits Miya's elegant and mystical Moon Elf background.",
     "She is somewhat inspired by <b>Lufia</b> from <i>Magic Rush</i>, a game created by Moonton before <i>MLBB</i>. Miya's skin <b>Jungle Ranger</b> looks like her.",
     "She is the first hero to have a running animation when having a high movement speed attribute.",
     "Miya's <b>Honor</b> skin is a giveaway skin to celebrate the summer vacation in the Philippines.",
     "Her skin, <b>Suzuhime</b> (鈴姫) is Japanese and can be broken down into two parts: 鈴 (Suzu) means '<b>bell</b>' or '<b>chime</b>', often associated with gentle, pleasant sounds. 姫 (Hime) means '<b>princess</b>' or '<b>young noblewoman</b>'.",
-    "Miya was one of the heroes revamped in <a href='../../../mlbb/project-next.html'>Project NEXT</a>'s first batch in September 2020, along with <a href='../../heroes/layla.html'>Layla</a>, <a href='../../heroes/eudora.html'>Eudora</a> (whom Miya also shares the same Japanese-language voice actor, <a href='https://www.themoviedb.org/person/2995662'>Miho Morisaki</a>, with), <a href='../../heroes/zilong.html'>Zilong</a> and <a href='../../heroes/saber.html'>Saber</a>. The goal was to balance the power gap between older and newer heroes, as the latter had better mechanics and animations.",
-    "Miya's <b>Burning Bow</b> was previously called <b>Queen of Banshes</b> in 2016 <i>(check Archive)</i>",
-    "Miya's <b>Christmas Carnival</b> was previously called <b>Christmas Cheer</b> from 2016 until 2020 <i>(check Archive)</i>",
-    "<b>Turbo</b>, <b>Fission Shot</b>, <b>Rain of Arrows</b> and <b>Turbo Stealth</b> were the old names for <b>Moon Blessing</b>, <b>Moon Arrow</b>, <b>Arrow of Eclipse</b> and <b>Hidden Moonlight</b> <i>(check Archive)</i>"
+    "Miya was one of the heroes revamped in <a href='../../../mlbb/project-next.html'>Project NEXT</a> in September 2020.",
+    "Miya's <b>Burning Bow</b> was previously called <b>Queen of Banshes</b> in 2016.",
+    "Miya's <b>Christmas Carnival</b> was previously called <b>Christmas Cheer</b> from 2016 until 2020."
 ];
 
-
-// ========================================================================= //
-// DATA: MASTERY CODE                                                         //
-// ========================================================================= //
 const heroMasteryCode = [
     {
         chapter: 1,
@@ -353,10 +325,6 @@ const heroMasteryCode = [
     }
 ];
 
-
-// ========================================================================= //
-// DATA: PATCH HISTORY                                                        //
-// ========================================================================= //
 const heroPatchHistory = [
     {
         version: "1.8.66",
@@ -386,10 +354,6 @@ const heroPatchHistory = [
     }
 ];
 
-
-// ========================================================================= //
-// DATA: COSMETICS — SKINS                                                    //
-// ========================================================================= //
 const heroSkins = [
     {
         name: "Moonlight Archer",
@@ -490,10 +454,6 @@ const heroSkins = [
     }
 ];
 
-
-// ========================================================================= //
-// DATA: COSMETICS — PAINTED SKINS                                           //
-// ========================================================================= //
 const heroPaintedSkins = [
     {
         name: "Tranquil Bow",
@@ -518,10 +478,6 @@ const heroPaintedSkins = [
     }
 ];
 
-
-// ========================================================================= //
-// DATA: COSMETICS — STATUES                                                  //
-// ========================================================================= //
 const heroStatues = [
     {
         name: "Moonlight Guardian",
@@ -537,10 +493,6 @@ const heroStatues = [
     }
 ];
 
-
-// ========================================================================= //
-// DATA: COSMETICS — ICONS                                                    //
-// ========================================================================= //
 const heroIcons = [
     { name: "Moonlight Archer",                             image: `${IMAGES}heroes/icons/miya-moonlight-archer-icon.webp`   },
     { name: "Burning Bow",                                  image: `${IMAGES}heroes/icons/miya-burning-bow-icon.webp`        },
@@ -560,10 +512,6 @@ const heroIcons = [
     { name: "Arrow of Spring <i>(image needed)</i>",        image: `${IMAGES}heroes/icons/miya-arrow-of-spring-icon.webp`   }
 ];
 
-
-// ========================================================================= //
-// DATA: COSMETICS — SPLASH ART                                               //
-// ========================================================================= //
 const heroSplashArt = [
     { name: "Moonlight Archer",                                 image: `${IMAGES}heroes/splashes/miya-moonlight-archer-splash.webp`   },
     { name: "Burning Bow",                                      image: `${IMAGES}heroes/splashes/miya-burning-bow-splash.webp`        },
@@ -583,10 +531,6 @@ const heroSplashArt = [
     { name: "Arrow of Spring",                                  image: `${IMAGES}heroes/splashes/miya-arrow-of-spring-splash.webp`    }
 ];
 
-
-// ========================================================================= //
-// DATA: AUDIO                                                                //
-// ========================================================================= //
 const heroAudioData = {
     en: {
         default: {
@@ -666,10 +610,6 @@ const heroAudioData = {
     }
 };
 
-
-// ========================================================================= //
-// DATA: ARCHIVE — PREVIOUS ABILITIES                                        //
-// ========================================================================= //
 const heroArchiveAbilities = [
     {
         name: "Turbo",
@@ -748,10 +688,6 @@ const heroArchiveAbilities = [
     }
 ];
 
-
-// ========================================================================= //
-// DATA: ARCHIVE — PREVIOUS SKINS (GALLERY)                                 //
-// ========================================================================= //
 const heroArchiveSkins = [
     {name: "Moonlight Archer (2016)",       image: `${IMAGES}heroes/skins/miya-moonlight-archer-archive01.webp`},
     {name: "Moonlight Archer (2016)",       image: `${IMAGES}heroes/skins/miya-moonlight-archer-archive02.webp`},
@@ -766,22 +702,14 @@ const heroArchiveSkins = [
     {name: "Sweet Fantasy (2018-2022)",     image: `${IMAGES}heroes/skins/miya-sweet-fantasy-archive01.webp`}
 ];
 
-
-// ========================================================================= //
-// DATA: ARCHIVE — PREVIOUS LORE                                             //
-// ========================================================================= //
 const heroArchiveLore = [
     {
         version: "Original (2016)",
         title: "Original Lore",
-        text: "Miya was born in the Temple of the Moon God in the Moonlit Forest and studied hard to one day become a worthy sacrifice to the Moon God.<br><br>When the fires of war between Humans and Orcs engulfed the Moon Elves, the Moon Elf hero Miya took a stand and led her fellow Moon Elves to resist the invasion. Despite their best efforts, Miya and her fellow elves were forced to retreat make a last stand in the temple against the enemy.<br><br>Miya knelt in the center of the temple to pray, for one last time when she realized that all hope was lost. Then, a miracle occurred. The moon God answered Miya's prayer and blessed her longbow with an ancient relic power. Miya grasped the newly endowed bow and fired an arrow, and with the power of the stars, the arrow turned into an eagle spirit and sunk the enemy into chaos.<br><br>Miya led her people out of the temple, raining showers of star-wrought arrows upon the enemy with each pull of her bow. Meanwhile, the magical eagle hovered the enemy, singling them out and attacking them. Like a falling tide, the humans and orcs quickly started to retreat. Miya and her countrymen retook the shores of the Moon God, and the moon elves recognized Miya and her spirit eagle as the Moon God incarnated.<br><br>The young Miya knew, within her heart that if this problem was not stopped at the root, the wars would never end. With the Moon God's blessing, she set out on a journey to the <a href='../locations/land-of-dawn.html'>Land of Dawn</a>, hoping to find a king, who could bring peace and order to this world."
+        text: "Miya was born in the Temple of the Moon God in the Moonlit Forest..."
     }
 ];
 
-
-// ========================================================================= //
-// DATA: STRATEGY                                                             //
-// ========================================================================= //
 const heroStrategy = {
     recommendations: {
         builds: [
@@ -835,11 +763,6 @@ const heroStrategy = {
         weakAgainst: ["<a href='natalia.html'>Natalia</a>", "<a href='karina.html'>Karina</a>", "<a href='lancelot.html'>Lancelot</a>", "<a href='zilong.html'>Zilong</a>", "<a href='helcurt.html'>Helcurt</a>", "<a href='saber.html'>Saber</a>", "<a href='akai.html'>Akai</a>", "<a href='hayabusa.html'>Hayabusa</a>", "<a href='argus.html'>Argus</a>", "<a href='angela.html'>Angela</a>"]
     }
 };
-
-
-// ========================================================================= //
-// RENDER FUNCTIONS                                                           //
-// ========================================================================= //
 
 function renderRatings() {
     const container = document.getElementById('ratings-container');
@@ -998,11 +921,6 @@ window.renderAudioList = function(lang, skin, category) {
     renderAudioIntoContainer(containerId, heroAudioData, lang, skin, category);
 }
 
-
-// ========================================================================= //
-// ARCHIVE RENDER FUNCTIONS                                                   //
-// ========================================================================= //
-
 function renderArchiveAbilities() {
     const container = document.getElementById('archive-abilities-container');
     if (!container) return;
@@ -1142,10 +1060,6 @@ function renderStrategy() {
     }
 }
 
-
-// ========================================================================= //
-// INITIALIZATION                                                             //
-// ========================================================================= //
 function initHeroPage() {
     renderRatings();
     renderAbilities();
