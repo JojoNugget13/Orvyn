@@ -2603,7 +2603,7 @@ function renderHeroBatch() {
             <td class="order-col"><span class="hero-number">${hero.order}</span></td>
             <td class="icon-col">
                 <div class="hero-icon-wrapper">
-                    <img src="../../../${hero.icon}" class="hero-icon" alt="${hero.name} icon">
+                    <img src="../../${hero.icon}" class="hero-icon" alt="${hero.name} icon">
                 </div>
             </td>
             <td>
@@ -2630,7 +2630,7 @@ function renderHeroBatch() {
             <td>${hero.region}</td>
             <td>
                 ${hero.price.map(p =>
-                    `<div class="price-item"><img class="currency-icon" src="../../../images/games/mlbb/currencies/${p.type}.webp" alt="${p.type}"> <span>${p.value}</span></div>`
+                    `<div class="price-item"><img class="currency-icon" src="../../images/games/mlbb/currencies/${p.type}.webp" alt="${p.type}"> <span>${p.value}</span></div>`
                 ).join("")}
             </td>
             <td class="date-col">${hero.release}</td>
