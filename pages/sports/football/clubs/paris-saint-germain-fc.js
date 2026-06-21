@@ -1,99 +1,146 @@
-const squadData = {
-    gk: [
-        { name: "Gianluigi Donnarumma", nationality: "🇮🇹" },
-        { name: "Matvey Safonov", nationality: "🇷🇺" },
-        { name: "Arnau Tenas", nationality: "🇪🇸" }
-    ],
-    df: [
-        { name: "Marquinhos", nationality: "🇧🇷", captain: true },
-        { name: "Achraf Hakimi", nationality: "🇲🇦" },
-        { name: "Willian Pacho", nationality: "🇪🇨" },
-        { name: "Nuno Mendes", nationality: "🇵🇹" },
-        { name: "Lucas Hernández", nationality: "🇫🇷" },
-        { name: "Presnel Kimpembe", nationality: "🇫🇷" },
-        { name: "Lucas Beraldo", nationality: "🇧🇷" }
-    ],
-    mf: [
-        { name: "Vitinha", nationality: "🇵🇹" },
-        { name: "Warren Zaïre-Emery", nationality: "🇫🇷" },
-        { name: "João Neves", nationality: "🇵🇹" },
-        { name: "Fabián Ruiz", nationality: "🇪🇸" },
-        { name: "Kang-in Lee", nationality: "🇰🇷" },
-        { name: "Senny Mayulu", nationality: "🇫🇷" }
-    ],
-    fw: [
-        { name: "Ousmane Dembélé", nationality: "🇫🇷" },
-        { name: "Bradley Barcola", nationality: "🇫🇷" },
-        { name: "Gonçalo Ramos", nationality: "🇵🇹" },
-        { name: "Khvicha Kvaratskhelia", nationality: "🇬🇪" },
-        { name: "Désiré Doué", nationality: "🇫🇷" }
+/**
+ * PSG Club Page Logic
+ * Handles Tab switching and Data population
+ */
+
+const clubData = {
+    squads: {
+        "2024-25": [
+            { pos: "GK", name: "Gianluigi Donnarumma", age: 26, nat: "Italy", number: 99 },
+            { pos: "DF", name: "Marquinhos", age: 31, nat: "Brazil", number: 5 },
+            { pos: "DF", name: "Achraf Hakimi", age: 26, nat: "Morocco", number: 2 },
+            { pos: "DF", name: "Nuno Mendes", age: 22, nat: "Portugal", number: 25 },
+            { pos: "MF", name: "Vitinha", age: 25, nat: "Portugal", number: 17 },
+            { pos: "MF", name: "João Neves", age: 20, nat: "Portugal", number: 8 },
+            { pos: "FW", name: "Ousmane Dembélé", age: 28, nat: "France", number: 10 },
+            { pos: "FW", name: "Bradley Barcola", age: 22, nat: "France", number: 29 }
+        ],
+        "2023-24": [
+            { pos: "GK", name: "Gianluigi Donnarumma", age: 25, nat: "Italy", number: 99 },
+            { pos: "DF", name: "Marquinhos", age: 30, nat: "Brazil", number: 5 },
+            { pos: "DF", name: "Milan Škriniar", age: 29, nat: "Slovakia", number: 37 },
+            { pos: "MF", name: "Manuel Ugarte", age: 23, nat: "Uruguay", number: 4 },
+            { pos: "MF", name: "Warren Zaïre-Emery", age: 18, nat: "France", number: 33 },
+            { pos: "FW", name: "Kylian Mbappé", age: 25, nat: "France", number: 7 },
+            { pos: "FW", name: "Randal Kolo Muani", age: 25, nat: "France", number: 26 }
+        ]
+    },
+    trophies: [
+        { title: "Ligue 1", count: 12, years: "1985–86, 1993–94, 2012–13, 2013–14, 2014–15, 2015–16, 2017–18, 2018–19, 2019–20, 2021–22, 2022–23, 2023–24" },
+        { title: "Coupe de France", count: 15, years: "1981–82, 1982–83, 1992–93, 1994–95, 1997–98, 2003–04, 2005–06, 2009–10, 2014–15, 2015–16, 2016–17, 2017–18, 2019–20, 2020–21, 2023–24" },
+        { title: "UEFA Cup Winners' Cup", count: 1, years: "1995–96" }
     ]
 };
 
-const trophyData = [
-    { name: "Ligue 1", count: 12, icon: "🏆" },
-    { name: "Coupe de France", count: 15, icon: "🇫🇷" },
-    { name: "Trophée des Champions", count: 12, icon: "⚡" },
-    { name: "Cup Winners' Cup", count: 1, icon: "🌍" }
-];
-
-function renderSquad() {
+function renderSquad(year = "2024-25") {
     const container = document.getElementById('squad-container');
     if (!container) return;
+    
+    const squad = clubData.squads[year] || [];
 
-    let html = '';
-    const sections = [
-        { label: "Goalkeepers", key: "gk" },
-        { label: "Defenders", key: "df" },
-        { label: "Midfielders", key: "mf" },
-        { label: "Forwards", key: "fw" }
-    ];
-
-    sections.forEach(section => {
-        html += `<div class="lineup-group" style="margin-bottom: 2rem;">
-            <span class="lineup-label">${section.label}</span>`;
-        squadData[section.key].forEach(player => {
-            html += `
-                <div class="player-row">
-                    <div style="display: flex; align-items: center; gap: 12px;">
-                        <span style="font-size: 1.2rem;">${player.nationality}</span>
-                        <span class="player-name">${player.name}</span>
-                        ${player.captain ? '<span class="player-event-text" style="background: var(--primary-color); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.6rem; font-weight: 800; margin-left: 10px;">CAPTAIN</span>' : ''}
-                    </div>
-                </div>`;
-        });
-        html += `</div>`;
-    });
-    container.innerHTML = html;
+    container.innerHTML = `
+        <div class="table-wrapper">
+            <table class="wiki-table">
+                <thead>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Player</th>
+                        <th>Age</th>
+                        <th>Nat</th>
+                        <th>Shirt No.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${squad.map(p => `
+                        <tr>
+                            <td><strong>${p.pos}</strong></td>
+                            <td>${p.name}</td> 
+                            <td>${p.age}</td>
+                            <td>${p.nat}</td>
+                            <td>${p.number || '-'}</td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+        </div>
+    `;
 }
 
 function renderTrophies() {
     const container = document.getElementById('trophies-container');
     if (!container) return;
-    let html = '<div class="role-grid">';
-    trophyData.forEach(trophy => {
-        html += `<div class="role-card">
-            <div class="role-icon">${trophy.icon}</div>
-            <h4>${trophy.name}</h4>
-            <p>${trophy.count} Titles</p>
-        </div>`;
-    });
-    html += '</div>';
-    container.innerHTML = html;
+    
+    container.innerHTML = clubData.trophies.map(t => `
+        <div class="story-card" style="margin-bottom: 1rem; border-left: 3px solid #f59e0b;">
+            <h4 style="margin-bottom: 0.5rem; color: #f59e0b;">${t.title} (${t.count})</h4>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.4;">${t.years}</p>
+        </div>
+    `).join('');
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    renderSquad();
-    renderTrophies();
-
+function initTabs() {
     const tabBtns = document.querySelectorAll('.tab-btn');
     const tabPanes = document.querySelectorAll('.tab-pane');
 
+    function activateTab(tabId) {
+        tabBtns.forEach(btn => btn.classList.toggle('active', btn.dataset.tab === tabId));
+        tabPanes.forEach(pane => pane.classList.toggle('active', pane.id === tabId));
+        localStorage.setItem('activeClubTab', tabId);
+    }
+
     tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            const tabId = btn.dataset.tab;
-            tabBtns.forEach(b => b.classList.toggle('active', b.dataset.tab === tabId));
-            tabPanes.forEach(p => p.classList.toggle('active', p.id === tabId));
+            activateTab(btn.dataset.tab);
         });
     });
+
+    // Restore last active tab
+    const savedTab = localStorage.getItem('activeClubTab') || 'details';
+    activateTab(savedTab);
+}
+
+function initSquadDropdown() {
+    const btn = document.getElementById('squadYearBtn');
+    const menu = document.getElementById('squadYearMenu');
+    const display = document.getElementById('currentYearDisplay');
+
+    if (!btn || !menu) return;
+
+    // Dynamically populate options from squad data keys
+    const seasons = Object.keys(clubData.squads).sort().reverse();
+    
+    menu.innerHTML = seasons.map(year => 
+        `<div class="nav-profile-item" data-value="${year}">${year}</div>`
+    ).join('');
+
+    // Toggle dropdown
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        menu.classList.toggle('show');
+        btn.classList.toggle('active');
+    });
+
+    // Handle selection
+    menu.querySelectorAll('.nav-profile-item').forEach(item => {
+        item.addEventListener('click', () => {
+            const year = item.dataset.value;
+            display.textContent = item.textContent;
+            menu.classList.remove('show');
+            btn.classList.remove('active');
+            renderSquad(year);
+        });
+    });
+
+    // Initial render based on the first available option
+    if (seasons.length > 0) {
+        display.textContent = `${seasons[0]} Season`;
+        renderSquad(seasons[0]);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("⚽ PSG Club Wiki Loaded");
+    initTabs();
+    renderTrophies();
+    initSquadDropdown();
 });

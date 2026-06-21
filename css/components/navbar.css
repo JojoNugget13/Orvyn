@@ -157,6 +157,7 @@
     cursor: pointer;
     transition: all 0.3s;
     font-family: 'Unbounded', sans-serif;
+    color: var(--text-primary);
 }
 
 .nav-profile-btn:hover {
@@ -268,7 +269,8 @@
     box-sizing: border-box;
 }
 
-.nav-profile-item:hover {
+.nav-profile-item:hover,
+.nav-profile-item.active {
     background: rgba(99, 102, 241, 0.18);
     color: var(--primary-color);
     padding-left: 24px;
