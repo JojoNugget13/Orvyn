@@ -1,9 +1,4 @@
-/**
- * UCL 2024/2025 Season Logic
- * Handles data management and rendering for matches, standings, and stats.
- */
-
-let currentStandingsSubTab = 'regular'; // 'regular' or 'knockout'
+let currentStandingsSubTab = 'regular';
 
 window.switchStandingsSubTab = function(subTab) {
     currentStandingsSubTab = subTab;
@@ -17,7 +12,49 @@ const wc2022 = {
             { rank: 1, team: "<a href='../../../../football/clubs/netherlands.html'>Netherlands</a>", badge: "../../../../../../images/sports/football/clubs/netherlands.webp", p: 3, w: 2, d: 1, l: 0, gf: 5, ga: 1, gd: +4, pts: 7, status: "qualified" },
             { rank: 2, team: "<a href='../../../../football/clubs/senegal.html'>Senegal</a>", badge: "../../../../../../images/sports/football/clubs/senegal.webp", p: 3, w: 2, d: 0, l: 1, gf: 5, ga: 4, gd: +1, pts: 6, status: "qualified" },
             { rank: 3, team: "<a href='../../../../football/clubs/ecuador.html'>Ecuador</a>", badge: "../../../../../../images/sports/football/clubs/ecuador.webp", p: 3, w: 1, d: 1, l: 1, gf: 4, ga: 3, gd: +1, pts: 4, status: "eliminated" },
-            { rank: 4, team: "<a href='../../../../football/clubs/qatar.html'>Qatar</a>", badge: "../../../../../../images/sports/football/clubs/qatar.webp", p: 8, w: 0, d: 0, l: 3, gf: 1, ga: 7, gd: -6, pts: 0, status: "eliminated" },
+            { rank: 4, team: "<a href='../../../../football/clubs/qatar.html'>Qatar</a>", badge: "../../../../../../images/sports/football/clubs/qatar.webp", p: 3, w: 0, d: 0, l: 3, gf: 1, ga: 7, gd: -6, pts: 0, status: "eliminated" },
+        ],
+        B: [
+            { rank: 1, team: "<a href='../../../../football/clubs/england.html'>England</a>", badge: "../../../../../../images/sports/football/clubs/england.webp", p: 3, w: 2, d: 1, l: 0, gf: 9, ga: 2, gd: +7, pts: 7, status: "qualified" },
+            { rank: 2, team: "<a href='../../../../football/clubs/united-states.html'>United States</a>", badge: "../../../../../../images/sports/football/clubs/united-states.webp", p: 3, w: 1, d: 2, l: 0, gf: 2, ga: 1, gd: +1, pts: 5, status: "qualified" },
+            { rank: 3, team: "<a href='../../../../football/clubs/iran.html'>Iran</a>", badge: "../../../../../../images/sports/football/clubs/iran.webp", p: 3, w: 1, d: 0, l: 2, gf: 4, ga: 7, gd: -3, pts: 3, status: "eliminated" },
+            { rank: 4, team: "<a href='../../../../football/clubs/wales.html'>Wales</a>", badge: "../../../../../../images/sports/football/clubs/wales.webp", p: 8, w: 0, d: 1, l: 2, gf: 1, ga: 6, gd: -5, pts: 1, status: "eliminated" },
+        ],
+        C: [
+            { rank: 1, team: "<a href='../../../../football/clubs/argentina.html'>Argentina</a>", badge: "../../../../../../images/sports/football/clubs/argentina.webp", p: 3, w: 2, d: 0, l: 1, gf: 5, ga: 2, gd: +3, pts: 6, status: "qualified" },
+            { rank: 2, team: "<a href='../../../../football/clubs/poland.html'>Poland</a>", badge: "../../../../../../images/sports/football/clubs/poland.webp", p: 3, w: 1, d: 1, l: 1, gf: 2, ga: 2, gd: 0, pts: 4, status: "qualified" },
+            { rank: 3, team: "<a href='../../../../football/clubs/mexico.html'>Mexico</a>", badge: "../../../../../../images/sports/football/clubs/mexico.webp", p: 3, w: 1, d: 1, l: 1, gf: 2, ga: 3, gd: -1, pts: 4, status: "eliminated" },
+            { rank: 4, team: "<a href='../../../../football/clubs/saudi-arabia.html'>Saudi Arabia</a>", badge: "../../../../../../images/sports/football/clubs/saudi-arabia.webp", p: 3, w: 1, d: 0, l: 2, gf: 3, ga: 5, gd: -2, pts: 3, status: "eliminated" },
+        ],
+        D: [
+            { rank: 1, team: "<a href='../../../../football/clubs/france.html'>France</a>", badge: "../../../../../../images/sports/football/clubs/france.webp", p: 3, w: 2, d: 0, l: 1, gf: 6, ga: 3, gd: +3, pts: 6, status: "qualified" },
+            { rank: 2, team: "<a href='../../../../football/clubs/australia.html'>Australia</a>", badge: "../../../../../../images/sports/football/clubs/australia.webp", p: 3, w: 2, d: 0, l: 1, gf: 3, ga: 4, gd: -1, pts: 6, status: "qualified" },
+            { rank: 3, team: "<a href='../../../../football/clubs/tunisia.html'>Tunisia</a>", badge: "../../../../../../images/sports/football/clubs/tunisia.webp", p: 3, w: 1, d: 1, l: 1, gf: 1, ga: 1, gd: 0, pts: 4, status: "eliminated" },
+            { rank: 4, team: "<a href='../../../../football/clubs/denmark.html'>Denmark</a>", badge: "../../../../../../images/sports/football/clubs/denmark.webp", p: 3, w: 0, d: 1, l: 2, gf: 1, ga: 3, gd: -2, pts: 1, status: "eliminated" },
+        ],
+        E: [
+            { rank: 1, team: "<a href='../../../../football/clubs/japan.html'>Japan</a>", badge: "../../../../../../images/sports/football/clubs/japan.webp", p: 3, w: 2, d: 0, l: 1, gf: 4, ga: 3, gd: +1, pts: 6, status: "qualified" },
+            { rank: 2, team: "<a href='../../../../football/clubs/spain.html'>Spain</a>", badge: "../../../../../../images/sports/football/clubs/spain.webp", p: 3, w: 1, d: 1, l: 1, gf: 9, ga: 3, gd: +6, pts: 4, status: "qualified" },
+            { rank: 3, team: "<a href='../../../../football/clubs/germany.html'>Germany</a>", badge: "../../../../../../images/sports/football/clubs/germany.webp", p: 3, w: 1, d: 1, l: 1, gf: 6, ga: 5, gd: +1, pts: 4, status: "eliminated" },
+            { rank: 4, team: "<a href='../../../../football/clubs/costa-rica.html'>Costa Rica</a>", badge: "../../../../../../images/sports/football/clubs/costa-rica.webp", p: 3, w: 1, d: 0, l: 2, gf: 3, ga: 11, gd: -8, pts: 3, status: "eliminated" },
+        ],
+        F: [
+            { rank: 1, team: "<a href='../../../../football/clubs/morocco.html'>Morocco</a>", badge: "../../../../../../images/sports/football/clubs/morocco.webp", p: 3, w: 2, d: 1, l: 0, gf: 4, ga: 1, gd: +3, pts: 7, status: "qualified" },
+            { rank: 2, team: "<a href='../../../../football/clubs/croatia.html'>Croatia</a>", badge: "../../../../../../images/sports/football/clubs/croatia.webp", p: 3, w: 1, d: 2, l: 0, gf: 4, ga: 1, gd: +3, pts: 5, status: "qualified" },
+            { rank: 3, team: "<a href='../../../../football/clubs/belgium.html'>Belgium</a>", badge: "../../../../../../images/sports/football/clubs/belgium.webp", p: 3, w: 1, d: 1, l: 1, gf: 1, ga: 2, gd: -1, pts: 4, status: "eliminated" },
+            { rank: 4, team: "<a href='../../../../football/clubs/canada.html'>Canada</a>", badge: "../../../../../../images/sports/football/clubs/canada.webp", p: 3, w: 0, d: 0, l: 3, gf: 2, ga: 7, gd: -5, pts: 0, status: "eliminated" },
+        ],
+        G: [
+            { rank: 1, team: "<a href='../../../../football/clubs/brazil.html'>Brazil</a>", badge: "../../../../../../images/sports/football/clubs/brazil.webp", p: 3, w: 2, d: 0, l: 1, gf: 3, ga: 1, gd: +2, pts: 6, status: "qualified" },
+            { rank: 2, team: "<a href='../../../../football/clubs/switzerland.html'>Switzerland</a>", badge: "../../../../../../images/sports/football/clubs/switzerland.webp", p: 3, w: 2, d: 0, l: 1, gf: 4, ga: 3, gd: +1, pts: 6, status: "qualified" },
+            { rank: 3, team: "<a href='../../../../football/clubs/cameroon.html'>Cameroon</a>", badge: "../../../../../../images/sports/football/clubs/cameroon.webp", p: 3, w: 1, d: 1, l: 1, gf: 4, ga: 4, gd: 0, pts: 4, status: "eliminated" },
+            { rank: 4, team: "<a href='../../../../football/clubs/serbia.html'>Serbia</a>", badge: "../../../../../../images/sports/football/clubs/serbia.webp", p: 3, w: 0, d: 1, l: 2, gf: 5, ga: 8, gd: -3, pts: 1, status: "eliminated" },
+        ],
+        H: [
+            { rank: 1, team: "<a href='../../../../football/clubs/portugal.html'>Portugal</a>", badge: "../../../../../../images/sports/football/clubs/portugal.webp", p: 3, w: 2, d: 0, l: 1, gf: 6, ga: 4, gd: +2, pts: 6, status: "qualified" },
+            { rank: 2, team: "<a href='../../../../football/clubs/south-korea.html'>South Korea</a>", badge: "../../../../../../images/sports/football/clubs/south-korea.webp", p: 3, w: 1, d: 1, l: 1, gf: 4, ga: 4, gd: 0, pts: 4, status: "qualified" },
+            { rank: 3, team: "<a href='../../../../football/clubs/uruguay.html'>Uruguay</a>", badge: "../../../../../../images/sports/football/clubs/uruguay.webp", p: 3, w: 1, d: 1, l: 1, gf: 2, ga: 2, gd: 0, pts: 4, status: "eliminated" },
+            { rank: 4, team: "<a href='../../../../football/clubs/ghana.html'>Ghana</a>", badge: "../../../../../../images/sports/football/clubs/ghana.webp", p: 3, w: 1, d: 0, l: 2, gf: 5, ga: 7, gd: -2, pts: 3, status: "eliminated" },
         ],
     },
 
@@ -3702,7 +3739,7 @@ function renderRegularSeasonStandings(container) {
         <style>
             .groups-grid {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
                 gap: 1.5rem;
                 margin-bottom: 1.5rem;
             }
