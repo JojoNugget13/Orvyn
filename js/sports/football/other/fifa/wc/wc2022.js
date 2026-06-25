@@ -60,71 +60,13 @@ const wc2022 = {
 
     // ─── KNOCKOUT DATA ────────────────────────────────────────────────────────
     knockout: {
-        playoffs: [
-            {
-                home: { name: "Juventus FC", badge: "../../../../../../images/sports/football/clubs/juventus-fc.webp" },
-                away: { name: "PSV Eindhoven (a.e.t.)", badge: "../../../../../../images/sports/football/clubs/psv-eindhoven.webp" },
-                leg1: { homeScore: 2, awayScore: 1 },
-                leg2: { homeScore: 3, awayScore: 1 },
-                agg: "3–4", winner: "away", pens: null
-            },
-            {
-                home: { name: "Manchester City FC", badge: "../../../../../../images/sports/football/clubs/manchester-city-fc.webp" },
-                away: { name: "Real Madrid CF", badge: "../../../../../../images/sports/football/clubs/real-madrid-cf.webp" },
-                leg1: { homeScore: 2, awayScore: 3 },
-                leg2: { homeScore: 3, awayScore: 1 },
-                agg: "6–3", winner: "away", pens: null
-            },
-            {
-                home: { name: "Stade Brestois 29", badge: "../../../../../../images/sports/football/clubs/stade-brestois-29.webp" },
-                away: { name: "Paris Saint-Germain FC", badge: "../../../../../../images/sports/football/clubs/paris-saint-germain-fc.webp" },
-                leg1: { homeScore: 0, awayScore: 3 },
-                leg2: { homeScore: 7, awayScore: 0 },
-                agg: "0–10", winner: "away", pens: ""
-            },
-            {
-                home: { name: "Club Brugge KV", badge: "../../../../../../images/sports/football/clubs/club-brugge-kv.webp" },
-                away: { name: "Atalanta BC", badge: "../../../../../../images/sports/football/clubs/atalanta-bc.webp" },
-                leg1: { homeScore: 2, awayScore: 1 },
-                leg2: { homeScore: 1, awayScore: 3 },
-                agg: "5–2", winner: "home", pens: null
-            },
-            {
-                home: { name: "AS Monaco FC", badge: "../../../../../../images/sports/football/clubs/as-monaco-fc.webp" },
-                away: { name: "SL Benfica", badge: "../../../../../../images/sports/football/clubs/sl-benfica.webp" },
-                leg1: { homeScore: 0, awayScore: 1 },
-                leg2: { homeScore: 3, awayScore: 3 },
-                agg: "3–4", winner: "away", pens: null
-            },
-            {
-                home: { name: "Sporting CP", badge: "../../../../../../images/sports/football/clubs/sporting-cp.webp" },
-                away: { name: "Borussia Dortmund", badge: "../../../../../../images/sports/football/clubs/borussia-dortmund.webp" },
-                leg1: { homeScore: 0, awayScore: 3 },
-                leg2: { homeScore: 0, awayScore: 0 },
-                agg: "0–3", winner: "away", pens: null
-            },
-            {
-                home: { name: "Celtic FC", badge: "../../../../../../images/sports/football/clubs/celtic-fc.webp" },
-                away: { name: "FC Bayern Munich", badge: "../../../../../../images/sports/football/clubs/fc-bayern-munich.webp" },
-                leg1: { homeScore: 1, awayScore: 2 },
-                leg2: { homeScore: 1, awayScore: 1 },
-                agg: "2–3", winner: "away", pens: null
-            },
-            {
-                home: { name: "Feyenoord Rotterdam", badge: "../../../../../../images/sports/football/clubs/feyenoord-rotterdam.webp" },
-                away: { name: "AC Milan", badge: "../../../../../../images/sports/football/clubs/ac-milan.webp" },
-                leg1: { homeScore: 1, awayScore: 0 },
-                leg2: { homeScore: 1, awayScore: 1 },
-                agg: "2–1", winner: "home", pens: null
-            },
-        ],
         roundOf16: [
             {
-                home: { name: "PSV Eindhoven", badge: "../../../../../../images/sports/football/clubs/psv-eindhoven.webp" },
-                away: { name: "Arsenal FC", badge: "../../../../../../images/sports/football/clubs/arsenal-fc.webp" },
-                leg1: { homeScore: 1, awayScore: 7 },
-                leg2: { homeScore: 2, awayScore: 2 },
-                agg: "3–9", winner: "away", pens: null
+                home: { name: "Netherlands", badge: "../../../../../../images/sports/football/clubs/netherlands.webp" },
+                away: { name: "United States", badge: "../../../../../../images/sports/football/clubs/united-states.webp" },
+                leg1: { homeScore: 3, awayScore: 1 },
+                leg2: { homeScore: "", awayScore: "/" },
+                agg: "3–1", winner: "away", pens: null
             },
             {
                 home: { name: "Real Madrid CF", badge: "../../../../../../images/sports/football/clubs/real-madrid-cf.webp" },
