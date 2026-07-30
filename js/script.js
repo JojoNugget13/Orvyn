@@ -304,3 +304,33 @@ function debounce(func, wait) {
         timeout = setTimeout(later, wait);
     };
 }
+
+/**
+ * Initialize live filtering for any page
+ * Usage: initLiveFilter('globalSearch', '.category-card', 'h4', 'p')
+ */
+function initLiveFilter(inputId, cardSelector, titleSelector = 'h4', descSelector = 'p') {
+    const searchInput = document.getElementById(inputId);
+    const cards = document.querySelectorAll(cardSelector);
+
+    if (!searchInput || cards.length === 0) return;
+
+    searchInput.addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+            const title = card.querySelector(titleSelector)?.textContent.toLowerCase() || '';
+            const desc = card.querySelector(descSelector)?.textContent.toLowerCase() || '';
+            const matches = title.includes(searchTerm) || desc.includes(searchTerm);
+            
+            card.style.display = matches ? 'block' : 'none';
+            if (matches) visibleCount++;
+        });
+    });
+
+    // Prevent Enter key from triggering global search
+    searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') e.preventDefault();
+    });
+}

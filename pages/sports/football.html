@@ -90,47 +90,9 @@
     <script src="../../js/sports.js"></script>
     <script src="../../js/components.js"></script>
     <script>
-    // Live filter for category cards on this page
-    const searchInput = document.getElementById('globalSearch');
-    const categoryCards = document.querySelectorAll('.category-card');
-
-    if (searchInput) {
-        // Live filtering as user types
-        searchInput.addEventListener('input', (e) => {
-            const searchTerm = e.target.value.toLowerCase();
-            let visibleCount = 0;
-
-            categoryCards.forEach(card => {
-                const title = card.querySelector('h4')?.textContent.toLowerCase() || '';
-                const desc = card.querySelector('p')?.textContent.toLowerCase() || '';
-                const matches = title.includes(searchTerm) || desc.includes(searchTerm);
-                
-                card.style.display = matches ? 'block' : 'none';
-                if (matches) visibleCount++;
-            });
-
-            // Show message if no results
-            const grid = document.querySelector('.category-grid');
-            let noResults = grid.querySelector('.no-results-message');
-            if (visibleCount === 0 && searchTerm) {
-                if (!noResults) {
-                    noResults = document.createElement('div');
-                    noResults.className = 'no-results-message';
-                    noResults.textContent = 'No regions found matching your search.';
-                    grid.appendChild(noResults);
-                }
-            } else if (noResults) {
-                noResults.remove();
-            }
-        });
-
-        // Prevent the global search popup on Enter
-        searchInput.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') {
-                e.preventDefault();
-            }
-        });
-    }
-</script>
+    document.addEventListener('DOMContentLoaded', () => {
+        initLiveFilter('globalSearch', '.category-card', 'h4', 'p');
+    });
+    </script>
 </body>
 </html>
