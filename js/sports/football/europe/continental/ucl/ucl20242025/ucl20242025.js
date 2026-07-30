@@ -4029,7 +4029,7 @@ function renderKnockoutBracket(container) {
                 </svg>
             </div>
             <div class="bracket-phase bracket-phase--final">
-                <div class="bracket-phase__label">⭐ Final</div>
+                <div class="bracket-phase__label">Final</div>
                 <div class="bracket-phase__ties">
                     ${buildFinalTie(ko.final)}
                 </div>

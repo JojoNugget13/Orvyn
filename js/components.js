@@ -83,7 +83,6 @@ function updateNavbar() {
     
     if (user) {
         navButtons.innerHTML = `
-            <button class="nav-btn" id="forumBtn">Forum</button>
             <div class="nav-profile-dropdown">
                 <button class="nav-profile-btn" onclick="toggleProfileDropdown()">
                     <div class="nav-profile-avatar" style="background-color: ${getUserAvatarColor(user)}">

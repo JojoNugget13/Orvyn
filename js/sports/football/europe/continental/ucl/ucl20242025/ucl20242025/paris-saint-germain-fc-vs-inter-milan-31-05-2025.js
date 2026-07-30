@@ -14,6 +14,8 @@ function getEventIconPath(emoji) {
         case 'subbed-on': return `${EVENT_ICONS_BASE_PATH}subbed-on.webp`;
         case 'subbed-off': return `${EVENT_ICONS_BASE_PATH}subbed-off.webp`;
         case 'captain': return `${EVENT_ICONS_BASE_PATH}captain.webp`;
+        case 'penalty-score': return `${EVENT_ICONS_BASE_PATH}penalty-score.webp`;
+        case 'penalty-miss': return `${EVENT_ICONS_BASE_PATH}penalty-miss.webp`;
         default: return '';
     }
 }

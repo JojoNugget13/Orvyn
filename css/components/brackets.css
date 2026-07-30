@@ -15,6 +15,17 @@
     font-weight: 600;
 }
 
+.bracket-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.bracket-agg-cell {
+    margin-left: auto;
+}
+
 .tab-btn.active {
     color: #fff;
     border-color: #3b82f6;

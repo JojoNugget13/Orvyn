@@ -23,3 +23,11 @@
     box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
     transform: translateY(-2px);
 }
+
+.no-results-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
